@@ -1,0 +1,18 @@
+# Node dependencies
+node_modules/
+
+# Playwright
+playwright-report/
+playwright/.cache/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+
+# OS junk
+.DS_Store
+Thumbs.db

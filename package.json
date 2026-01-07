@@ -1,5 +1,12 @@
 {
-  "devDependencies": {
-    "@types/node": "^25.0.3"
+  "name": "a11y-scan",
+  "version": "1.0.0",
+  "description": "Automated accessibility (a11y) scanner using Playwright and axe-core",
+  "private": true,
+  "scripts": {
+    "scan": "node scripts/scan.js"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
