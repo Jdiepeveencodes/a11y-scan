@@ -1,0 +1,21 @@
+{
+  "name": "playwright-a11y-scanner",
+  "version": "1.0.0",
+  "description": "Playwright + axe-core accessibility scanner with CSV, JSON, and HTML reporting",
+  "private": true,
+  "scripts": {
+    "test": "node ./node_modules/@playwright/test/cli.js test",
+    "a11y": "node ./node_modules/@playwright/test/cli.js test src/scan.spec.ts",
+    "a11y:headed": "node ./node_modules/@playwright/test/cli.js test src/scan.spec.ts --headed",
+    "a11y:debug": "node ./node_modules/@playwright/test/cli.js test src/scan.spec.ts --debug"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.0",
+    "@types/node": "^25.0.3",
+    "axe-core": "^4.9.0",
+    "escape-html": "^1.0.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
