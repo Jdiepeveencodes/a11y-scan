@@ -8,7 +8,6 @@
     "scan:file": "node scripts/scan-file.js",
     "scan:file:open": "node scripts/scan-file.js urls.txt && node scripts/open-report.js",
     "start": "node server.js"
-
   },
   "engines": {
     "node": ">=18"

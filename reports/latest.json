@@ -13,8 +13,8 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-01-07T19:51:54.463Z",
-  "url": "https://eternal-ember.fandom.com/wiki/Eternal_Ember_Wiki",
+  "timestamp": "2026-01-07T20:06:21.261Z",
+  "url": "https://www.w3.org/WAI/",
   "toolOptions": {
     "resultTypes": [
       "violations"
@@ -22,6 +22,18 @@
     "reporter": "v1"
   },
   "inapplicable": [
+    {
+      "id": "accesskeys",
+      "impact": null,
+      "tags": [
+        "cat.keyboard",
+        "best-practice"
+      ],
+      "description": "Ensures every accesskey attribute value is unique",
+      "help": "accesskey attribute value should be unique",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/accesskeys?application=axeAPI",
+      "nodes": []
+    },
     {
       "id": "area-alt",
       "impact": null,
@@ -57,6 +69,36 @@
       "description": "Ensure aria-braillelabel and aria-brailleroledescription have a non-braille equivalent",
       "help": "aria-braille attributes must have a non-braille equivalent",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-braille-equivalent?application=axeAPI",
+      "nodes": []
+    },
+    {
+      "id": "aria-command-name",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT"
+      ],
+      "description": "Ensures every ARIA button, link and menuitem has an accessible name",
+      "help": "ARIA commands must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-command-name?application=axeAPI",
+      "nodes": []
+    },
+    {
+      "id": "aria-dialog-name",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "best-practice"
+      ],
+      "description": "Ensures every ARIA dialog and alertdialog node has an accessible name",
+      "help": "ARIA dialog and alertdialog nodes should have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-dialog-name?application=axeAPI",
       "nodes": []
     },
     {
@@ -105,21 +147,6 @@
       "description": "Ensures every ARIA progressbar node has an accessible name",
       "help": "ARIA progressbar nodes must have an accessible name",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-progressbar-name?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "aria-required-children",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag131",
-        "EN-301-549",
-        "EN-9.1.3.1"
-      ],
-      "description": "Ensures elements with an ARIA role that require child roles contain them",
-      "help": "Certain ARIA roles must contain particular children",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-required-children?application=axeAPI",
       "nodes": []
     },
     {
@@ -208,6 +235,22 @@
       "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
       "help": "autocomplete attribute must be used correctly",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/autocomplete-valid?application=axeAPI",
+      "nodes": []
+    },
+    {
+      "id": "avoid-inline-spacing",
+      "impact": null,
+      "tags": [
+        "cat.structure",
+        "wcag21aa",
+        "wcag1412",
+        "EN-301-549",
+        "EN-9.1.4.12",
+        "ACT"
+      ],
+      "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
+      "help": "Inline text spacing must be adjustable with custom stylesheets",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/avoid-inline-spacing?application=axeAPI",
       "nodes": []
     },
     {
@@ -512,23 +555,15 @@
       "nodes": []
     },
     {
-      "id": "svg-img-alt",
+      "id": "tabindex",
       "impact": null,
       "tags": [
-        "cat.text-alternatives",
-        "wcag2a",
-        "wcag111",
-        "section508",
-        "section508.22.a",
-        "TTv5",
-        "TT7.a",
-        "EN-301-549",
-        "EN-9.1.1.1",
-        "ACT"
+        "cat.keyboard",
+        "best-practice"
       ],
-      "description": "Ensures <svg> elements with an img, graphics-document or graphics-symbol role have an accessible text",
-      "help": "<svg> elements with an img role must have an alternative text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/svg-img-alt?application=axeAPI",
+      "description": "Ensures tabindex attribute values are not greater than 0",
+      "help": "Elements should not have tabindex greater than zero",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/tabindex?application=axeAPI",
       "nodes": []
     },
     {
@@ -621,39 +656,8 @@
   ],
   "passes": [
     {
-      "id": "accesskeys",
-      "impact": null,
-      "tags": [
-        "cat.keyboard",
-        "best-practice"
-      ],
-      "description": "Ensures every accesskey attribute value is unique",
-      "help": "accesskey attribute value should be unique",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/accesskeys?application=axeAPI",
-      "nodes": [
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "accesskeys",
-              "data": "z",
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Accesskey attribute value is unique"
-            }
-          ],
-          "impact": null,
-          "html": "<a accesskey=\"z\" href=\"https://eternal-ember.fandom.com\" class=\"fandom-community-header__image\">",
-          "target": [
-            ".fandom-community-header__image"
-          ]
-        }
-      ]
-    },
-    {
       "id": "aria-allowed-attr",
-      "impact": "critical",
+      "impact": null,
       "tags": [
         "cat.aria",
         "wcag2a",
@@ -686,16 +690,16 @@
             }
           ],
           "impact": null,
-          "html": "<nav class=\"global-top-navigation\" id=\"global-top-navigation\" aria-label=\"Fandom top navigation\">",
+          "html": "<nav aria-label=\"Skip Link and Language Selector\" id=\"controls\" class=\"default-grid\">",
           "target": [
-            "#global-top-navigation"
+            "#controls"
           ]
         }
       ]
     },
     {
       "id": "aria-allowed-role",
-      "impact": "minor",
+      "impact": null,
       "tags": [
         "cat.aria",
         "best-practice"
@@ -717,46 +721,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div id=\"sticky-toc\" class=\"toc sticky-toc wds-is-hidden\" role=\"navigation\">",
+          "html": "<svg role=\"img\" width=\"46\" height=\"46\" version=\"1.1\" viewBox=\"0 0 360 360\" xmlns=\"http://www.w3.org/2000/svg\" aria-labelledby=\"w3c-homepage-title\">",
           "target": [
-            "#sticky-toc"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "aria-command-name",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "TTv5",
-        "TT6.a",
-        "EN-301-549",
-        "EN-9.4.1.2",
-        "ACT"
-      ],
-      "description": "Ensures every ARIA button, link and menuitem has an accessible name",
-      "help": "ARIA commands must have an accessible name",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-command-name?application=axeAPI",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute exists and is not empty"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div role=\"button\" class=\"wds-dropdown__toggle wds-button wds-is-text page-header__action-button\" aria-label=\"Page Tools\" aria-controls=\"p-cactions\" data-tracking-label=\"dropdown-actions\">\n\t\t\t\t\t\t\t<svg class=\"wds-icon wds-icon-small\"><use xlink:href=\"#wds-icons-more-small\"></use></svg>\t\t\t\t\t\t</div>",
-          "target": [
-            "div[aria-label=\"Page Tools\"]"
+            "svg[width=\"46\"]"
           ]
         }
       ]
@@ -788,9 +755,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<nav class=\"global-top-navigation\" id=\"global-top-navigation\" aria-label=\"Fandom top navigation\">",
+          "html": "<nav aria-label=\"Skip Link and Language Selector\" id=\"controls\" class=\"default-grid\">",
           "target": [
-            "#global-top-navigation"
+            "#controls"
           ]
         }
       ]
@@ -822,40 +789,9 @@
             }
           ],
           "impact": null,
-          "html": "<div role=\"button\" class=\"wds-dropdown__toggle wds-button wds-is-text page-header__action-button\" aria-label=\"Page Tools\" aria-controls=\"p-cactions\" data-tracking-label=\"dropdown-actions\">\n\t\t\t\t\t\t\t<svg class=\"wds-icon wds-icon-small\"><use xlink:href=\"#wds-icons-more-small\"></use></svg>\t\t\t\t\t\t</div>",
+          "html": "<svg role=\"img\" width=\"46\" height=\"46\" version=\"1.1\" viewBox=\"0 0 360 360\" xmlns=\"http://www.w3.org/2000/svg\" aria-labelledby=\"w3c-homepage-title\">",
           "target": [
-            "div[aria-label=\"Page Tools\"]"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "aria-dialog-name",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "best-practice"
-      ],
-      "description": "Ensures every ARIA dialog and alertdialog node has an accessible name",
-      "help": "ARIA dialog and alertdialog nodes should have an accessible name",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-dialog-name?application=axeAPI",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute exists and is not empty"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
-          "target": [
-            "div[aria-label=\"Privacy\"]"
+            "svg[width=\"46\"]"
           ]
         }
       ]
@@ -889,9 +825,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<body class=\"mainpage nowikiabar mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Eternal_Ember_Wiki page-Main_Page rootpage-Eternal_Ember_Wiki skin-fandomdesktop action-view ooui-theme-fandomooui wiki-eternalember theme-fandomdesktop-light odyssey odyssey-top-strategy\" data-theme=\"light\">",
+          "html": "<body id=\"top\" class=\"page-home \">",
           "target": [
-            "body"
+            "#top"
           ]
         }
       ]
@@ -939,16 +875,16 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"height: 0px; width: 0px; position: absolute; overflow: hidden;\" aria-hidden=\"true\">",
+          "html": "<svg focusable=\"false\" aria-hidden=\"true\" class=\"icon-translations \"><use xlink:href=\"/WAI/assets/images/icons.svg#icon-translations\"></use></svg>",
           "target": [
-            "body > svg[aria-hidden=\"true\"]"
+            ".icon-translations"
           ]
         }
       ]
     },
     {
       "id": "aria-prohibited-attr",
-      "impact": "serious",
+      "impact": null,
       "tags": [
         "cat.aria",
         "wcag2a",
@@ -973,9 +909,9 @@
             }
           ],
           "impact": null,
-          "html": "<nav class=\"global-top-navigation\" id=\"global-top-navigation\" aria-label=\"Fandom top navigation\">",
+          "html": "<nav aria-label=\"Skip Link and Language Selector\" id=\"controls\" class=\"default-grid\">",
           "target": [
-            "#global-top-navigation"
+            "#controls"
           ]
         }
       ]
@@ -1007,9 +943,43 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div role=\"button\" class=\"wds-dropdown__toggle wds-button wds-is-text page-header__action-button\" aria-label=\"Page Tools\" aria-controls=\"p-cactions\" data-tracking-label=\"dropdown-actions\">\n\t\t\t\t\t\t\t<svg class=\"wds-icon wds-icon-small\"><use xlink:href=\"#wds-icons-more-small\"></use></svg>\t\t\t\t\t\t</div>",
+          "html": "<svg role=\"img\" width=\"46\" height=\"46\" version=\"1.1\" viewBox=\"0 0 360 360\" xmlns=\"http://www.w3.org/2000/svg\" aria-labelledby=\"w3c-homepage-title\">",
           "target": [
-            "div[aria-label=\"Page Tools\"]"
+            "svg[width=\"46\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-required-children",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1"
+      ],
+      "description": "Ensures elements with an ARIA role that require child roles contain them",
+      "help": "Certain ARIA roles must contain particular children",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-required-children?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-required-children",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA children are present"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<ul class=\"w3c-clean-list\" role=\"list\">",
+          "target": [
+            ".wai-global-footer__cta > .w3c-clean-list[role=\"list\"]"
           ]
         }
       ]
@@ -1055,9 +1025,9 @@
             }
           ],
           "impact": null,
-          "html": "<div role=\"button\" class=\"wds-dropdown__toggle wds-button wds-is-text page-header__action-button\" aria-label=\"Page Tools\" aria-controls=\"p-cactions\" data-tracking-label=\"dropdown-actions\">\n\t\t\t\t\t\t\t<svg class=\"wds-icon wds-icon-small\"><use xlink:href=\"#wds-icons-more-small\"></use></svg>\t\t\t\t\t\t</div>",
+          "html": "<svg role=\"img\" width=\"46\" height=\"46\" version=\"1.1\" viewBox=\"0 0 360 360\" xmlns=\"http://www.w3.org/2000/svg\" aria-labelledby=\"w3c-homepage-title\">",
           "target": [
-            "div[aria-label=\"Page Tools\"]"
+            "svg[width=\"46\"]"
           ]
         }
       ]
@@ -1103,9 +1073,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<nav class=\"global-top-navigation\" id=\"global-top-navigation\" aria-label=\"Fandom top navigation\">",
+          "html": "<nav aria-label=\"Skip Link and Language Selector\" id=\"controls\" class=\"default-grid\">",
           "target": [
-            "#global-top-navigation"
+            "#controls"
           ]
         }
       ]
@@ -1137,58 +1107,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<nav class=\"global-top-navigation\" id=\"global-top-navigation\" aria-label=\"Fandom top navigation\">",
+          "html": "<nav aria-label=\"Skip Link and Language Selector\" id=\"controls\" class=\"default-grid\">",
           "target": [
-            "#global-top-navigation"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "avoid-inline-spacing",
-      "impact": null,
-      "tags": [
-        "cat.structure",
-        "wcag21aa",
-        "wcag1412",
-        "EN-301-549",
-        "EN-9.1.4.12",
-        "ACT"
-      ],
-      "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
-      "help": "Inline text spacing must be adjustable with custom stylesheets",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/avoid-inline-spacing?application=axeAPI",
-      "nodes": [
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "important-letter-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-word-spacing",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
-            },
-            {
-              "id": "important-line-height",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
-            }
-          ],
-          "none": [],
-          "impact": null,
-          "html": "<html class=\"client-js sse-other l2u-other cookie-banner-api-usp ve-available cookie-banner-visible\" lang=\"en\" dir=\"ltr\" style=\"--desktop-global-navigation-width: 66px; --left-panel-spacing: 66px; --skybox-impact-spacing: 0px; --cookie-banner-height: 71px;\">",
-          "target": [
-            "html"
+            "#controls"
           ]
         }
       ]
@@ -1225,9 +1146,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"global-explore-navigation__button\" aria-expanded=\"false\" aria-controls=\"menu__content\" data-testid=\"menu__button\">",
+          "html": "<button class=\"button button-icon button-nobg button-noborder\"><span><svg focusable=\"false\" aria-label=\"Submit Search\" class=\"icon-search \"><use xlink:href=\"/WAI/assets/images/icons.svg#icon-search\"></use></svg></span></button>",
           "target": [
-            "button[aria-controls=\"menu__content\"]"
+            ".button-icon"
           ]
         }
       ]
@@ -1264,81 +1185,117 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<h1 class=\"page-header__title\" id=\"firstHeading\">\n\t\t\t\t\tHome\t\t\t\t</h1>",
+                  "html": "<h1 class=\"visuallyhidden\">W3C Web Accessibility Initiative Home</h1>",
                   "target": [
-                    "#firstHeading"
+                    "h1"
                   ]
                 },
                 {
-                  "html": "<h2 id=\"mw-toc-heading\"><svg class=\"wds-icon wds-icon-tiny\"><use href=\"#wds-icons-bullet-list-tiny\"></use></svg>Contents</h2>",
+                  "html": "<h2 id=\"mwa-title\">\n      <span class=\"title\">Making the Web Accessible</span>\n    </h2>",
                   "target": [
-                    "#mw-toc-heading"
+                    "#mwa-title"
                   ]
                 },
                 {
-                  "html": "<h2>",
+                  "html": "<h3><svg focusable=\"false\" aria-hidden=\"true\" class=\"icon-hp-book mwa-icon mwa-icon-book\"><use xlink:href=\"/WAI/assets/images/icons.svg#icon-hp-book\"></use></svg>W3C</h3>",
                   "target": [
-                    "h2:nth-child(5)"
+                    ".making-web-accessible-box.col1 > h3"
                   ]
                 },
                 {
-                  "html": "<h2>",
+                  "html": "<h3><svg focusable=\"false\" aria-hidden=\"true\" class=\"icon-hp-tools mwa-icon\"><use xlink:href=\"/WAI/assets/images/icons.svg#icon-hp-tools\"></use></svg>WAI</h3>",
                   "target": [
-                    "h2:nth-child(8)"
+                    ".col2.making-web-accessible-box > h3"
                   ]
                 },
                 {
-                  "html": "<h2>",
+                  "html": "<h3><svg focusable=\"false\" aria-hidden=\"true\" class=\"icon-hp-computer mwa-icon mwa-icon-computer\"><use xlink:href=\"/WAI/assets/images/icons.svg#icon-hp-computer\"></use></svg>You</h3>",
                   "target": [
-                    "h2:nth-child(11)"
+                    ".col3 > h3"
                   ]
                 },
                 {
-                  "html": "<h2>",
+                  "html": "<h2 id=\"news-teaser-title\">\n            <span class=\"subtitle\">&nbsp;</span>\n            <span class=\"title\">News</span>\n          </h2>",
                   "target": [
-                    "h2:nth-child(13)"
+                    "#news-teaser-title"
                   ]
                 },
                 {
-                  "html": "<h2 class=\"global-footer__header\">",
+                  "html": "<h3>Current Work</h3>",
                   "target": [
-                    ".global-footer__header"
+                    "section[aria-labelledby=\"news-teaser-title\"] > h3"
                   ]
                 },
                 {
-                  "html": "<h3 class=\"global-footer__section-header\">Explore properties</h3>",
+                  "html": "<h3>WCAG 2.2 Approved as an ISO Standard</h3>",
                   "target": [
-                    ".global-footer__section-fandom-overview > .global-footer__section-header"
+                    "article:nth-child(5) > h3"
                   ]
                 },
                 {
-                  "html": "<h3 class=\"global-footer__section-header\">Follow Us</h3>",
+                  "html": "<h3>For Review: WCAG 3 Working Draft - September 2025</h3>",
                   "target": [
-                    ".global-footer__section-social-links > .global-footer__section-header"
+                    "article:nth-child(6) > h3"
                   ]
                 },
                 {
-                  "html": "<h3 class=\"global-footer__section-header\">Overview</h3>",
+                  "html": "<h3>For Wide Review: Accessibility Maturity Model \u2014 Updated Draft Note</h3>",
                   "target": [
-                    ".global-footer__section-site-overview > .global-footer__section-header"
+                    "article:nth-child(7) > h3"
                   ]
                 },
                 {
-                  "html": "<h3 class=\"global-footer__section-header\">Community</h3>",
+                  "html": "<h3>WCAG2ICT \u2014 W3C Group Note updated to coordinate with EN 301 549</h3>",
                   "target": [
-                    ".global-footer__section-community > .global-footer__section-header"
+                    "article:nth-child(8) > h3"
                   ]
                 },
                 {
-                  "html": "<h3 class=\"global-footer__section-header\">Advertise</h3>",
+                  "html": "<h3>Call for implementations: Accessibility Conformance Testing (ACT) Rules Format 1.1 \u2014 Candidate Recommendation</h3>",
                   "target": [
-                    ".global-footer__section-advertise > .global-footer__section-header"
+                    "article:nth-child(9) > h3"
                   ]
                 },
                 {
-                  "html": "<h3 class=\"global-footer__section-header\">Fandom Apps</h3>",
+                  "html": "<h3>Advancing Digital Accessibility with W3C WAI \u2014 keynote recording available</h3>",
                   "target": [
-                    ".global-footer__section-fandom-apps > .global-footer__section-header"
+                    "article:nth-child(10) > h3"
+                  ]
+                },
+                {
+                  "html": "<h3>DPUB-ARIA and DPUB-AAM are now Web Standards (W3C Recommendations)</h3>",
+                  "target": [
+                    "article:nth-child(11) > h3"
+                  ]
+                },
+                {
+                  "html": "<h2 id=\"audiences-title\">\n          <span class=\"subtitle\">See what we have for you: </span>\n          <span class=\"title\">Get Resources for\u2026</span>\n        </h2>",
+                  "target": [
+                    "#audiences-title"
+                  ]
+                },
+                {
+                  "html": "<h2 id=\"course-title\">\n            <span class=\"subtitle\">Training Course:</span>\n            <span class=\"title\">Digital Accessibility Foundations</span>\n          </h2>",
+                  "target": [
+                    "#course-title"
+                  ]
+                },
+                {
+                  "html": "<h2 id=\"perspectives-title\">\n          <span class=\"subtitle\">Web Accessibility Perspectives: </span>\n          <span class=\"title\">Video Captions</span></h2>",
+                  "target": [
+                    "#perspectives-title"
+                  ]
+                },
+                {
+                  "html": "<h2 id=\"media-title\">\n            <span class=\"subtitle\">Featured Resource: </span>\n            <span class=\"title\">Making Audio and Video Media Accessible</span>\n          </h2>",
+                  "target": [
+                    "#media-title"
+                  ]
+                },
+                {
+                  "html": "<h2 class=\"title\" id=\"sponsors\">Sponsors and Funders</h2>",
+                  "target": [
+                    "#sponsors"
                   ]
                 }
               ],
@@ -1350,9 +1307,9 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<main class=\"page__main\" lang=\"en\">",
+                  "html": "<main id=\"main\" lang=\"en\">",
                   "target": [
-                    "main"
+                    "#main"
                   ]
                 }
               ],
@@ -1363,7 +1320,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<html class=\"client-js sse-other l2u-other cookie-banner-api-usp ve-available cookie-banner-visible\" lang=\"en\" dir=\"ltr\" style=\"--desktop-global-navigation-width: 66px; --left-panel-spacing: 66px; --skybox-impact-spacing: 0px; --cookie-banner-height: 71px;\">",
+          "html": "<html class=\"has-js\" lang=\"en\" dir=\"ltr\" prefix=\"og: http://ogp.me/ns#\">",
           "target": [
             "html"
           ]
@@ -1372,7 +1329,7 @@
     },
     {
       "id": "color-contrast",
-      "impact": "serious",
+      "impact": null,
       "tags": [
         "cat.color",
         "wcag2aa",
@@ -1392,26 +1349,26 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#3a3a3a",
-                "bgColor": "#edeee8",
-                "contrastRatio": 9.74,
-                "fontSize": "18.0pt (24px)",
-                "fontWeight": "bold",
+                "fgColor": "#003366",
+                "bgColor": "#f2f2f2",
+                "contrastRatio": 11.26,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
                 "messageKey": null,
-                "expectedContrastRatio": "3:1",
+                "expectedContrastRatio": "4.5:1",
                 "shadowColor": null
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 9.74"
+              "message": "Element has sufficient color contrast of 11.26"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<b>Eternal Ember is a dark fantasy style Idle RPG game.</b>",
+          "html": "<a href=\"#main\">Skip to Content</a>",
           "target": [
-            "div:nth-child(2) > b"
+            "a[href$=\"#main\"]"
           ]
         }
       ]
@@ -1446,7 +1403,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<html class=\"client-js sse-other l2u-other cookie-banner-api-usp ve-available cookie-banner-visible\" lang=\"en\" dir=\"ltr\" style=\"--desktop-global-navigation-width: 66px; --left-panel-spacing: 66px; --skybox-impact-spacing: 0px; --cookie-banner-height: 71px;\">",
+          "html": "<html class=\"has-js\" lang=\"en\" dir=\"ltr\" prefix=\"og: http://ogp.me/ns#\">",
           "target": [
             "html"
           ]
@@ -1471,7 +1428,7 @@
           "any": [
             {
               "id": "duplicate-id-aria",
-              "data": "menu__content",
+              "data": "w3c-homepage-title",
               "relatedNodes": [],
               "impact": "critical",
               "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
@@ -1480,9 +1437,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div id=\"menu__content\" class=\"global-explore-navigation__panel-container\"></div>",
+          "html": "<title id=\"w3c-homepage-title\">W3C homepage</title>",
           "target": [
-            "#menu__content"
+            "#w3c-homepage-title"
           ]
         }
       ]
@@ -1511,9 +1468,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h1 class=\"page-header__title\" id=\"firstHeading\">\n\t\t\t\t\tHome\t\t\t\t</h1>",
+          "html": "<h1 class=\"visuallyhidden\">W3C Web Accessibility Initiative Home</h1>",
           "target": [
-            "#firstHeading"
+            "h1"
           ]
         }
       ]
@@ -1541,22 +1498,65 @@
             {
               "id": "multiple-label",
               "data": null,
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<label for=\"header-search\">\n              <span class=\"visuallyhidden\">Search:</span>\n              <input id=\"header-search\" type=\"search\" name=\"q\" placeholder=\"Search\" aria-label=\"Search\">\n            </label>",
+                  "target": [
+                    "label"
+                  ]
+                }
+              ],
               "impact": "moderate",
               "message": "Form field does not have multiple label elements"
             }
           ],
           "impact": null,
-          "html": "<input type=\"text\" class=\"search-app__input\" placeholder=\"Search\" value=\"\">",
+          "html": "<input id=\"header-search\" type=\"search\" name=\"q\" placeholder=\"Search\" aria-label=\"Search\">",
           "target": [
-            "#global-top-navigation > .search-container > .search-app__wrapper.search-app > .search-app__input[placeholder=\"Search\"][value=\"\"]"
+            "#header-search"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frame-title-unique",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT12.d",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures <iframe> and <frame> elements contain a unique title attribute",
+      "help": "Frames must have a unique title attribute",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-title-unique?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "unique-frame-title",
+              "data": "video",
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's title attribute is unique"
+            }
+          ],
+          "impact": null,
+          "html": "<iframe title=\"Video\" width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/iWO5N3n1DXU\" allowfullscreen=\"\"></iframe>",
+          "target": [
+            "iframe"
           ]
         }
       ]
     },
     {
       "id": "frame-title",
-      "impact": "serious",
+      "impact": null,
       "tags": [
         "cat.text-alternatives",
         "wcag2a",
@@ -1580,21 +1580,14 @@
               "relatedNodes": [],
               "impact": "serious",
               "message": "Element has a title attribute"
-            },
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute exists and is not empty"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<iframe id=\"google_ads_iframe_/5441/wka1b.LB/top_leaderboard/desktop/ucp_desktop-fandom-home/_not_a_top1k_wiki-gaming_0\" name=\"google_ads_iframe_/5441/wka1b.LB/top_leaderboard/desktop/ucp_desktop-fandom-home/_not_a_top1k_wiki-gaming_0\" title=\"3rd party ad content\" width=\"728\" height=\"90\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" aria-label=\"Advertisement\" tabindex=\"0\" allow=\"private-state-token-redemption;attribution-reporting\" data-load-complete=\"true\" data-google-container-id=\"1\" style=\"border: 0px; vertical-align: bottom;\">",
+          "html": "<iframe title=\"Video\" width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/iWO5N3n1DXU\" allowfullscreen=\"\"></iframe>",
           "target": [
-            "#google_ads_iframe_\\/5441\\/wka1b\\.LB\\/top_leaderboard\\/desktop\\/ucp_desktop-fandom-home\\/_not_a_top1k_wiki-gaming_0"
+            "iframe"
           ]
         }
       ]
@@ -1618,105 +1611,123 @@
                 "headingOrder": [
                   {
                     "ancestry": [
-                      "html > body > div:nth-child(5) > div:nth-child(2) > div > fandom-ad:nth-child(1) > div > iframe"
-                    ],
-                    "level": -1
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > div:nth-child(5) > div:nth-child(4) > div:nth-child(3) > main > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > h1"
+                      "html > body > main:nth-child(4) > h1:nth-child(1)"
                     ],
                     "level": 1
                   },
                   {
                     "ancestry": [
-                      "html > body > div:nth-child(5) > div:nth-child(4) > div:nth-child(3) > main > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(4) > div:nth-child(2) > h2:nth-child(1)"
+                      "html > body > main:nth-child(4) > section:nth-child(2) > header:nth-child(1) > h2:nth-child(1)"
                     ],
                     "level": 2
                   },
                   {
                     "ancestry": [
-                      "html > body > div:nth-child(5) > div:nth-child(4) > div:nth-child(3) > main > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(1) > div > h2:nth-child(5)"
+                      "html > body > main:nth-child(4) > section:nth-child(2) > div:nth-child(2) > div:nth-child(1) > h3:nth-child(1)"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > main:nth-child(4) > section:nth-child(2) > div:nth-child(2) > div:nth-child(2) > h3:nth-child(1)"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > main:nth-child(4) > section:nth-child(2) > div:nth-child(2) > div:nth-child(3) > h3:nth-child(1)"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > main:nth-child(4) > div:nth-child(3) > div:nth-child(1) > section > header:nth-child(1) > h2"
                     ],
                     "level": 2
                   },
                   {
                     "ancestry": [
-                      "html > body > div:nth-child(5) > div:nth-child(4) > div:nth-child(3) > main > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(1) > div > h2:nth-child(8)"
+                      "html > body > main:nth-child(4) > div:nth-child(3) > div:nth-child(1) > section > h3:nth-child(2)"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > main:nth-child(4) > div:nth-child(3) > div:nth-child(1) > section > article:nth-child(5) > h3:nth-child(1)"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > main:nth-child(4) > div:nth-child(3) > div:nth-child(1) > section > article:nth-child(6) > h3:nth-child(1)"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > main:nth-child(4) > div:nth-child(3) > div:nth-child(1) > section > article:nth-child(7) > h3:nth-child(1)"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > main:nth-child(4) > div:nth-child(3) > div:nth-child(1) > section > article:nth-child(8) > h3:nth-child(1)"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > main:nth-child(4) > div:nth-child(3) > div:nth-child(1) > section > article:nth-child(9) > h3:nth-child(1)"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > main:nth-child(4) > div:nth-child(3) > div:nth-child(1) > section > article:nth-child(10) > h3:nth-child(1)"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > main:nth-child(4) > div:nth-child(3) > div:nth-child(1) > section > article:nth-child(11) > h3:nth-child(1)"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > main:nth-child(4) > div:nth-child(3) > div:nth-child(2) > section:nth-child(1) > header:nth-child(1) > h2"
                     ],
                     "level": 2
                   },
                   {
                     "ancestry": [
-                      "html > body > div:nth-child(5) > div:nth-child(4) > div:nth-child(3) > main > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(1) > div > h2:nth-child(11)"
+                      "html > body > main:nth-child(4) > div:nth-child(3) > div:nth-child(2) > section:nth-child(2) > a > header:nth-child(1) > h2"
                     ],
                     "level": 2
                   },
                   {
                     "ancestry": [
-                      "html > body > div:nth-child(5) > div:nth-child(4) > div:nth-child(3) > main > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(1) > div > h2:nth-child(13)"
+                      "html > body > main:nth-child(4) > div:nth-child(3) > div:nth-child(2) > section:nth-child(3) > header:nth-child(1) > h2"
                     ],
                     "level": 2
                   },
                   {
                     "ancestry": [
-                      "html > body > div:nth-child(5) > div:nth-child(4) > div:nth-child(3) > main > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(3) > fandom-ad:nth-child(1) > div:nth-child(1) > iframe"
+                      "html > body > main:nth-child(4) > div:nth-child(3) > div:nth-child(2) > section:nth-child(3) > div:nth-child(2) > iframe"
                     ],
                     "level": -1
                   },
                   {
                     "ancestry": [
-                      "html > body > div:nth-child(5) > div:nth-child(4) > div:nth-child(4) > fandom-ad:nth-child(1) > div > iframe"
-                    ],
-                    "level": -1
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > div:nth-child(5) > footer:nth-child(5) > div:nth-child(1) > div:nth-child(1) > h2:nth-child(1)"
+                      "html > body > main:nth-child(4) > div:nth-child(3) > div:nth-child(2) > section:nth-child(4) > a > header:nth-child(1) > h2"
                     ],
                     "level": 2
                   },
                   {
                     "ancestry": [
-                      "html > body > div:nth-child(5) > footer:nth-child(5) > div:nth-child(1) > div:nth-child(1) > section:nth-child(2) > h3:nth-child(1)"
+                      "html > body > main:nth-child(4) > div:nth-child(4) > div > header:nth-child(1) > h2"
                     ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > div:nth-child(5) > footer:nth-child(5) > div:nth-child(1) > div:nth-child(1) > section:nth-child(3) > h3:nth-child(1)"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > div:nth-child(5) > footer:nth-child(5) > div:nth-child(1) > div:nth-child(2) > section > h3:nth-child(1)"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > div:nth-child(5) > footer:nth-child(5) > div:nth-child(1) > div:nth-child(3) > section:nth-child(1) > h3:nth-child(1)"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > div:nth-child(5) > footer:nth-child(5) > div:nth-child(1) > div:nth-child(3) > section:nth-child(2) > h3:nth-child(1)"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > div:nth-child(5) > footer:nth-child(5) > div:nth-child(1) > div:nth-child(4) > section:nth-child(1) > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > iframe:nth-child(58)"
-                    ],
-                    "level": -1
+                    "level": 2
                   }
                 ]
               },
@@ -1728,9 +1739,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h1 class=\"page-header__title\" id=\"firstHeading\">\n\t\t\t\t\tHome\t\t\t\t</h1>",
+          "html": "<h1 class=\"visuallyhidden\">W3C Web Accessibility Initiative Home</h1>",
           "target": [
-            "#firstHeading"
+            "h1"
           ]
         }
       ]
@@ -1765,7 +1776,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<html class=\"client-js sse-other l2u-other cookie-banner-api-usp ve-available cookie-banner-visible\" lang=\"en\" dir=\"ltr\" style=\"--desktop-global-navigation-width: 66px; --left-panel-spacing: 66px; --skybox-impact-spacing: 0px; --cookie-banner-height: 71px;\">",
+          "html": "<html class=\"has-js\" lang=\"en\" dir=\"ltr\" prefix=\"og: http://ogp.me/ns#\">",
           "target": [
             "html"
           ]
@@ -1802,7 +1813,7 @@
             }
           ],
           "impact": null,
-          "html": "<html class=\"client-js sse-other l2u-other cookie-banner-api-usp ve-available cookie-banner-visible\" lang=\"en\" dir=\"ltr\" style=\"--desktop-global-navigation-width: 66px; --left-panel-spacing: 66px; --skybox-impact-spacing: 0px; --cookie-banner-height: 71px;\">",
+          "html": "<html class=\"has-js\" lang=\"en\" dir=\"ltr\" prefix=\"og: http://ogp.me/ns#\">",
           "target": [
             "html"
           ]
@@ -1837,6 +1848,15 @@
               "relatedNodes": [],
               "impact": "critical",
               "message": "Element has an alt attribute"
+            },
+            {
+              "id": "presentational-role",
+              "data": {
+                "role": "presentation"
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element's default semantics were overriden with role=\"presentation\""
             }
           ],
           "all": [],
@@ -1850,9 +1870,9 @@
             }
           ],
           "impact": null,
-          "html": "<img src=\"https://static.wikia.nocookie.net/eternal-ember/images/e/e6/Site-logo.png/revision/latest?cb=20250626020153\" width=\"500\" height=\"500\" alt=\"Eternal Ember Wiki\" data-test=\"fandom-community-header-community-logo\">",
+          "html": "<img src=\"/WAI/content-images/news/2019-12-03-w3cx-accessibility-intro.jpg\" alt=\"\">",
           "target": [
-            "img[width=\"500\"]"
+            "section[aria-labelledby=\"course-title\"] > .teaser-c.stealthy-link.col1 > img"
           ]
         }
       ]
@@ -1881,9 +1901,9 @@
             }
           ],
           "impact": null,
-          "html": "<img src=\"https://static.wikia.nocookie.net/eternal-ember/images/e/e6/Site-logo.png/revision/latest?cb=20250626020153\" width=\"500\" height=\"500\" alt=\"Eternal Ember Wiki\" data-test=\"fandom-community-header-community-logo\">",
+          "html": "<img src=\"/WAI/content-images/news/2019-12-03-w3cx-accessibility-intro.jpg\" alt=\"\">",
           "target": [
-            "img[width=\"500\"]"
+            "section[aria-labelledby=\"course-title\"] > .teaser-c.stealthy-link.col1 > img"
           ]
         }
       ]
@@ -1912,9 +1932,9 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"text\" class=\"search-app__input\" placeholder=\"Search\" value=\"\">",
+          "html": "<input id=\"header-search\" type=\"search\" name=\"q\" placeholder=\"Search\" aria-label=\"Search\">",
           "target": [
-            "#global-top-navigation > .search-container > .search-app__wrapper.search-app > .search-app__input[placeholder=\"Search\"][value=\"\"]"
+            "#header-search"
           ]
         }
       ]
@@ -1941,6 +1961,45 @@
         {
           "any": [
             {
+              "id": "implicit-label",
+              "data": {
+                "implicitLabel": "Search: Search"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<label for=\"header-search\">\n              <span class=\"visuallyhidden\">Search:</span>\n              <input id=\"header-search\" type=\"search\" name=\"q\" placeholder=\"Search\" aria-label=\"Search\">\n            </label>",
+                  "target": [
+                    "label"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Form element has an implicit (wrapped) <label>"
+            },
+            {
+              "id": "explicit-label",
+              "data": {
+                "explicitLabel": "Search: Search"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<label for=\"header-search\">\n              <span class=\"visuallyhidden\">Search:</span>\n              <input id=\"header-search\" type=\"search\" name=\"q\" placeholder=\"Search\" aria-label=\"Search\">\n            </label>",
+                  "target": [
+                    "label"
+                  ]
+                }
+              ],
+              "impact": "critical",
+              "message": "Form element has an explicit <label>"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-label attribute exists and is not empty"
+            },
+            {
               "id": "non-empty-placeholder",
               "data": null,
               "relatedNodes": [],
@@ -1959,9 +2018,9 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"text\" class=\"search-app__input\" placeholder=\"Search\" value=\"\">",
+          "html": "<input id=\"header-search\" type=\"search\" name=\"q\" placeholder=\"Search\" aria-label=\"Search\">",
           "target": [
-            "#global-top-navigation > .search-container > .search-app__wrapper.search-app > .search-app__input[placeholder=\"Search\"][value=\"\"]"
+            "#header-search"
           ]
         }
       ]
@@ -1992,9 +2051,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<header class=\"fandom-community-header\">",
+          "html": "<header id=\"site-header\" class=\"default-grid with-gap\">",
           "target": [
-            ".fandom-community-header"
+            "#site-header"
           ]
         }
       ]
@@ -2025,7 +2084,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<footer class=\"global-footer\">",
+          "html": "<footer class=\"w3c-global-footer wai-global-footer default-grid\" aria-label=\"Site\">",
           "target": [
             "footer"
           ]
@@ -2058,9 +2117,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<main class=\"page__main\" lang=\"en\">",
+          "html": "<main id=\"main\" lang=\"en\">",
           "target": [
-            "main"
+            "#main"
           ]
         }
       ]
@@ -2089,9 +2148,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<header class=\"fandom-community-header\">",
+          "html": "<header id=\"site-header\" class=\"default-grid with-gap\">",
           "target": [
-            ".fandom-community-header"
+            "#site-header"
           ]
         }
       ]
@@ -2120,7 +2179,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<footer class=\"global-footer\">",
+          "html": "<footer class=\"w3c-global-footer wai-global-footer default-grid\" aria-label=\"Site\">",
           "target": [
             "footer"
           ]
@@ -2151,9 +2210,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<main class=\"page__main\" lang=\"en\">",
+          "html": "<main id=\"main\" lang=\"en\">",
           "target": [
-            "main"
+            "#main"
           ]
         }
       ]
@@ -2175,14 +2234,21 @@
             {
               "id": "page-has-main",
               "data": null,
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<main id=\"main\" lang=\"en\">",
+                  "target": [
+                    "#main"
+                  ]
+                }
+              ],
               "impact": "moderate",
               "message": "Document has at least one main landmark"
             }
           ],
           "none": [],
           "impact": null,
-          "html": "<html class=\"client-js sse-other l2u-other cookie-banner-api-usp ve-available cookie-banner-visible\" lang=\"en\" dir=\"ltr\" style=\"--desktop-global-navigation-width: 66px; --left-panel-spacing: 66px; --skybox-impact-spacing: 0px; --cookie-banner-height: 71px;\">",
+          "html": "<html class=\"has-js\" lang=\"en\" dir=\"ltr\" prefix=\"og: http://ogp.me/ns#\">",
           "target": [
             "html"
           ]
@@ -2206,7 +2272,7 @@
               "id": "landmark-is-unique",
               "data": {
                 "role": "navigation",
-                "accessibleText": "fandom top navigation"
+                "accessibleText": "skip link and language selector"
               },
               "relatedNodes": [],
               "impact": "moderate",
@@ -2216,16 +2282,59 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<nav class=\"global-top-navigation\" id=\"global-top-navigation\" aria-label=\"Fandom top navigation\">",
+          "html": "<nav aria-label=\"Skip Link and Language Selector\" id=\"controls\" class=\"default-grid\">",
           "target": [
-            "#global-top-navigation"
+            "#controls"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "link-in-text-block",
+      "impact": null,
+      "tags": [
+        "cat.color",
+        "wcag2a",
+        "wcag141",
+        "TTv5",
+        "TT13.a",
+        "EN-301-549",
+        "EN-9.1.4.1"
+      ],
+      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+      "help": "Links must be distinguishable without relying on color",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/link-in-text-block?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "link-in-text-block-style",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<p>",
+                  "target": [
+                    "article:nth-child(5) > p:nth-child(3)"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Links can be distinguished from surrounding text by visual styling"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"https://www.w3.org/WAI/standards-guidelines/wcag/\">WCAG</a>",
+          "target": [
+            "article:nth-child(5) > p:nth-child(3) > a:nth-child(1)"
           ]
         }
       ]
     },
     {
       "id": "link-name",
-      "impact": "serious",
+      "impact": null,
       "tags": [
         "cat.name-role-value",
         "wcag2a",
@@ -2247,11 +2356,11 @@
         {
           "any": [
             {
-              "id": "aria-label",
+              "id": "has-visible-text",
               "data": null,
               "relatedNodes": [],
               "impact": "serious",
-              "message": "aria-label attribute exists and is not empty"
+              "message": "Element has text that is visible to screen readers"
             }
           ],
           "all": [],
@@ -2265,9 +2374,9 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"https://www.fandom.com/\" class=\"global-top-navigation__fandom-logo\" data-tracking-label=\"fandom-logo\" data-testid=\"fandom-logo\" aria-label=\"Fandom homepage\">\n\t<svg class=\"wds-icon\"><use xlink:href=\"#wds-brand-fandom-logo\"></use></svg></a>",
+          "html": "<a href=\"#main\">Skip to Content</a>",
           "target": [
-            ".global-top-navigation__fandom-logo"
+            "a[href$=\"#main\"]"
           ]
         }
       ]
@@ -2299,9 +2408,9 @@
             }
           ],
           "impact": null,
-          "html": "<ul class=\"wds-tabs\">",
+          "html": "<ul>",
           "target": [
-            ".fandom-community-header > .fandom-community-header__local-navigation > .wds-tabs"
+            "#controls > ul"
           ]
         }
       ]
@@ -2333,9 +2442,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li class=\"wds-dropdown explore-menu\">",
+          "html": "<li><a href=\"#main\">Skip to Content</a></li>",
           "target": [
-            ".fandom-community-header > .fandom-community-header__local-navigation > .wds-tabs > .explore-menu.wds-dropdown"
+            "#controls > ul > li:nth-child(1)"
           ]
         }
       ]
@@ -2364,7 +2473,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0\">",
+          "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">",
           "target": [
             "meta[name=\"viewport\"]"
           ]
@@ -2399,7 +2508,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0\">",
+          "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">",
           "target": [
             "meta[name=\"viewport\"]"
           ]
@@ -2435,9 +2544,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"global-explore-navigation__button\" aria-expanded=\"false\" aria-controls=\"menu__content\" data-testid=\"menu__button\">",
+          "html": "<svg role=\"img\" width=\"46\" height=\"46\" version=\"1.1\" viewBox=\"0 0 360 360\" xmlns=\"http://www.w3.org/2000/svg\" aria-labelledby=\"w3c-homepage-title\">",
           "target": [
-            "button[aria-controls=\"menu__content\"]"
+            "svg[width=\"46\"]"
           ]
         }
       ]
@@ -2459,14 +2568,21 @@
             {
               "id": "page-has-heading-one",
               "data": null,
-              "relatedNodes": [],
+              "relatedNodes": [
+                {
+                  "html": "<h1 class=\"visuallyhidden\">W3C Web Accessibility Initiative Home</h1>",
+                  "target": [
+                    "h1"
+                  ]
+                }
+              ],
               "impact": "moderate",
               "message": "Page has at least one level-one heading"
             }
           ],
           "none": [],
           "impact": null,
-          "html": "<html class=\"client-js sse-other l2u-other cookie-banner-api-usp ve-available cookie-banner-visible\" lang=\"en\" dir=\"ltr\" style=\"--desktop-global-navigation-width: 66px; --left-panel-spacing: 66px; --skybox-impact-spacing: 0px; --cookie-banner-height: 71px;\">",
+          "html": "<html class=\"has-js\" lang=\"en\" dir=\"ltr\" prefix=\"og: http://ogp.me/ns#\">",
           "target": [
             "html"
           ]
@@ -2505,16 +2621,16 @@
             }
           ],
           "impact": null,
-          "html": "<img style=\"\" src=\"data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" title=\"The 9 Things You Should Do After Entering the Game (134 KB)\" class=\"thumbimage lazyload\" alt=\"\" height=\"180\" width=\"180\" data-image-name=\"1.png\" data-image-key=\"1.png\" data-relevant=\"1\" data-src=\"https://static.wikia.nocookie.net/eternal-ember/images/4/4a/1.png/revision/latest/scale-to-width-down/180?cb=20250304021448\">",
+          "html": "<img src=\"/WAI/content-images/news/2019-12-03-w3cx-accessibility-intro.jpg\" alt=\"\">",
           "target": [
-            "img[data-image-name=\"1.png\"]"
+            "section[aria-labelledby=\"course-title\"] > .teaser-c.stealthy-link.col1 > img"
           ]
         }
       ]
     },
     {
       "id": "region",
-      "impact": "moderate",
+      "impact": null,
       "tags": [
         "cat.keyboard",
         "best-practice"
@@ -2538,40 +2654,55 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"notifications-placeholder\">\n\t\t\t\t<div class=\"banner-notifications-placeholder\" style=\"height: 0px;\">\n\t\t\t<div class=\"wds-banner-notification__container\">\n\t\n</div>\n\t\t</div>\n\t</div>",
+          "html": "<nav aria-label=\"Skip Link and Language Selector\" id=\"controls\" class=\"default-grid\">",
           "target": [
-            ".notifications-placeholder"
+            "#controls"
           ]
         }
       ]
     },
     {
-      "id": "tabindex",
+      "id": "svg-img-alt",
       "impact": null,
       "tags": [
-        "cat.keyboard",
-        "best-practice"
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT7.a",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "ACT"
       ],
-      "description": "Ensures tabindex attribute values are not greater than 0",
-      "help": "Elements should not have tabindex greater than zero",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/tabindex?application=axeAPI",
+      "description": "Ensures <svg> elements with an img, graphics-document or graphics-symbol role have an accessible text",
+      "help": "<svg> elements with an img role must have an alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/svg-img-alt?application=axeAPI",
       "nodes": [
         {
           "any": [
             {
-              "id": "tabindex",
+              "id": "svg-non-empty-title",
               "data": null,
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element does not have a tabindex greater than 0"
+              "message": "Element has a child that is a title"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute exists and references elements that are visible to screen readers"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<iframe id=\"google_ads_iframe_/5441/wka1b.LB/top_leaderboard/desktop/ucp_desktop-fandom-home/_not_a_top1k_wiki-gaming_0\" name=\"google_ads_iframe_/5441/wka1b.LB/top_leaderboard/desktop/ucp_desktop-fandom-home/_not_a_top1k_wiki-gaming_0\" title=\"3rd party ad content\" width=\"728\" height=\"90\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" aria-label=\"Advertisement\" tabindex=\"0\" allow=\"private-state-token-redemption;attribution-reporting\" data-load-complete=\"true\" data-google-container-id=\"1\" style=\"border: 0px; vertical-align: bottom;\">",
+          "html": "<svg role=\"img\" width=\"46\" height=\"46\" version=\"1.1\" viewBox=\"0 0 360 360\" xmlns=\"http://www.w3.org/2000/svg\" aria-labelledby=\"w3c-homepage-title\">",
           "target": [
-            "#google_ads_iframe_\\/5441\\/wka1b\\.LB\\/top_leaderboard\\/desktop\\/ucp_desktop-fandom-home\\/_not_a_top1k_wiki-gaming_0"
+            "svg[width=\"46\"]"
           ]
         }
       ]
@@ -2606,104 +2737,15 @@
             }
           ],
           "impact": null,
-          "html": "<main class=\"page__main\" lang=\"en\">",
+          "html": "<a lang=\"en\" class=\"home w3c\" href=\"https://www.w3.org/\">",
           "target": [
-            "main"
+            ".w3c"
           ]
         }
       ]
     }
   ],
   "incomplete": [
-    {
-      "id": "aria-prohibited-attr",
-      "impact": "serious",
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures ARIA attributes are not prohibited for an element's role",
-      "help": "Elements must only use permitted ARIA attributes",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-prohibited-attr?application=axeAPI",
-      "nodes": [
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "aria-prohibited-attr",
-              "data": {
-                "role": null,
-                "nodeName": "div",
-                "messageKey": "noRoleSingular",
-                "prohibited": [
-                  "aria-labelledby"
-                ]
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-labelledby attribute is not well supported on a div with no valid role attribute."
-            }
-          ],
-          "impact": "serious",
-          "html": "<div class=\"sticky-toc-wrapper\" aria-labelledby=\"mw-sticky-toc-heading\">",
-          "target": [
-            ".sticky-toc-wrapper"
-          ],
-          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported on a div with no valid role attribute."
-        }
-      ]
-    },
-    {
-      "id": "color-contrast",
-      "impact": "serious",
-      "tags": [
-        "cat.color",
-        "wcag2aa",
-        "wcag143",
-        "TTv5",
-        "TT13.c",
-        "EN-301-549",
-        "EN-9.1.4.3",
-        "ACT"
-      ],
-      "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/color-contrast?application=axeAPI",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": null,
-                "bgColor": null,
-                "contrastRatio": 0,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
-                "messageKey": "bgOverlap",
-                "expectedContrastRatio": "4.5:1",
-                "shadowColor": null
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's background color could not be determined because it is overlapped by another element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<input type=\"text\" class=\"search-app__input\" placeholder=\"Search\" value=\"\">",
-          "target": [
-            "#global-top-navigation > .search-container > .search-app__wrapper.search-app > .search-app__input[placeholder=\"Search\"][value=\"\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
-        }
-      ]
-    },
     {
       "id": "frame-tested",
       "impact": "critical",
@@ -2729,608 +2771,14 @@
           ],
           "none": [],
           "impact": "critical",
-          "html": "<iframe id=\"google_ads_iframe_/5441/wka1b.LB/top_leaderboard/desktop/ucp_desktop-fandom-home/_not_a_top1k_wiki-gaming_0\" name=\"google_ads_iframe_/5441/wka1b.LB/top_leaderboard/desktop/ucp_desktop-fandom-home/_not_a_top1k_wiki-gaming_0\" title=\"3rd party ad content\" width=\"728\" height=\"90\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" aria-label=\"Advertisement\" tabindex=\"0\" allow=\"private-state-token-redemption;attribution-reporting\" data-load-complete=\"true\" data-google-container-id=\"1\" style=\"border: 0px; vertical-align: bottom;\">",
+          "html": "<iframe title=\"Video\" width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/iWO5N3n1DXU\" allowfullscreen=\"\"></iframe>",
           "target": [
-            "#google_ads_iframe_\\/5441\\/wka1b\\.LB\\/top_leaderboard\\/desktop\\/ucp_desktop-fandom-home\\/_not_a_top1k_wiki-gaming_0"
+            "iframe"
           ],
           "failureSummary": "Fix all of the following:\n  The iframe still has to be tested with axe-core"
         }
       ]
-    },
-    {
-      "id": "frame-title-unique",
-      "impact": "serious",
-      "tags": [
-        "cat.text-alternatives",
-        "wcag2a",
-        "wcag412",
-        "TTv5",
-        "TT12.d",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures <iframe> and <frame> elements contain a unique title attribute",
-      "help": "Frames must have a unique title attribute",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-title-unique?application=axeAPI",
-      "nodes": [
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "unique-frame-title",
-              "data": "3rd party ad content",
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's title attribute is not unique"
-            }
-          ],
-          "impact": "serious",
-          "html": "<iframe id=\"google_ads_iframe_/5441/wka1b.LB/top_leaderboard/desktop/ucp_desktop-fandom-home/_not_a_top1k_wiki-gaming_0\" name=\"google_ads_iframe_/5441/wka1b.LB/top_leaderboard/desktop/ucp_desktop-fandom-home/_not_a_top1k_wiki-gaming_0\" title=\"3rd party ad content\" width=\"728\" height=\"90\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" aria-label=\"Advertisement\" tabindex=\"0\" allow=\"private-state-token-redemption;attribution-reporting\" data-load-complete=\"true\" data-google-container-id=\"1\" style=\"border: 0px; vertical-align: bottom;\">",
-          "target": [
-            "#google_ads_iframe_\\/5441\\/wka1b\\.LB\\/top_leaderboard\\/desktop\\/ucp_desktop-fandom-home\\/_not_a_top1k_wiki-gaming_0"
-          ],
-          "failureSummary": "Fix all of the following:\n  Element's title attribute is not unique"
-        }
-      ]
     }
   ],
-  "violations": [
-    {
-      "id": "aria-allowed-attr",
-      "impact": "critical",
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures an element's role supports its ARIA attributes",
-      "help": "Elements must only use supported ARIA attributes",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-allowed-attr?application=axeAPI",
-      "nodes": [
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "aria-allowed-attr",
-              "data": [
-                "aria-expanded=\"false\""
-              ],
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "ARIA attribute is not allowed: aria-expanded=\"false\""
-            }
-          ],
-          "none": [],
-          "impact": "critical",
-          "html": "<header class=\"wds-collapsible-panel__header\" aria-controls=\"collapsible-content-categories\" aria-expanded=\"false\" tabindex=\"0\">\n\t\t\tCategories\t\t\t<svg class=\"wds-icon wds-icon-small\"><use xlink:href=\"#wds-icons-menu-control-small\"></use></svg>\t\t</header>",
-          "target": [
-            ".wds-collapsible-panel__header"
-          ],
-          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
-        }
-      ]
-    },
-    {
-      "id": "aria-allowed-role",
-      "impact": "minor",
-      "tags": [
-        "cat.aria",
-        "best-practice"
-      ],
-      "description": "Ensures role attribute has an appropriate value for the element",
-      "help": "ARIA role should be appropriate for the element",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-allowed-role?application=axeAPI",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "aria-allowed-role",
-              "data": [
-                "button"
-              ],
-              "relatedNodes": [],
-              "impact": "minor",
-              "message": "ARIA role button is not allowed for given element"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "minor",
-          "html": "<input type=\"checkbox\" role=\"button\" id=\"toctogglecheckbox\" class=\"toctogglecheckbox\" style=\"display:none\" aria-label=\"show\">",
-          "target": [
-            "#toctogglecheckbox"
-          ],
-          "failureSummary": "Fix any of the following:\n  ARIA role button is not allowed for given element"
-        }
-      ]
-    },
-    {
-      "id": "color-contrast",
-      "impact": "serious",
-      "tags": [
-        "cat.color",
-        "wcag2aa",
-        "wcag143",
-        "TTv5",
-        "TT13.c",
-        "EN-301-549",
-        "EN-9.1.4.3",
-        "ACT"
-      ],
-      "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/color-contrast?application=axeAPI",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#917859",
-                "bgColor": "#edeee8",
-                "contrastRatio": 3.57,
-                "fontSize": "15.0pt (20px)",
-                "fontWeight": "normal",
-                "messageKey": null,
-                "expectedContrastRatio": "4.5:1",
-                "shadowColor": null
-              },
-              "relatedNodes": [
-                {
-                  "html": "<main class=\"page__main\" lang=\"en\">",
-                  "target": [
-                    "main"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 3.57 (foreground color: #917859, background color: #edeee8, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<font color=\"#917859\">Group up the heroes, explore the vast land, fight monsters, and gain loots.</font>",
-          "target": [
-            "font"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.57 (foreground color: #917859, background color: #edeee8, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#888788",
-                "bgColor": "#edeee8",
-                "contrastRatio": 3.06,
-                "fontSize": "7.5pt (10px)",
-                "fontWeight": "normal",
-                "messageKey": null,
-                "expectedContrastRatio": "4.5:1",
-                "shadowColor": null
-              },
-              "relatedNodes": [
-                {
-                  "html": "<main class=\"page__main\" lang=\"en\">",
-                  "target": [
-                    "main"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 3.06 (foreground color: #888788, background color: #edeee8, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<label id=\"label-top_boxad\" class=\"ae-translatable-label\" data-key=\"advertisement\">\n\tAdvertisement\n</label>",
-          "target": [
-            "#label-top_boxad"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.06 (foreground color: #888788, background color: #edeee8, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-        }
-      ]
-    },
-    {
-      "id": "frame-title",
-      "impact": "serious",
-      "tags": [
-        "cat.text-alternatives",
-        "wcag2a",
-        "wcag412",
-        "section508",
-        "section508.22.i",
-        "TTv5",
-        "TT12.d",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures <iframe> and <frame> elements have an accessible name",
-      "help": "Frames must have an accessible name",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-title?application=axeAPI",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "non-empty-title",
-              "data": {
-                "messageKey": "noAttr"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has no title attribute"
-            },
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute does not exist or is empty"
-            },
-            {
-              "id": "aria-labelledby",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
-            },
-            {
-              "id": "presentational-role",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<iframe id=\"li_sync_frame\" src=\"https://i.liadm.com/sync-container?duid=17cd767946ca--01ked0777wc3caq85rhwew86yv&amp;appId=a-07ev&amp;euns=0&amp;s=&amp;us_privacy=1YNN&amp;version=v3.13.1&amp;cd=.fandom.com&amp;pv=6e49ff99-3e39-4aa1-bbe6-b342856add50\" style=\"opacity: 0; width: 0px; height: 0px; border: 0px; position: absolute; top: 0px; left: 0px; z-index: -1000;\">",
-          "target": [
-            "#li_sync_frame"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has no title attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-        }
-      ]
-    },
-    {
-      "id": "link-in-text-block",
-      "impact": "serious",
-      "tags": [
-        "cat.color",
-        "wcag2a",
-        "wcag141",
-        "TTv5",
-        "TT13.a",
-        "EN-301-549",
-        "EN-9.1.4.1"
-      ],
-      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
-      "help": "Links must be distinguishable without relying on color",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/link-in-text-block?application=axeAPI",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "link-in-text-block",
-              "data": {
-                "messageKey": "fgContrast",
-                "contrastRatio": 1.33,
-                "requiredContrastRatio": 3,
-                "nodeColor": "#6d4306",
-                "parentColor": "#3a3a3a"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"license-description\">\n\t\tCommunity content is available under <a href=\"https://www.fandom.com/licensing\">CC-BY-SA</a> unless otherwise noted.\t</div>",
-                  "target": [
-                    ".license-description"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "The link has insufficient color contrast of 1.33:1 with the surrounding text. (Minimum contrast is 3:1, link text: #6d4306, surrounding text: #3a3a3a)"
-            },
-            {
-              "id": "link-in-text-block-style",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"license-description\">\n\t\tCommunity content is available under <a href=\"https://www.fandom.com/licensing\">CC-BY-SA</a> unless otherwise noted.\t</div>",
-                  "target": [
-                    ".license-description"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<a href=\"https://www.fandom.com/licensing\">CC-BY-SA</a>",
-          "target": [
-            ".license-description > a"
-          ],
-          "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 1.33:1 with the surrounding text. (Minimum contrast is 3:1, link text: #6d4306, surrounding text: #3a3a3a)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-        }
-      ]
-    },
-    {
-      "id": "link-name",
-      "impact": "serious",
-      "tags": [
-        "cat.name-role-value",
-        "wcag2a",
-        "wcag244",
-        "wcag412",
-        "section508",
-        "section508.22.a",
-        "TTv5",
-        "TT6.a",
-        "EN-301-549",
-        "EN-9.2.4.4",
-        "EN-9.4.1.2",
-        "ACT"
-      ],
-      "description": "Ensures links have discernible text",
-      "help": "Links must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/link-name?application=axeAPI",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have text that is visible to screen readers"
-            },
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute does not exist or is empty"
-            },
-            {
-              "id": "aria-labelledby",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
-            },
-            {
-              "id": "non-empty-title",
-              "data": {
-                "messageKey": "noAttr"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has no title attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is in tab order and does not have accessible text"
-            }
-          ],
-          "impact": "serious",
-          "html": "<a href=\"https://reddit.com/submit?url=https%3A%2F%2Feternal-ember.fandom.com%2Fwiki%2FEternal_Ember_Wiki%3Fsh%3Dnull__6987%26m%3D3%26utm_source%3Dreddit%26utm_campaign%3Dh2s&amp;title=\"><svg class=\"wds-icon wds-icon-small\"><use xlink:href=\"#wds-icons-reddit-small\"></use></svg></a>",
-          "target": [
-            ".highlight__d-flex > .highlight__action:nth-child(1) > a"
-          ],
-          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have text that is visible to screen readers"
-            },
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute does not exist or is empty"
-            },
-            {
-              "id": "aria-labelledby",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
-            },
-            {
-              "id": "non-empty-title",
-              "data": {
-                "messageKey": "noAttr"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has no title attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is in tab order and does not have accessible text"
-            }
-          ],
-          "impact": "serious",
-          "html": "<a href=\"https://www.facebook.com/dialog/share?app_id=112328095453510&amp;href=https%3A%2F%2Feternal-ember.fandom.com%2Fwiki%2FEternal_Ember_Wiki%3Fsh%3Dnull__6987%26m%3D2%26utm_source%3Dfacebook%26utm_campaign%3Dh2s&amp;redirect_uri=https%3A%2F%2Feternal-ember.fandom.com%2Fwiki%2FEternal_Ember_Wiki&amp;quote=&amp;display=page\">",
-          "target": [
-            ".highlight__d-flex > .highlight__action:nth-child(2) > a"
-          ],
-          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have text that is visible to screen readers"
-            },
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute does not exist or is empty"
-            },
-            {
-              "id": "aria-labelledby",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
-            },
-            {
-              "id": "non-empty-title",
-              "data": {
-                "messageKey": "noAttr"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has no title attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is in tab order and does not have accessible text"
-            }
-          ],
-          "impact": "serious",
-          "html": "<a href=\"https://twitter.com/intent/tweet?text=&amp;url=https%3A%2F%2Feternal-ember.fandom.com%2Fwiki%2FEternal_Ember_Wiki%3Fsh%3Dnull__6987%26m%3D1%26utm_source%3Dtwitter%26utm_campaign%3Dh2s\"><svg class=\"wds-icon wds-icon-small\"><use xlink:href=\"#wds-icons-twitter-small\"></use></svg></a>",
-          "target": [
-            ".highlight__action:nth-child(3) > a"
-          ],
-          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
-        }
-      ]
-    },
-    {
-      "id": "region",
-      "impact": "moderate",
-      "tags": [
-        "cat.keyboard",
-        "best-practice"
-      ],
-      "description": "Ensures all page content is contained by landmarks",
-      "help": "All page content should be contained by landmarks",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/region?application=axeAPI",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "region",
-              "data": {
-                "isIframe": false
-              },
-              "relatedNodes": [],
-              "impact": "moderate",
-              "message": "Some page content is not contained by landmarks"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "moderate",
-          "html": "<label id=\"label-top_leaderboard\" class=\"ae-translatable-label\" data-key=\"advertisement\">\n\tAdvertisement\n</label>",
-          "target": [
-            "#label-top_leaderboard"
-          ],
-          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-        },
-        {
-          "any": [
-            {
-              "id": "region",
-              "data": {
-                "isIframe": false
-              },
-              "relatedNodes": [],
-              "impact": "moderate",
-              "message": "Some page content is not contained by landmarks"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "moderate",
-          "html": "<a href=\"#page-header\" class=\"skip-link wds-button wds-is-text\" tabindex=\"0\">Skip to content</a>",
-          "target": [
-            ".skip-link"
-          ],
-          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-        },
-        {
-          "any": [
-            {
-              "id": "region",
-              "data": {
-                "isIframe": false
-              },
-              "relatedNodes": [],
-              "impact": "moderate",
-              "message": "Some page content is not contained by landmarks"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "moderate",
-          "html": "<span>Search this wiki</span>",
-          "target": [
-            ".highlight__action:nth-child(1) > a > span"
-          ],
-          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-        },
-        {
-          "any": [
-            {
-              "id": "region",
-              "data": {
-                "isIframe": false
-              },
-              "relatedNodes": [],
-              "impact": "moderate",
-              "message": "Some page content is not contained by landmarks"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "moderate",
-          "html": "<div class=\"highlight__action \"><a href=\"https://eternal-ember.fandom.com/wiki/Special:Search?scope=cross-wiki&amp;query=&amp;h=1&amp;isFromHighlightActions=on\"><span>Search all wikis</span></a></div>",
-          "target": [
-            ".highlight__actions > .highlight__action:nth-child(2)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-        }
-      ]
-    }
-  ]
+  "violations": []
 }
