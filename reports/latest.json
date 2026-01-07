@@ -13,8 +13,8 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-01-07T21:07:22.322Z",
-  "url": "https://www.nasa.gov/",
+  "timestamp": "2026-01-07T22:04:41.640Z",
+  "url": "https://dequeuniversity.com/",
   "toolOptions": {
     "resultTypes": [
       "violations"
@@ -69,6 +69,24 @@
       "description": "Ensure aria-braillelabel and aria-brailleroledescription have a non-braille equivalent",
       "help": "aria-braille attributes must have a non-braille equivalent",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-braille-equivalent?application=axeAPI",
+      "nodes": []
+    },
+    {
+      "id": "aria-command-name",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT"
+      ],
+      "description": "Ensures every ARIA button, link and menuitem has an accessible name",
+      "help": "ARIA commands must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-command-name?application=axeAPI",
       "nodes": []
     },
     {
@@ -129,36 +147,6 @@
       "description": "Ensures every ARIA progressbar node has an accessible name",
       "help": "ARIA progressbar nodes must have an accessible name",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-progressbar-name?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "aria-required-children",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag131",
-        "EN-301-549",
-        "EN-9.1.3.1"
-      ],
-      "description": "Ensures elements with an ARIA role that require child roles contain them",
-      "help": "Certain ARIA roles must contain particular children",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-required-children?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "aria-required-parent",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag131",
-        "EN-301-549",
-        "EN-9.1.3.1"
-      ],
-      "description": "Ensures elements with an ARIA role that require parent roles are contained by them",
-      "help": "Certain ARIA roles must be contained by particular parents",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-required-parent?application=axeAPI",
       "nodes": []
     },
     {
@@ -296,6 +284,23 @@
       "nodes": []
     },
     {
+      "id": "form-field-multiple-labels",
+      "impact": null,
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag332",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.3.3.2"
+      ],
+      "description": "Ensures form field does not have multiple label elements",
+      "help": "Form field must not have multiple label elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/form-field-multiple-labels?application=axeAPI",
+      "nodes": []
+    },
+    {
       "id": "frame-focusable-content",
       "impact": null,
       "tags": [
@@ -420,6 +425,38 @@
       "nodes": []
     },
     {
+      "id": "label-title-only",
+      "impact": null,
+      "tags": [
+        "cat.forms",
+        "best-practice"
+      ],
+      "description": "Ensures that every form element has a visible label and is not solely labeled using hidden labels, or the title or aria-describedby attributes",
+      "help": "Form elements should have a visible label",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/label-title-only?application=axeAPI",
+      "nodes": []
+    },
+    {
+      "id": "label",
+      "impact": null,
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.n",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT"
+      ],
+      "description": "Ensures every form element has a label",
+      "help": "Form elements must have labels",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/label?application=axeAPI",
+      "nodes": []
+    },
+    {
       "id": "landmark-complementary-is-top-level",
       "impact": null,
       "tags": [
@@ -515,25 +552,6 @@
       "nodes": []
     },
     {
-      "id": "scrollable-region-focusable",
-      "impact": null,
-      "tags": [
-        "cat.keyboard",
-        "wcag2a",
-        "wcag211",
-        "wcag213",
-        "TTv5",
-        "TT4.a",
-        "EN-301-549",
-        "EN-9.2.1.1",
-        "EN-9.2.1.3"
-      ],
-      "description": "Ensure elements that have scrollable content are accessible by keyboard",
-      "help": "Scrollable region must have keyboard access",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/scrollable-region-focusable?application=axeAPI",
-      "nodes": []
-    },
-    {
       "id": "select-name",
       "impact": null,
       "tags": [
@@ -570,18 +588,6 @@
       "description": "Ensures that server-side image maps are not used",
       "help": "Server-side image maps must not be used",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/server-side-image-map?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "skip-link",
-      "impact": null,
-      "tags": [
-        "cat.keyboard",
-        "best-practice"
-      ],
-      "description": "Ensure all skip links have a focusable target",
-      "help": "The skip-link target should exist and be focusable",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/skip-link?application=axeAPI",
       "nodes": []
     },
     {
@@ -746,9 +752,9 @@
             }
           ],
           "impact": null,
-          "html": "<button class=\"usa-accordion__button usa-nav__link display-flex flex-align-center\" aria-expanded=\"false\" id=\"global-navigation-trigger\">",
+          "html": "<button id=\"cookie-alert-accept\" class=\"cookie-alert-button\" onclick=\"recordUserResponse(1, 1)\" aria-describedby=\"cookie-alert-text\">\n            Accept        </button>",
           "target": [
-            "#global-navigation-trigger"
+            "#cookie-alert-accept"
           ]
         }
       ]
@@ -777,46 +783,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<form action=\"https://www.nasa.gov/\" class=\"hds-search usa-search usa-search--small float-none\" role=\"search\" style=\"float: none!important;\">",
+          "html": "<ul id=\"dqu-ui-component-1_itemList-itemList\" class=\"component_DropDownMenu_itemList\" role=\"menu\">",
           "target": [
-            ".grid-col-5.flex-align-center.display-flex > .hds-search.usa-search.usa-search--small"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "aria-command-name",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "TTv5",
-        "TT6.a",
-        "EN-301-549",
-        "EN-9.4.1.2",
-        "ACT"
-      ],
-      "description": "Ensures every ARIA button, link and menuitem has an accessible name",
-      "help": "ARIA commands must have an accessible name",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-command-name?application=axeAPI",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute exists and is not empty"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<div class=\"hds-image-download-wrapper width-full display-block cursor-pointer\" role=\"link\" tabindex=\"0\" aria-label=\"View full image page\" onclick=\"window.location='https://www.nasa.gov/image-detail/earth-observation-2/'\" onkeypress=\"if(event.keyCode == 13){window.location='https://www.nasa.gov/image-detail/earth-observation-2/'}\">",
-          "target": [
-            ".hds-image-download-wrapper"
+            "#dqu-ui-component-1_itemList-itemList"
           ]
         }
       ]
@@ -848,9 +817,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<button class=\"usa-accordion__button usa-nav__link display-flex flex-align-center\" aria-expanded=\"false\" id=\"global-navigation-trigger\">",
+          "html": "<button id=\"cookie-alert-accept\" class=\"cookie-alert-button\" onclick=\"recordUserResponse(1, 1)\" aria-describedby=\"cookie-alert-text\">\n            Accept        </button>",
           "target": [
-            "#global-navigation-trigger"
+            "#cookie-alert-accept"
           ]
         }
       ]
@@ -882,9 +851,9 @@
             }
           ],
           "impact": null,
-          "html": "<form action=\"https://www.nasa.gov/\" class=\"hds-search usa-search usa-search--small float-none\" role=\"search\" style=\"float: none!important;\">",
+          "html": "<ul id=\"menu-primary-navigation\" aria-hidden=\"false\" aria-label=\"Main Menu\" role=\"menubar\">",
           "target": [
-            ".grid-col-5.flex-align-center.display-flex > .hds-search.usa-search.usa-search--small"
+            "#menu-primary-navigation"
           ]
         }
       ]
@@ -918,7 +887,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<body class=\"home wp-singular page-template-default page page-id-128943 wp-theme-nasa\">",
+          "html": "<body style=\"height: auto; padding-bottom: 239px;\">",
           "target": [
             "body"
           ]
@@ -968,9 +937,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<svg width=\"50\" height=\"50\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\">\n\t\t\t\t\t\t\t<circle r=\"25\" cx=\"25\" cy=\"25\" fill=\"transparent\" style=\"stroke-dasharray: 157.08; stroke-dashoffset: 0; transition: stroke-dashoffset 14000ms linear;\"></circle>\n\t\t\t\t\t\t</svg>",
+          "html": "<a class=\"logo\" href=\"https://dequeuniversity.com/\" rel=\"home\" tabindex=\"-1\" aria-hidden=\"true\">",
           "target": [
-            "svg[width=\"50\"]"
+            ".main-navigation > .site-title > .logo[href$=\"dequeuniversity.com/\"][rel=\"home\"]"
           ]
         }
       ]
@@ -1002,9 +971,9 @@
             }
           ],
           "impact": null,
-          "html": "<button class=\"usa-accordion__button usa-nav__link display-flex flex-align-center\" aria-expanded=\"false\" id=\"global-navigation-trigger\">",
+          "html": "<button id=\"cookie-alert-accept\" class=\"cookie-alert-button\" onclick=\"recordUserResponse(1, 1)\" aria-describedby=\"cookie-alert-text\">\n            Accept        </button>",
           "target": [
-            "#global-navigation-trigger"
+            "#cookie-alert-accept"
           ]
         }
       ]
@@ -1036,9 +1005,77 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<form action=\"https://www.nasa.gov/\" class=\"hds-search usa-search usa-search--small float-none\" role=\"search\" style=\"float: none!important;\">",
+          "html": "<ul id=\"menu-primary-navigation\" aria-hidden=\"false\" aria-label=\"Main Menu\" role=\"menubar\">",
           "target": [
-            ".grid-col-5.flex-align-center.display-flex > .hds-search.usa-search.usa-search--small"
+            "#menu-primary-navigation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-required-children",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1"
+      ],
+      "description": "Ensures elements with an ARIA role that require child roles contain them",
+      "help": "Certain ARIA roles must contain particular children",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-required-children?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-required-children",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA children are present"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<ul id=\"menu-primary-navigation\" aria-hidden=\"false\" aria-label=\"Main Menu\" role=\"menubar\">",
+          "target": [
+            "#menu-primary-navigation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-required-parent",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1"
+      ],
+      "description": "Ensures elements with an ARIA role that require parent roles are contained by them",
+      "help": "Certain ARIA roles must be contained by particular parents",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-required-parent?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-required-parent",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Required ARIA parent role present"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a role=\"menuitem\" id=\"menubutton-21099\" href=\"#\" class=\"dropdown-toggle\" aria-haspopup=\"true\" aria-expanded=\"false\" aria-controls=\"sub-menu-21099\">Online Courses</a>",
+          "target": [
+            "#menubutton-21099"
           ]
         }
       ]
@@ -1084,16 +1121,16 @@
             }
           ],
           "impact": null,
-          "html": "<form action=\"https://www.nasa.gov/\" class=\"hds-search usa-search usa-search--small float-none\" role=\"search\" style=\"float: none!important;\">",
+          "html": "<ul id=\"menu-primary-navigation\" aria-hidden=\"false\" aria-label=\"Main Menu\" role=\"menubar\">",
           "target": [
-            ".grid-col-5.flex-align-center.display-flex > .hds-search.usa-search.usa-search--small"
+            "#menu-primary-navigation"
           ]
         }
       ]
     },
     {
       "id": "aria-valid-attr-value",
-      "impact": null,
+      "impact": "critical",
       "tags": [
         "cat.aria",
         "wcag2a",
@@ -1132,9 +1169,9 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<button class=\"usa-accordion__button usa-nav__link display-flex flex-align-center\" aria-expanded=\"false\" id=\"global-navigation-trigger\">",
+          "html": "<button id=\"cookie-alert-accept\" class=\"cookie-alert-button\" onclick=\"recordUserResponse(1, 1)\" aria-describedby=\"cookie-alert-text\">\n            Accept        </button>",
           "target": [
-            "#global-navigation-trigger"
+            "#cookie-alert-accept"
           ]
         }
       ]
@@ -1166,9 +1203,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"usa-accordion__button usa-nav__link display-flex flex-align-center\" aria-expanded=\"false\" id=\"global-navigation-trigger\">",
+          "html": "<button id=\"cookie-alert-accept\" class=\"cookie-alert-button\" onclick=\"recordUserResponse(1, 1)\" aria-describedby=\"cookie-alert-text\">\n            Accept        </button>",
           "target": [
-            "#global-navigation-trigger"
+            "#cookie-alert-accept"
           ]
         }
       ]
@@ -1215,16 +1252,16 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"16px\" height=\"17px\" viewBox=\"0 0 16 17\" style=\"enable-background:new 0 0 16 17;\" xml:space=\"preserve\">",
+          "html": "<body style=\"height: auto; padding-bottom: 239px;\">",
           "target": [
-            "svg[height=\"17px\"]"
+            "body"
           ]
         }
       ]
     },
     {
       "id": "button-name",
-      "impact": "critical",
+      "impact": null,
       "tags": [
         "cat.name-role-value",
         "wcag2a",
@@ -1254,9 +1291,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"usa-accordion__button usa-nav__link display-flex flex-align-center\" aria-expanded=\"false\" id=\"global-navigation-trigger\">",
+          "html": "<button class=\"cookie-alert-button\" onclick=\"recordUserResponse(0, 1)\">\n            Decline        </button>",
           "target": [
-            "#global-navigation-trigger"
+            "button[onclick=\"recordUserResponse(0, 1)\"]"
           ]
         }
       ]
@@ -1286,201 +1323,45 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<h2 class=\"heading-22\">\n\t\t\t\tLIVE Thursday, Jan. 8, 6:30 a.m. EST (1130 UTC)\t\t\t</h2>",
+                  "html": "<h2 id=\"cookie-alert-title\" tabindex=\"-1\">This website uses cookies</h2>",
                   "target": [
-                    ".margin-bottom-4 > h2"
+                    "#cookie-alert-title"
                   ]
                 },
                 {
-                  "html": "<h2 class=\"heading-36 margin-0\">U.S. Spacewalk 94</h2>",
+                  "html": "<h1 id=\"id1_h1\" tabindex=\"-1\" style=\"display: block;\">Digital Accessibility Courses<br>&amp; Accessibility<br>Reference Library</h1>",
                   "target": [
-                    ".heading-36"
+                    "#id1_h1"
                   ]
                 },
                 {
-                  "html": "<h2 class=\"display-72 margin-bottom-1 color-spacesuit-white\">\n\t\t\t\t\t\t\t\t\t\tHumans in Space\t\t\t\t\t\t\t\t\t</h2>",
+                  "html": "<h2 class=\"section-title\">Axe Assistant, Your AI Accessibility Ally, Now Available on the web, Slack, and Microsoft Teams</h2>",
                   "target": [
-                    ".display-72"
+                    ".call-out-section > .container > .section-header.row > .col-lg-9.col-md-12:nth-child(1) > .section-title"
                   ]
                 },
                 {
-                  "html": "<h3 class=\"label color-spacesuit-white\">\n\t\t\t\t\t\t\t\t\t\tACTIVE MISSION\t\t\t\t\t\t\t\t\t</h3>",
+                  "html": "<h2 class=\"section-title\">Learn accessibility skills for web, documents, and mobile content at your own pace.</h2>",
                   "target": [
-                    ".hds-nasa-mag-col.tablet\\:grid-col-4.desktop\\:grid-col-3:nth-child(1) > .hds-nasa-mag-col-inner.padding-y-1.desktop\\:padding-top-2 > .label"
+                    ".col-lg-9.col-md-12:nth-child(2) > .section-title"
                   ]
                 },
                 {
-                  "html": "<h3 class=\"label color-spacesuit-white\">\n\t\t\t\t\t\t\t\t\t\tOFF THE EARTh, FOR THE EARTH\t\t\t\t\t\t\t\t\t</h3>",
+                  "html": "<h2 class=\"cta-title\" style=\"color:#ffffff;\">Accessibility Training with Expert Instructors</h2>",
                   "target": [
-                    ".hds-nasa-mag-col.tablet\\:grid-col-4.desktop\\:grid-col-3:nth-child(2) > .hds-nasa-mag-col-inner.padding-y-1.desktop\\:padding-top-2 > .label"
+                    ".image-left > .content-wrapper.col-md-8 > .cta-title"
                   ]
                 },
                 {
-                  "html": "<h3 class=\"label color-spacesuit-white\">\n\t\t\t\t\t\t\t\t\t\tA Momentous Milestone\t\t\t\t\t\t\t\t\t</h3>",
+                  "html": "<h2 class=\"section-title\">Deque University Scholarships for People with Disabilities</h2>",
                   "target": [
-                    ".hds-nasa-mag-col.tablet\\:grid-col-4.desktop\\:padding-right-2 > .hds-nasa-mag-col-inner.padding-y-1.desktop\\:padding-top-2 > .label"
+                    ".scholarships-section > .container > .section-header.row > .col-lg-9.col-md-12 > .section-title"
                   ]
                 },
                 {
-                  "html": "<h2 class=\"section-heading-md\">Featured News</h2>",
+                  "html": "<h2 class=\"cta-title\">IAAP Certification Prep</h2>",
                   "target": [
-                    ".section-heading-md"
-                  ]
-                },
-                {
-                  "html": "<h2 class=\"page-heading-md font-weight-extrabold line-height-heading-1 color-spacesuit-white-important\">Our Alien Earth</h2>",
-                  "target": [
-                    ".page-heading-md"
-                  ]
-                },
-                {
-                  "html": "<h2 class=\"section-heading-sm line-height-sm\">NASA Multimedia</h2>",
-                  "target": [
-                    ".hds-card-grid.padding-top-7.padding-bottom-3:nth-child(5) > .hds-card-grid-header.grid-container-block.grid-container > .flex-align-start.margin-bottom-5.grid-row > .desktop\\:grid-col-8.desktop\\:margin-bottom-0.margin-bottom-2 > .margin-bottom-1 > .section-heading-sm.line-height-sm"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-29 hds-topic-card-heading color-spacesuit-white\">",
-                  "target": [
-                    ".hds-card-grid.padding-top-7.padding-bottom-3:nth-child(5) > .hds-card-grid-cards.grid-container-block.grid-container > .hds-cards-included.grid-row > .hds-card-topic.mobile\\:grid-col-12.margin-bottom-6:nth-child(1) > .hds-card-inner > .z-300.flex-direction-column.hds-foreground-wrapper > .hds-card-content.padding-3 > .heading-29.hds-topic-card-heading"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-29 hds-topic-card-heading color-spacesuit-white\">",
-                  "target": [
-                    ".hds-card-topic.mobile\\:grid-col-12[href$=\"images/\"] > .hds-card-inner > .z-300.flex-direction-column.hds-foreground-wrapper > .hds-card-content.padding-3 > .heading-29.hds-topic-card-heading"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-29 hds-topic-card-heading color-spacesuit-white\">",
-                  "target": [
-                    ".hds-card-topic.mobile\\:grid-col-12[href$=\"apps/\"] > .hds-card-inner > .z-300.flex-direction-column.hds-foreground-wrapper > .hds-card-content.padding-3 > .heading-29.hds-topic-card-heading"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-29 hds-topic-card-heading color-spacesuit-white\">",
-                  "target": [
-                    ".hds-card-grid.padding-top-7.padding-bottom-3:nth-child(5) > .hds-card-grid-cards.grid-container-block.grid-container > .hds-cards-included.grid-row > .hds-card-topic.mobile\\:grid-col-12.margin-bottom-6:nth-child(4) > .hds-card-inner > .z-300.flex-direction-column.hds-foreground-wrapper > .hds-card-content.padding-3 > .heading-29.hds-topic-card-heading"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"label\">Today</h3>",
-                  "target": [
-                    ".margin-bottom-10 > .label"
-                  ]
-                },
-                {
-                  "html": "<h2 class=\"display-41 margin-0\">Image Of The Day</h2>",
-                  "target": [
-                    ".margin-bottom-10 > .display-41"
-                  ]
-                },
-                {
-                  "html": "<h2 class=\"section-heading-sm line-height-sm\">Image Galleries</h2>",
-                  "target": [
-                    ".desktop\\:grid-col-8.desktop\\:margin-bottom-0.margin-bottom-2 > .section-heading-sm.line-height-sm"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-16 color-carbon-black\">James Webb Space Telescope Gallery</h3>",
-                  "target": [
-                    ".slick-current.hds-card-gallery[data-slick-index=\"0\"] > .hds-card-inner > .padding-right-0 > .margin-bottom-1 > .color-carbon-black.heading-16"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-16 color-carbon-black\">Hubble Space Telescope Gallery</h3>",
-                  "target": [
-                    "a[data-slick-index=\"1\"] > .hds-card-inner > .padding-right-0 > .margin-bottom-1 > .color-carbon-black.heading-16"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-16 color-carbon-black\">Chandra X-ray Observatory Gallery</h3>",
-                  "target": [
-                    "a[data-slick-index=\"2\"] > .hds-card-inner > .padding-right-0 > .margin-bottom-1 > .color-carbon-black.heading-16"
-                  ]
-                },
-                {
-                  "html": "<h2 class=\"display-41 line-height-normal\">Explore the Universe from your Inbox</h2>",
-                  "target": [
-                    ".line-height-normal"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"subtitle-md\">Artemis</h3>",
-                  "target": [
-                    ".subtitle-md"
-                  ]
-                },
-                {
-                  "html": "<h2 class=\"display-48\">Send Your Name Around the Moon</h2>",
-                  "target": [
-                    ".display-48"
-                  ]
-                },
-                {
-                  "html": "<h2 class=\"section-heading-sm line-height-sm\">More Topics from NASA</h2>",
-                  "target": [
-                    ".hds-card-grid.padding-top-7.padding-bottom-3:nth-child(10) > .hds-card-grid-header.grid-container-block.grid-container > .flex-align-start.margin-bottom-5.grid-row > .desktop\\:grid-col-8.desktop\\:margin-bottom-0.margin-bottom-2 > .margin-bottom-1 > .section-heading-sm.line-height-sm"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-29 hds-topic-card-heading color-spacesuit-white\">",
-                  "target": [
-                    ".hds-card-grid.padding-top-7.padding-bottom-3:nth-child(10) > .hds-card-grid-cards.grid-container-block.grid-container > .hds-cards-included.grid-row > .hds-card-topic.mobile\\:grid-col-12.margin-bottom-6:nth-child(1) > .hds-card-inner > .z-300.flex-direction-column.hds-foreground-wrapper > .hds-card-content.padding-3 > .heading-29.hds-topic-card-heading"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-29 hds-topic-card-heading color-spacesuit-white\">",
-                  "target": [
-                    ".hds-card-grid.padding-top-7.padding-bottom-3:nth-child(10) > .hds-card-grid-cards.grid-container-block.grid-container > .hds-cards-included.grid-row > .hds-card-topic.mobile\\:grid-col-12.margin-bottom-6:nth-child(2) > .hds-card-inner > .z-300.flex-direction-column.hds-foreground-wrapper > .hds-card-content.padding-3 > .heading-29.hds-topic-card-heading"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-29 hds-topic-card-heading color-spacesuit-white\">",
-                  "target": [
-                    ".hds-card-grid.padding-top-7.padding-bottom-3:nth-child(10) > .hds-card-grid-cards.grid-container-block.grid-container > .hds-cards-included.grid-row > .hds-card-topic.mobile\\:grid-col-12.margin-bottom-6:nth-child(3) > .hds-card-inner > .z-300.flex-direction-column.hds-foreground-wrapper > .hds-card-content.padding-3 > .heading-29.hds-topic-card-heading"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-29 hds-topic-card-heading color-spacesuit-white\">",
-                  "target": [
-                    ".hds-card-grid.padding-top-7.padding-bottom-3:nth-child(10) > .hds-card-grid-cards.grid-container-block.grid-container > .hds-cards-included.grid-row > .hds-card-topic.mobile\\:grid-col-12.margin-bottom-6:nth-child(4) > .hds-card-inner > .z-300.flex-direction-column.hds-foreground-wrapper > .hds-card-content.padding-3 > .heading-29.hds-topic-card-heading"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-29 hds-topic-card-heading color-spacesuit-white\">",
-                  "target": [
-                    ".hds-card-topic.mobile\\:grid-col-12.margin-bottom-6:nth-child(5) > .hds-card-inner > .z-300.flex-direction-column.hds-foreground-wrapper > .hds-card-content.padding-3 > .heading-29.hds-topic-card-heading"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-29 hds-topic-card-heading color-spacesuit-white\">",
-                  "target": [
-                    ".hds-card-topic.mobile\\:grid-col-12.margin-bottom-6:nth-child(6) > .hds-card-inner > .z-300.flex-direction-column.hds-foreground-wrapper > .hds-card-content.padding-3 > .heading-29.hds-topic-card-heading"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-29 hds-topic-card-heading color-spacesuit-white\">",
-                  "target": [
-                    ".hds-card-topic.mobile\\:grid-col-12.margin-bottom-6:nth-child(7) > .hds-card-inner > .z-300.flex-direction-column.hds-foreground-wrapper > .hds-card-content.padding-3 > .heading-29.hds-topic-card-heading"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-29 hds-topic-card-heading color-spacesuit-white\">",
-                  "target": [
-                    ".hds-card-topic.mobile\\:grid-col-12.margin-bottom-6:nth-child(8) > .hds-card-inner > .z-300.flex-direction-column.hds-foreground-wrapper > .hds-card-content.padding-3 > .heading-29.hds-topic-card-heading"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-22 line-height-md\">National Aeronautics and Space Administration</h3>",
-                  "target": [
-                    ".heading-22.line-height-md"
-                  ]
-                },
-                {
-                  "html": "<h3 class=\"heading-16 color-carbon-40 margin-bottom-2\">Follow NASA</h3>",
-                  "target": [
-                    ".heading-16.color-carbon-40.margin-bottom-2"
+                    ".image-right > .content-wrapper.col-md-8 > .cta-title"
                   ]
                 }
               ],
@@ -1492,9 +1373,9 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<main id=\"primary\" class=\"site-main\">",
+                  "html": "<main id=\"content\" tabindex=\"-1\">",
                   "target": [
-                    "#primary"
+                    "#content"
                   ]
                 }
               ],
@@ -1505,7 +1386,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\">",
+          "html": "<html lang=\"en\">",
           "target": [
             "html"
           ]
@@ -1534,26 +1415,26 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#000000",
-                "contrastRatio": 21,
-                "fontSize": "13.2pt (17.6px)",
+                "fgColor": "#003349",
+                "bgColor": "#ffffff",
+                "contrastRatio": 13.37,
+                "fontSize": "18.0pt (24px)",
                 "fontWeight": "normal",
                 "messageKey": null,
-                "expectedContrastRatio": "4.5:1",
+                "expectedContrastRatio": "3:1",
                 "shadowColor": null
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 21"
+              "message": "Element has sufficient color contrast of 13.37"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span>Explore</span>",
+          "html": "<h2 id=\"cookie-alert-title\" tabindex=\"-1\">This website uses cookies</h2>",
           "target": [
-            "#global-navigation-trigger > span"
+            "#cookie-alert-title"
           ]
         }
       ]
@@ -1588,7 +1469,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\">",
+          "html": "<html lang=\"en\">",
           "target": [
             "html"
           ]
@@ -1613,7 +1494,7 @@
           "any": [
             {
               "id": "duplicate-id-aria",
-              "data": "search-field-en-small--desktop",
+              "data": "cookie-alert-text",
               "relatedNodes": [],
               "impact": "critical",
               "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
@@ -1622,9 +1503,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input class=\"hds-search-input hds-search-input-dark usa-input border bg-carbon-black border-color-carbon-70-important\" id=\"search-field-en-small--desktop\" type=\"search\" name=\"search\" value=\"\" placeholder=\"Search\" maxlength=\"100\">",
+          "html": "<p id=\"cookie-alert-text\">",
           "target": [
-            "#search-field-en-small--desktop"
+            "#cookie-alert-text"
           ]
         }
       ]
@@ -1653,52 +1534,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h2 class=\"heading-22\">\n\t\t\t\tLIVE Thursday, Jan. 8, 6:30 a.m. EST (1130 UTC)\t\t\t</h2>",
+          "html": "<h2 id=\"cookie-alert-title\" tabindex=\"-1\">This website uses cookies</h2>",
           "target": [
-            ".margin-bottom-4 > h2"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "form-field-multiple-labels",
-      "impact": null,
-      "tags": [
-        "cat.forms",
-        "wcag2a",
-        "wcag332",
-        "TTv5",
-        "TT5.c",
-        "EN-301-549",
-        "EN-9.3.3.2"
-      ],
-      "description": "Ensures form field does not have multiple label elements",
-      "help": "Form field must not have multiple label elements",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/form-field-multiple-labels?application=axeAPI",
-      "nodes": [
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "multiple-label",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<label class=\"usa-sr-only\" for=\"search-field-en-small--desktop\">Search</label>",
-                  "target": [
-                    "label[for=\"search-field-en-small--desktop\"]"
-                  ]
-                }
-              ],
-              "impact": "moderate",
-              "message": "Form field does not have multiple label elements"
-            }
-          ],
-          "impact": null,
-          "html": "<input class=\"hds-search-input hds-search-input-dark usa-input border bg-carbon-black border-color-carbon-70-important\" id=\"search-field-en-small--desktop\" type=\"search\" name=\"search\" value=\"\" placeholder=\"Search\" maxlength=\"100\">",
-          "target": [
-            "#search-field-en-small--desktop"
+            "#cookie-alert-title"
           ]
         }
       ]
@@ -1722,201 +1560,45 @@
                 "headingOrder": [
                   {
                     "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(1) > div > div:nth-child(1) > h2"
+                      "html > body > div:nth-child(3) > header:nth-child(1) > div:nth-child(3) > h2:nth-child(1)"
                     ],
                     "level": 2
                   },
                   {
                     "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(1) > div > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(1) > h2"
+                      "html > body > div:nth-child(3) > div:nth-child(2) > main > div:nth-child(2) > div:nth-child(1) > h1:nth-child(2)"
+                    ],
+                    "level": 1
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(3) > div:nth-child(2) > main > div:nth-child(2) > div:nth-child(2) > section:nth-child(4) > div > div > div:nth-child(1) > h2:nth-child(1)"
                     ],
                     "level": 2
                   },
                   {
                     "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div:nth-child(1) > div:nth-child(1) > div > div > h2:nth-child(1)"
+                      "html > body > div:nth-child(3) > div:nth-child(2) > main > div:nth-child(2) > div:nth-child(2) > section:nth-child(4) > div > div > div:nth-child(2) > h2:nth-child(1)"
                     ],
                     "level": 2
                   },
                   {
                     "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div > h3:nth-child(1)"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div > h3:nth-child(1)"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div > h3:nth-child(1)"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(3) > div > div:nth-child(1) > div:nth-child(1) > h2"
+                      "html > body > div:nth-child(3) > div:nth-child(2) > main > div:nth-child(2) > div:nth-child(2) > section:nth-child(5) > div > div > div > div:nth-child(2) > h2:nth-child(1)"
                     ],
                     "level": 2
                   },
                   {
                     "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(4) > div:nth-child(1) > div > div > div:nth-child(1) > div > h2:nth-child(1)"
+                      "html > body > div:nth-child(3) > div:nth-child(2) > main > div:nth-child(2) > div:nth-child(2) > section:nth-child(6) > div > div > div > h2:nth-child(1)"
                     ],
                     "level": 2
                   },
                   {
                     "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div > h2"
+                      "html > body > div:nth-child(3) > div:nth-child(2) > main > div:nth-child(2) > div:nth-child(2) > section:nth-child(7) > div > div > div > div:nth-child(2) > h2:nth-child(1)"
                     ],
                     "level": 2
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(5) > div:nth-child(2) > div > a:nth-child(1) > div > div:nth-child(1) > div > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(5) > div:nth-child(2) > div > a:nth-child(2) > div > div:nth-child(1) > div > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(5) > div:nth-child(2) > div > a:nth-child(3) > div > div:nth-child(1) > div > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(5) > div:nth-child(2) > div > a:nth-child(4) > div > div:nth-child(1) > div > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(6) > div > div > div:nth-child(1) > div:nth-child(1) > h3:nth-child(1)"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(6) > div > div > div:nth-child(1) > div:nth-child(1) > h2:nth-child(2)"
-                    ],
-                    "level": 2
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(7) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > h2"
-                    ],
-                    "level": 2
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(7) > div:nth-child(2) > div > div > div > div > a:nth-child(1) > div > div:nth-child(2) > div:nth-child(1) > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(7) > div:nth-child(2) > div > div > div > div > a:nth-child(2) > div > div:nth-child(2) > div:nth-child(1) > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(7) > div:nth-child(2) > div > div > div > div > a:nth-child(3) > div > div:nth-child(2) > div:nth-child(1) > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(8) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > h2"
-                    ],
-                    "level": 2
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(9) > div > div > div:nth-child(1) > div:nth-child(1) > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(9) > div > div > div:nth-child(1) > div:nth-child(2) > h2"
-                    ],
-                    "level": 2
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(10) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div > h2"
-                    ],
-                    "level": 2
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(10) > div:nth-child(2) > div > a:nth-child(1) > div > div:nth-child(1) > div > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(10) > div:nth-child(2) > div > a:nth-child(2) > div > div:nth-child(1) > div > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(10) > div:nth-child(2) > div > a:nth-child(3) > div > div:nth-child(1) > div > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(10) > div:nth-child(2) > div > a:nth-child(4) > div > div:nth-child(1) > div > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(10) > div:nth-child(2) > div > a:nth-child(5) > div > div:nth-child(1) > div > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(10) > div:nth-child(2) > div > a:nth-child(6) > div > div:nth-child(1) > div > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(10) > div:nth-child(2) > div > a:nth-child(7) > div > div:nth-child(1) > div > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > main:nth-child(6) > article > div > div:nth-child(10) > div:nth-child(2) > div > a:nth-child(8) > div > div:nth-child(1) > div > h3"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > footer:nth-child(7) > div > div:nth-child(2) > div > div:nth-child(1) > div > h3:nth-child(1)"
-                    ],
-                    "level": 3
-                  },
-                  {
-                    "ancestry": [
-                      "html > body > footer:nth-child(7) > div > div:nth-child(2) > div > div:nth-child(3) > div > div:nth-child(1) > h3:nth-child(1)"
-                    ],
-                    "level": 3
                   }
                 ]
               },
@@ -1928,9 +1610,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h2 class=\"heading-22\">\n\t\t\t\tLIVE Thursday, Jan. 8, 6:30 a.m. EST (1130 UTC)\t\t\t</h2>",
+          "html": "<h2 id=\"cookie-alert-title\" tabindex=\"-1\">This website uses cookies</h2>",
           "target": [
-            ".margin-bottom-4 > h2"
+            "#cookie-alert-title"
           ]
         }
       ]
@@ -1965,7 +1647,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\">",
+          "html": "<html lang=\"en\">",
           "target": [
             "html"
           ]
@@ -2002,7 +1684,7 @@
             }
           ],
           "impact": null,
-          "html": "<html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\">",
+          "html": "<html lang=\"en\">",
           "target": [
             "html"
           ]
@@ -2050,9 +1732,9 @@
             }
           ],
           "impact": null,
-          "html": "<img fetchpriority=\"high\" width=\"60\" height=\"50.58\" alt=\"NASA Logo\" src=\"https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo@2x.png\" srcset=\"https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg\">",
+          "html": "<img src=\"assets/images/logos/deque_university_wordmark_white.png\" height=\"83\" alt=\"Deque University logo\">",
           "target": [
-            "#header-logo > img[width=\"60\"][height=\"50.58\"][alt=\"NASA Logo\"]"
+            "img[height=\"83\"][alt=\"Deque University logo\"]"
           ]
         }
       ]
@@ -2081,101 +1763,9 @@
             }
           ],
           "impact": null,
-          "html": "<img fetchpriority=\"high\" width=\"60\" height=\"50.58\" alt=\"NASA Logo\" src=\"https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo@2x.png\" srcset=\"https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg\">",
+          "html": "<img src=\"assets/images/logos/deque_university_wordmark_white.png\" height=\"83\" alt=\"Deque University logo\">",
           "target": [
-            "#header-logo > img[width=\"60\"][height=\"50.58\"][alt=\"NASA Logo\"]"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "label-title-only",
-      "impact": null,
-      "tags": [
-        "cat.forms",
-        "best-practice"
-      ],
-      "description": "Ensures that every form element has a visible label and is not solely labeled using hidden labels, or the title or aria-describedby attributes",
-      "help": "Form elements should have a visible label",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/label-title-only?application=axeAPI",
-      "nodes": [
-        {
-          "any": [],
-          "all": [],
-          "none": [
-            {
-              "id": "title-only",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Form element does not solely use title attribute for its label"
-            }
-          ],
-          "impact": null,
-          "html": "<input class=\"hds-search-input hds-search-input-dark usa-input border bg-carbon-black border-color-carbon-70-important\" id=\"search-field-en-small--desktop\" type=\"search\" name=\"search\" value=\"\" placeholder=\"Search\" maxlength=\"100\">",
-          "target": [
-            "#search-field-en-small--desktop"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "label",
-      "impact": null,
-      "tags": [
-        "cat.forms",
-        "wcag2a",
-        "wcag412",
-        "section508",
-        "section508.22.n",
-        "TTv5",
-        "TT5.c",
-        "EN-301-549",
-        "EN-9.4.1.2",
-        "ACT"
-      ],
-      "description": "Ensures every form element has a label",
-      "help": "Form elements must have labels",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/label?application=axeAPI",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "explicit-label",
-              "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<label class=\"usa-sr-only\" for=\"search-field-en-small--desktop\">Search</label>",
-                  "target": [
-                    "label[for=\"search-field-en-small--desktop\"]"
-                  ]
-                }
-              ],
-              "impact": "critical",
-              "message": "Form element has an explicit <label>"
-            },
-            {
-              "id": "non-empty-placeholder",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has a placeholder attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "hidden-explicit-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Form element has a visible explicit <label>"
-            }
-          ],
-          "impact": null,
-          "html": "<input class=\"hds-search-input hds-search-input-dark usa-input border bg-carbon-black border-color-carbon-70-important\" id=\"search-field-en-small--desktop\" type=\"search\" name=\"search\" value=\"\" placeholder=\"Search\" maxlength=\"100\">",
-          "target": [
-            "#search-field-en-small--desktop"
+            "img[height=\"83\"][alt=\"Deque University logo\"]"
           ]
         }
       ]
@@ -2206,9 +1796,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<header class=\"usa-header usa-header--basic usa-header-primary padding-y-2 padding-x-2 bg-carbon-black color-spacesuit-white display-none desktop:display-block\">",
+          "html": "<header id=\"masthead\" class=\"site-header\" style=\"padding-bottom: 32px;\">",
           "target": [
-            ".usa-header--basic"
+            "#masthead"
           ]
         }
       ]
@@ -2239,9 +1829,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<footer class=\"usa-footer bg-carbon-black-important padding-x-3 padding-y-7\">",
+          "html": "<footer id=\"footer\" class=\"site-footer\">",
           "target": [
-            "footer"
+            "#footer"
           ]
         }
       ]
@@ -2272,9 +1862,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<main id=\"primary\" class=\"site-main\">",
+          "html": "<main id=\"content\" tabindex=\"-1\">",
           "target": [
-            "#primary"
+            "#content"
           ]
         }
       ]
@@ -2303,9 +1893,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<header class=\"usa-header usa-header--basic usa-header-primary padding-y-2 padding-x-2 bg-carbon-black color-spacesuit-white display-none desktop:display-block\">",
+          "html": "<header id=\"masthead\" class=\"site-header\" style=\"padding-bottom: 32px;\">",
           "target": [
-            ".usa-header--basic"
+            "#masthead"
           ]
         }
       ]
@@ -2334,9 +1924,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<footer class=\"usa-footer bg-carbon-black-important padding-x-3 padding-y-7\">",
+          "html": "<footer id=\"footer\" class=\"site-footer\">",
           "target": [
-            "footer"
+            "#footer"
           ]
         }
       ]
@@ -2365,9 +1955,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<main id=\"primary\" class=\"site-main\">",
+          "html": "<main id=\"content\" tabindex=\"-1\">",
           "target": [
-            "#primary"
+            "#content"
           ]
         }
       ]
@@ -2391,9 +1981,9 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<main id=\"primary\" class=\"site-main\">",
+                  "html": "<main id=\"content\" tabindex=\"-1\">",
                   "target": [
-                    "#primary"
+                    "#content"
                   ]
                 }
               ],
@@ -2403,7 +1993,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\">",
+          "html": "<html lang=\"en\">",
           "target": [
             "html"
           ]
@@ -2437,9 +2027,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<header class=\"usa-header usa-header--basic usa-header-primary padding-y-2 padding-x-2 bg-carbon-black color-spacesuit-white display-none desktop:display-block\">",
+          "html": "<header id=\"masthead\" class=\"site-header\" style=\"padding-bottom: 32px;\">",
           "target": [
-            ".usa-header--basic"
+            "#masthead"
           ]
         }
       ]
@@ -2467,9 +2057,9 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<div class=\"hds-nasa-mag-col-inner border-top-1px padding-y-1 desktop:padding-bottom-0 desktop:padding-top-2\">",
+                  "html": "<p id=\"cookie-alert-text\">",
                   "target": [
-                    ".hds-nasa-mag-col.tablet\\:grid-col-4.desktop\\:grid-col-3:nth-child(1) > .hds-nasa-mag-col-inner.padding-y-1.desktop\\:padding-top-2"
+                    "#cookie-alert-text"
                   ]
                 }
               ],
@@ -2480,16 +2070,16 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"https://www.nasa.gov/mission/expedition-74/\" target=\"_self\" class=\"button-primary button-primary-sm link-external-false\" tabindex=\"0\">",
+          "html": "<a href=\"/terms\" style=\"text-decoration: underline;\" target=\"_blank\">Terms of Use</a>",
           "target": [
-            ".hds-nasa-mag-col.tablet\\:grid-col-4.desktop\\:grid-col-3:nth-child(1) > .hds-nasa-mag-col-inner.padding-y-1.desktop\\:padding-top-2 > .button-primary-sm.link-external-false.button-primary"
+            "a[href$=\"terms\"][target=\"_blank\"]"
           ]
         }
       ]
     },
     {
       "id": "link-name",
-      "impact": "serious",
+      "impact": null,
       "tags": [
         "cat.name-role-value",
         "wcag2a",
@@ -2529,9 +2119,9 @@
             }
           ],
           "impact": null,
-          "html": "<a id=\"header-logo\" href=\"https://www.nasa.gov/\" class=\"usa-logo tablet:display-block margin-0\" style=\"width: 60px;\">",
+          "html": "<a class=\"skip-link sr-only sr-only-focusable\" href=\"/#content\">Skip to content</a>",
           "target": [
-            "#header-logo"
+            ".skip-link"
           ]
         }
       ]
@@ -2563,9 +2153,9 @@
             }
           ],
           "impact": null,
-          "html": "<ul class=\"usa-nav__primary usa-accordion\">",
+          "html": "<ul id=\"menu-footer-links\" class=\"list-inline legal-links\">",
           "target": [
-            ".usa-accordion"
+            "#menu-footer-links"
           ]
         }
       ]
@@ -2597,9 +2187,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li class=\"hds-explore-nav-trigger usa-nav__primary-item margin-right-2\">",
+          "html": "<li class=\"menu-item menu-item-type-post_type menu-item-object-page\"><a style=\"text-decoration:underline;\" href=\"/contact\">Contact Us</a></li>",
           "target": [
-            ".hds-explore-nav-trigger"
+            "#menu-footer-links > .menu-item-type-post_type.menu-item-object-page.menu-item:nth-child(1)"
           ]
         }
       ]
@@ -2699,9 +2289,47 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<button class=\"usa-accordion__button usa-nav__link display-flex flex-align-center\" aria-expanded=\"false\" id=\"global-navigation-trigger\">",
+          "html": "<button class=\"cookie-alert-button\" onclick=\"recordUserResponse(0, 1)\">\n            Decline        </button>",
           "target": [
-            "#global-navigation-trigger"
+            "button[onclick=\"recordUserResponse(0, 1)\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "page-has-heading-one",
+      "impact": null,
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+      "help": "Page should contain a level-one heading",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/page-has-heading-one?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "page-has-heading-one",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<h1 id=\"id1_h1\" tabindex=\"-1\" style=\"display: block;\">Digital Accessibility Courses<br>&amp; Accessibility<br>Reference Library</h1>",
+                  "target": [
+                    "#id1_h1"
+                  ]
+                }
+              ],
+              "impact": "moderate",
+              "message": "Page has at least one level-one heading"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<html lang=\"en\">",
+          "target": [
+            "html"
           ]
         }
       ]
@@ -2738,9 +2366,9 @@
             }
           ],
           "impact": null,
-          "html": "<img decoding=\"async\" width=\"1920\" height=\"1440\" src=\"https://images-assets.nasa.gov/image/iss074e0006149/iss074e0006149~large.jpg?w=1920&amp;h=1440&amp;fit=clip&amp;crop=faces%2Cfocalpoint\" class=\"attachment-large size-large\" alt=\"\" style=\"transform: scale(1); transform-origin: 50% 50%; object-position: 50% 50%; object-fit: cover;\" block_context=\"nasa-block\" loading=\"lazy\" srcset=\"https://images-assets.nasa.gov/image/iss074e0006149/iss074e0006149~large.jpg?w=1920&amp;h=1440&amp;fit=crop&amp;crop=faces%2Cfocalpoint 1920w, https://images-assets.nasa.gov/image/iss074e0006149/iss074e0006149~large.jpg?w=300&amp;h=225&amp;fit=crop&amp;crop=faces%2Cfocalpoint 300w, https://images-assets.nasa.gov/image/iss074e0006149/iss074e0006149~large.jpg?w=768&amp;h=576&amp;fit=crop&amp;crop=faces%2Cfocalpoint 768w, https://images-assets.nasa.gov/image/iss074e0006149/iss074e0006149~large.jpg?w=1024&amp;h=768&amp;fit=crop&amp;crop=faces%2Cfocalpoint 1024w, https://images-assets.nasa.gov/image/iss074e0006149/iss074e0006149~large.jpg?w=1536&amp;h=1152&amp;fit=crop&amp;crop=faces%2Cfocalpoint 1536w, https://images-assets.nasa.gov/image/iss074e0006149/iss074e0006149~large.jpg?w=400&amp;h=300&amp;fit=crop&amp;crop=faces%2Cfocalpoint 400w, https://images-assets.nasa.gov/image/iss074e0006149/iss074e0006149~large.jpg?w=600&amp;h=450&amp;fit=crop&amp;crop=faces%2Cfocalpoint 600w, https://images-assets.nasa.gov/image/iss074e0006149/iss074e0006149~large.jpg?w=900&amp;h=675&amp;fit=crop&amp;crop=faces%2Cfocalpoint 900w, https://images-assets.nasa.gov/image/iss074e0006149/iss074e0006149~large.jpg?w=1200&amp;h=900&amp;fit=crop&amp;crop=faces%2Cfocalpoint 1200w\" sizes=\"auto, (max-width: 1920px) 100vw, 1920px\">",
+          "html": "<li id=\"menu-item-21099\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-21099 dropdown\" role=\"none\">",
           "target": [
-            "img[height=\"1440\"]"
+            "#menu-item-21099"
           ]
         }
       ]
@@ -2771,9 +2399,78 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<header class=\"usa-header usa-header--basic usa-header-primary padding-y-2 padding-x-2 bg-carbon-black color-spacesuit-white display-none desktop:display-block\">",
+          "html": "<div id=\"page\" class=\"site\">",
           "target": [
-            ".usa-header--basic"
+            "#page"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scrollable-region-focusable",
+      "impact": null,
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag211",
+        "wcag213",
+        "TTv5",
+        "TT4.a",
+        "EN-301-549",
+        "EN-9.2.1.1",
+        "EN-9.2.1.3"
+      ],
+      "description": "Ensure elements that have scrollable content are accessible by keyboard",
+      "help": "Scrollable region must have keyboard access",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/scrollable-region-focusable?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element contains focusable elements"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<html lang=\"en\">",
+          "target": [
+            "html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skip-link",
+      "impact": null,
+      "tags": [
+        "cat.keyboard",
+        "best-practice"
+      ],
+      "description": "Ensure all skip links have a focusable target",
+      "help": "The skip-link target should exist and be focusable",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/skip-link?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "skip-link",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "Skip link target exists"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"skip-link sr-only sr-only-focusable\" href=\"/#content\">Skip to content</a>",
+          "target": [
+            ".skip-link"
           ]
         }
       ]
@@ -2802,15 +2499,53 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"hds-nasa-mag-wrapper hds-cover-wrapper width-full maxw-full bg-carbon-black minh-tablet color-mode-dark slick-slide slick-current slick-active\" data-slick-index=\"0\" aria-hidden=\"false\" style=\"width: 1265px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;\" tabindex=\"0\">",
+          "html": "<h2 id=\"cookie-alert-title\" tabindex=\"-1\">This website uses cookies</h2>",
           "target": [
-            ".hds-nasa-mag-wrapper"
+            "#cookie-alert-title"
           ]
         }
       ]
     }
   ],
   "incomplete": [
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-valid-attr-value?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": {
+                "messageKey": "controlsWithinPopup",
+                "needsReview": "aria-controls=\"dqu-ui-component-1_itemList\""
+              },
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"dqu-ui-component-1_itemList\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<button aria-haspopup=\"menu\" aria-expanded=\"false\" aria-controls=\"dqu-ui-component-1_itemList\" class=\"component_DropDownMenu_button\">",
+          "target": [
+            ".component_DropDownMenu_button"
+          ],
+          "failureSummary": "Fix all of the following:\n  Unable to determine if aria-controls referenced ID exists on the page while using aria-haspopup: aria-controls=\"dqu-ui-component-1_itemList\""
+        }
+      ]
+    },
     {
       "id": "color-contrast",
       "impact": "serious",
@@ -2836,420 +2571,28 @@
                 "fgColor": null,
                 "bgColor": null,
                 "contrastRatio": 0,
-                "fontSize": "54.0pt (72px)",
-                "fontWeight": "bold",
-                "messageKey": "bgGradient",
-                "expectedContrastRatio": "3:1",
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": "elmPartiallyObscuring",
+                "expectedContrastRatio": "4.5:1",
                 "shadowColor": null
               },
-              "relatedNodes": [
-                {
-                  "html": "<div class=\"skrim-overlay skrim-left mobile-skrim-top z-200\"></div>",
-                  "target": [
-                    ".hds-nasa-mag-wrapper > .skrim-overlay.skrim-left.mobile-skrim-top"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "serious",
-              "message": "Element's background color could not be determined due to a background gradient"
+              "message": "Element's background color could not be determined because it partially overlaps other elements"
             }
           ],
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<h2 class=\"display-72 margin-bottom-1 color-spacesuit-white\">\n\t\t\t\t\t\t\t\t\t\tHumans in Space\t\t\t\t\t\t\t\t\t</h2>",
+          "html": "<p id=\"cookie-alert-text\">",
           "target": [
-            ".display-72"
+            "#cookie-alert-text"
           ],
-          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
         }
       ]
     }
   ],
-  "violations": [
-    {
-      "id": "button-name",
-      "impact": "critical",
-      "tags": [
-        "cat.name-role-value",
-        "wcag2a",
-        "wcag412",
-        "section508",
-        "section508.22.a",
-        "TTv5",
-        "TT6.a",
-        "EN-301-549",
-        "EN-9.4.1.2",
-        "ACT"
-      ],
-      "description": "Ensures buttons have discernible text",
-      "help": "Buttons must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/button-name?application=axeAPI",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "button-has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element does not have inner text that is visible to screen readers"
-            },
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-label attribute does not exist or is empty"
-            },
-            {
-              "id": "aria-labelledby",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
-            },
-            {
-              "id": "non-empty-title",
-              "data": {
-                "messageKey": "noAttr"
-              },
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element has no title attribute"
-            },
-            {
-              "id": "presentational-role",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "critical",
-              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "critical",
-          "html": "<button class=\"hds-mag-progress hds-mag-pause-play\">",
-          "target": [
-            ".hds-mag-pause-play"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
-        }
-      ]
-    },
-    {
-      "id": "color-contrast",
-      "impact": "serious",
-      "tags": [
-        "cat.color",
-        "wcag2aa",
-        "wcag143",
-        "TTv5",
-        "TT13.c",
-        "EN-301-549",
-        "EN-9.1.4.3",
-        "ACT"
-      ],
-      "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/color-contrast?application=axeAPI",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#77777a",
-                "bgColor": "#ffffff",
-                "contrastRatio": 4.46,
-                "fontSize": "8.4pt (11.2px)",
-                "fontWeight": "normal",
-                "messageKey": null,
-                "expectedContrastRatio": "4.5:1",
-                "shadowColor": null
-              },
-              "relatedNodes": [
-                {
-                  "html": "<body class=\"home wp-singular page-template-default page page-id-128943 wp-theme-nasa\">",
-                  "target": [
-                    "body"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 4.46 (foreground color: #77777a, background color: #ffffff, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"margin-right-2\">36 Images</div>",
-          "target": [
-            ".slick-current.hds-card-gallery[data-slick-index=\"0\"] > .hds-card-inner > .padding-right-0 > .color-carbon-50.label.display-flex > .margin-right-2"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #77777a, background color: #ffffff, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#77777a",
-                "bgColor": "#ffffff",
-                "contrastRatio": 4.46,
-                "fontSize": "8.4pt (11.2px)",
-                "fontWeight": "normal",
-                "messageKey": null,
-                "expectedContrastRatio": "4.5:1",
-                "shadowColor": null
-              },
-              "relatedNodes": [
-                {
-                  "html": "<body class=\"home wp-singular page-template-default page page-id-128943 wp-theme-nasa\">",
-                  "target": [
-                    "body"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 4.46 (foreground color: #77777a, background color: #ffffff, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"margin-right-2\">415 Images</div>",
-          "target": [
-            "a[data-slick-index=\"1\"] > .hds-card-inner > .padding-right-0 > .color-carbon-50.label.display-flex > .margin-right-2"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #77777a, background color: #ffffff, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#77777a",
-                "bgColor": "#ffffff",
-                "contrastRatio": 4.46,
-                "fontSize": "8.4pt (11.2px)",
-                "fontWeight": "normal",
-                "messageKey": null,
-                "expectedContrastRatio": "4.5:1",
-                "shadowColor": null
-              },
-              "relatedNodes": [
-                {
-                  "html": "<body class=\"home wp-singular page-template-default page page-id-128943 wp-theme-nasa\">",
-                  "target": [
-                    "body"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 4.46 (foreground color: #77777a, background color: #ffffff, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"margin-right-2\">163 Images</div>",
-          "target": [
-            "a[data-slick-index=\"2\"] > .hds-card-inner > .padding-right-0 > .color-carbon-50.label.display-flex > .margin-right-2:nth-child(1)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #77777a, background color: #ffffff, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#77777a",
-                "bgColor": "#ffffff",
-                "contrastRatio": 4.46,
-                "fontSize": "8.4pt (11.2px)",
-                "fontWeight": "normal",
-                "messageKey": null,
-                "expectedContrastRatio": "4.5:1",
-                "shadowColor": null
-              },
-              "relatedNodes": [
-                {
-                  "html": "<body class=\"home wp-singular page-template-default page page-id-128943 wp-theme-nasa\">",
-                  "target": [
-                    "body"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 4.46 (foreground color: #77777a, background color: #ffffff, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<div class=\"margin-right-2\">4 Videos</div>",
-          "target": [
-            ".margin-right-2:nth-child(2)"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #77777a, background color: #ffffff, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
-        }
-      ]
-    },
-    {
-      "id": "link-name",
-      "impact": "serious",
-      "tags": [
-        "cat.name-role-value",
-        "wcag2a",
-        "wcag244",
-        "wcag412",
-        "section508",
-        "section508.22.a",
-        "TTv5",
-        "TT6.a",
-        "EN-301-549",
-        "EN-9.2.4.4",
-        "EN-9.4.1.2",
-        "ACT"
-      ],
-      "description": "Ensures links have discernible text",
-      "help": "Links must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/link-name?application=axeAPI",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have text that is visible to screen readers"
-            },
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute does not exist or is empty"
-            },
-            {
-              "id": "aria-labelledby",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
-            },
-            {
-              "id": "non-empty-title",
-              "data": {
-                "messageKey": "noAttr"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has no title attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is in tab order and does not have accessible text"
-            }
-          ],
-          "impact": "serious",
-          "html": "<a href=\"https://plus.nasa.gov/scheduled-video/us-spacewalk-94/\" target=\"\" aria-label=\"\" rel=\"noopener\">",
-          "target": [
-            "a[target=\"\"]"
-          ],
-          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
-        },
-        {
-          "any": [
-            {
-              "id": "has-visible-text",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element does not have text that is visible to screen readers"
-            },
-            {
-              "id": "aria-label",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-label attribute does not exist or is empty"
-            },
-            {
-              "id": "aria-labelledby",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
-            },
-            {
-              "id": "non-empty-title",
-              "data": {
-                "messageKey": "noAttr"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has no title attribute"
-            }
-          ],
-          "all": [],
-          "none": [
-            {
-              "id": "focusable-no-name",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element is in tab order and does not have accessible text"
-            }
-          ],
-          "impact": "serious",
-          "html": "<a class=\"hds-image-download-link\" href=\"https://www.nasa.gov/wp-content/uploads/2026/01/iss073e0532039orig.jpg\">",
-          "target": [
-            ".hds-image-download-link"
-          ],
-          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
-        }
-      ]
-    },
-    {
-      "id": "page-has-heading-one",
-      "impact": "moderate",
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
-      "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
-      "help": "Page should contain a level-one heading",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/page-has-heading-one?application=axeAPI",
-      "nodes": [
-        {
-          "any": [],
-          "all": [
-            {
-              "id": "page-has-heading-one",
-              "data": null,
-              "relatedNodes": [],
-              "impact": "moderate",
-              "message": "Page must have a level-one heading"
-            }
-          ],
-          "none": [],
-          "impact": "moderate",
-          "html": "<html lang=\"en-US\" prefix=\"og: https://ogp.me/ns#\">",
-          "target": [
-            "html"
-          ],
-          "failureSummary": "Fix all of the following:\n  Page must have a level-one heading"
-        }
-      ]
-    }
-  ]
+  "violations": []
 }
