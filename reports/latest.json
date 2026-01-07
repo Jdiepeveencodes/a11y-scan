@@ -13,8 +13,8 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-01-07T19:01:52.241Z",
-  "url": "https://www.salesforce.com/",
+  "timestamp": "2026-01-07T19:51:54.463Z",
+  "url": "https://eternal-ember.fandom.com/wiki/Eternal_Ember_Wiki",
   "toolOptions": {
     "resultTypes": [
       "violations"
@@ -22,18 +22,6 @@
     "reporter": "v1"
   },
   "inapplicable": [
-    {
-      "id": "accesskeys",
-      "impact": null,
-      "tags": [
-        "cat.keyboard",
-        "best-practice"
-      ],
-      "description": "Ensures every accesskey attribute value is unique",
-      "help": "accesskey attribute value should be unique",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/accesskeys?application=axeAPI",
-      "nodes": []
-    },
     {
       "id": "area-alt",
       "impact": null,
@@ -57,33 +45,6 @@
       "nodes": []
     },
     {
-      "id": "aria-allowed-attr",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures an element's role supports its ARIA attributes",
-      "help": "Elements must only use supported ARIA attributes",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-allowed-attr?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "aria-allowed-role",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "best-practice"
-      ],
-      "description": "Ensures role attribute has an appropriate value for the element",
-      "help": "ARIA role should be appropriate for the element",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-allowed-role?application=axeAPI",
-      "nodes": []
-    },
-    {
       "id": "aria-braille-equivalent",
       "impact": null,
       "tags": [
@@ -96,83 +57,6 @@
       "description": "Ensure aria-braillelabel and aria-brailleroledescription have a non-braille equivalent",
       "help": "aria-braille attributes must have a non-braille equivalent",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-braille-equivalent?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "aria-command-name",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "TTv5",
-        "TT6.a",
-        "EN-301-549",
-        "EN-9.4.1.2",
-        "ACT"
-      ],
-      "description": "Ensures every ARIA button, link and menuitem has an accessible name",
-      "help": "ARIA commands must have an accessible name",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-command-name?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "aria-conditional-attr",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures ARIA attributes are used as described in the specification of the element's role",
-      "help": "ARIA attributes must be used as specified for the element's role",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-conditional-attr?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "aria-deprecated-role",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures elements do not use deprecated roles",
-      "help": "Deprecated ARIA roles must not be used",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-deprecated-role?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "aria-dialog-name",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "best-practice"
-      ],
-      "description": "Ensures every ARIA dialog and alertdialog node has an accessible name",
-      "help": "ARIA dialog and alertdialog nodes should have an accessible name",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-dialog-name?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "aria-hidden-focus",
-      "impact": null,
-      "tags": [
-        "cat.name-role-value",
-        "wcag2a",
-        "wcag412",
-        "TTv5",
-        "TT6.a",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures aria-hidden elements are not focusable nor contain focusable elements",
-      "help": "ARIA hidden element must not be focusable or contain focusable elements",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-hidden-focus?application=axeAPI",
       "nodes": []
     },
     {
@@ -224,36 +108,6 @@
       "nodes": []
     },
     {
-      "id": "aria-prohibited-attr",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures ARIA attributes are not prohibited for an element's role",
-      "help": "Elements must only use permitted ARIA attributes",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-prohibited-attr?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "aria-required-attr",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures elements with ARIA roles have all required ARIA attributes",
-      "help": "Required ARIA attributes must be provided",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-required-attr?application=axeAPI",
-      "nodes": []
-    },
-    {
       "id": "aria-required-children",
       "impact": null,
       "tags": [
@@ -281,21 +135,6 @@
       "description": "Ensures elements with an ARIA role that require parent roles are contained by them",
       "help": "Certain ARIA roles must be contained by particular parents",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-required-parent?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "aria-roles",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures all elements with a role attribute use a valid value",
-      "help": "ARIA roles used must conform to valid values",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-roles?application=axeAPI",
       "nodes": []
     },
     {
@@ -356,36 +195,6 @@
       "nodes": []
     },
     {
-      "id": "aria-valid-attr-value",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures all ARIA attributes have valid values",
-      "help": "ARIA attributes must conform to valid values",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-valid-attr-value?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "aria-valid-attr",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures attributes that begin with aria- are valid ARIA attributes",
-      "help": "ARIA attributes must conform to valid names",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-valid-attr?application=axeAPI",
-      "nodes": []
-    },
-    {
       "id": "autocomplete-valid",
       "impact": null,
       "tags": [
@@ -399,22 +208,6 @@
       "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
       "help": "autocomplete attribute must be used correctly",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/autocomplete-valid?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "avoid-inline-spacing",
-      "impact": null,
-      "tags": [
-        "cat.structure",
-        "wcag21aa",
-        "wcag1412",
-        "EN-301-549",
-        "EN-9.1.4.12",
-        "ACT"
-      ],
-      "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
-      "help": "Inline text spacing must be adjustable with custom stylesheets",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/avoid-inline-spacing?application=axeAPI",
       "nodes": []
     },
     {
@@ -434,45 +227,6 @@
       "description": "Ensures <blink> elements are not used",
       "help": "<blink> elements are deprecated and must not be used",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/blink?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "button-name",
-      "impact": null,
-      "tags": [
-        "cat.name-role-value",
-        "wcag2a",
-        "wcag412",
-        "section508",
-        "section508.22.a",
-        "TTv5",
-        "TT6.a",
-        "EN-301-549",
-        "EN-9.4.1.2",
-        "ACT"
-      ],
-      "description": "Ensures buttons have discernible text",
-      "help": "Buttons must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/button-name?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "bypass",
-      "impact": null,
-      "tags": [
-        "cat.keyboard",
-        "wcag2a",
-        "wcag241",
-        "section508",
-        "section508.22.o",
-        "TTv5",
-        "TT9.a",
-        "EN-301-549",
-        "EN-9.2.4.1"
-      ],
-      "description": "Ensures each page has at least one mechanism for a user to bypass navigation and jump straight to the content",
-      "help": "Page must have means to bypass repeated blocks",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/bypass?application=axeAPI",
       "nodes": []
     },
     {
@@ -506,21 +260,6 @@
       "nodes": []
     },
     {
-      "id": "duplicate-id-aria",
-      "impact": null,
-      "tags": [
-        "cat.parsing",
-        "wcag2a",
-        "wcag412",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures every id attribute value used in ARIA and in labels is unique",
-      "help": "IDs used in ARIA and labels must be unique",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/duplicate-id-aria?application=axeAPI",
-      "nodes": []
-    },
-    {
       "id": "empty-table-header",
       "impact": null,
       "tags": [
@@ -530,23 +269,6 @@
       "description": "Ensures table headers have discernible text",
       "help": "Table header text should not be empty",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/empty-table-header?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "form-field-multiple-labels",
-      "impact": null,
-      "tags": [
-        "cat.forms",
-        "wcag2a",
-        "wcag332",
-        "TTv5",
-        "TT5.c",
-        "EN-301-549",
-        "EN-9.3.3.2"
-      ],
-      "description": "Ensures form field does not have multiple label elements",
-      "help": "Form field must not have multiple label elements",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/form-field-multiple-labels?application=axeAPI",
       "nodes": []
     },
     {
@@ -567,73 +289,6 @@
       "nodes": []
     },
     {
-      "id": "frame-tested",
-      "impact": null,
-      "tags": [
-        "cat.structure",
-        "best-practice",
-        "review-item"
-      ],
-      "description": "Ensures <iframe> and <frame> elements contain the axe-core script",
-      "help": "Frames should be tested with axe-core",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-tested?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "frame-title-unique",
-      "impact": null,
-      "tags": [
-        "cat.text-alternatives",
-        "wcag2a",
-        "wcag412",
-        "TTv5",
-        "TT12.d",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures <iframe> and <frame> elements contain a unique title attribute",
-      "help": "Frames must have a unique title attribute",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-title-unique?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "frame-title",
-      "impact": null,
-      "tags": [
-        "cat.text-alternatives",
-        "wcag2a",
-        "wcag412",
-        "section508",
-        "section508.22.i",
-        "TTv5",
-        "TT12.d",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures <iframe> and <frame> elements have an accessible name",
-      "help": "Frames must have an accessible name",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-title?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "html-lang-valid",
-      "impact": null,
-      "tags": [
-        "cat.language",
-        "wcag2a",
-        "wcag311",
-        "TTv5",
-        "TT11.a",
-        "EN-301-549",
-        "EN-9.3.1.1",
-        "ACT"
-      ],
-      "description": "Ensures the lang attribute of the <html> element has a valid value",
-      "help": "<html> element must have a valid value for the lang attribute",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/html-lang-valid?application=axeAPI",
-      "nodes": []
-    },
-    {
       "id": "html-xml-lang-mismatch",
       "impact": null,
       "tags": [
@@ -647,39 +302,6 @@
       "description": "Ensure that HTML elements with both valid lang and xml:lang attributes agree on the base language of the page",
       "help": "HTML elements with lang and xml:lang must have the same base language",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/html-xml-lang-mismatch?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "image-alt",
-      "impact": null,
-      "tags": [
-        "cat.text-alternatives",
-        "wcag2a",
-        "wcag111",
-        "section508",
-        "section508.22.a",
-        "TTv5",
-        "TT7.a",
-        "TT7.b",
-        "EN-301-549",
-        "EN-9.1.1.1",
-        "ACT"
-      ],
-      "description": "Ensures <img> elements have alternate text or a role of none or presentation",
-      "help": "Images must have alternate text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/image-alt?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "image-redundant-alt",
-      "impact": null,
-      "tags": [
-        "cat.text-alternatives",
-        "best-practice"
-      ],
-      "description": "Ensure image alternative is not repeated as text",
-      "help": "Alternative text of images should not be repeated as text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/image-redundant-alt?application=axeAPI",
       "nodes": []
     },
     {
@@ -725,50 +347,6 @@
       "nodes": []
     },
     {
-      "id": "label-title-only",
-      "impact": null,
-      "tags": [
-        "cat.forms",
-        "best-practice"
-      ],
-      "description": "Ensures that every form element has a visible label and is not solely labeled using hidden labels, or the title or aria-describedby attributes",
-      "help": "Form elements should have a visible label",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/label-title-only?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "label",
-      "impact": null,
-      "tags": [
-        "cat.forms",
-        "wcag2a",
-        "wcag412",
-        "section508",
-        "section508.22.n",
-        "TTv5",
-        "TT5.c",
-        "EN-301-549",
-        "EN-9.4.1.2",
-        "ACT"
-      ],
-      "description": "Ensures every form element has a label",
-      "help": "Form elements must have labels",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/label?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "landmark-banner-is-top-level",
-      "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
-      "description": "Ensures the banner landmark is at top level",
-      "help": "Banner landmark should not be contained in another landmark",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-banner-is-top-level?application=axeAPI",
-      "nodes": []
-    },
-    {
       "id": "landmark-complementary-is-top-level",
       "impact": null,
       "tags": [
@@ -778,147 +356,6 @@
       "description": "Ensures the complementary landmark or aside is at top level",
       "help": "Aside should not be contained in another landmark",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-complementary-is-top-level?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "landmark-contentinfo-is-top-level",
-      "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
-      "description": "Ensures the contentinfo landmark is at top level",
-      "help": "Contentinfo landmark should not be contained in another landmark",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-contentinfo-is-top-level?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "landmark-main-is-top-level",
-      "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
-      "description": "Ensures the main landmark is at top level",
-      "help": "Main landmark should not be contained in another landmark",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-main-is-top-level?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "landmark-no-duplicate-banner",
-      "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
-      "description": "Ensures the document has at most one banner landmark",
-      "help": "Document should not have more than one banner landmark",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-no-duplicate-banner?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "landmark-no-duplicate-contentinfo",
-      "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
-      "description": "Ensures the document has at most one contentinfo landmark",
-      "help": "Document should not have more than one contentinfo landmark",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-no-duplicate-contentinfo?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "landmark-no-duplicate-main",
-      "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
-      "description": "Ensures the document has at most one main landmark",
-      "help": "Document should not have more than one main landmark",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-no-duplicate-main?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "landmark-unique",
-      "impact": null,
-      "tags": [
-        "cat.semantics",
-        "best-practice"
-      ],
-      "help": "Ensures landmarks are unique",
-      "description": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-unique?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "link-in-text-block",
-      "impact": null,
-      "tags": [
-        "cat.color",
-        "wcag2a",
-        "wcag141",
-        "TTv5",
-        "TT13.a",
-        "EN-301-549",
-        "EN-9.1.4.1"
-      ],
-      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
-      "help": "Links must be distinguishable without relying on color",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/link-in-text-block?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "link-name",
-      "impact": null,
-      "tags": [
-        "cat.name-role-value",
-        "wcag2a",
-        "wcag244",
-        "wcag412",
-        "section508",
-        "section508.22.a",
-        "TTv5",
-        "TT6.a",
-        "EN-301-549",
-        "EN-9.2.4.4",
-        "EN-9.4.1.2",
-        "ACT"
-      ],
-      "description": "Ensures links have discernible text",
-      "help": "Links must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/link-name?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "list",
-      "impact": null,
-      "tags": [
-        "cat.structure",
-        "wcag2a",
-        "wcag131",
-        "EN-301-549",
-        "EN-9.1.3.1"
-      ],
-      "description": "Ensures that lists are structured correctly",
-      "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/list?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "listitem",
-      "impact": null,
-      "tags": [
-        "cat.structure",
-        "wcag2a",
-        "wcag131",
-        "EN-301-549",
-        "EN-9.1.3.1"
-      ],
-      "description": "Ensures <li> elements are used semantically",
-      "help": "<li> elements must be contained in a <ul> or <ol>",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/listitem?application=axeAPI",
       "nodes": []
     },
     {
@@ -956,51 +393,6 @@
       "nodes": []
     },
     {
-      "id": "meta-viewport-large",
-      "impact": null,
-      "tags": [
-        "cat.sensory-and-visual-cues",
-        "best-practice"
-      ],
-      "description": "Ensures <meta name=\"viewport\"> can scale a significant amount",
-      "help": "Users should be able to zoom and scale the text up to 500%",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/meta-viewport-large?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "meta-viewport",
-      "impact": null,
-      "tags": [
-        "cat.sensory-and-visual-cues",
-        "wcag2aa",
-        "wcag144",
-        "EN-301-549",
-        "EN-9.1.4.4",
-        "ACT"
-      ],
-      "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
-      "help": "Zooming and scaling must not be disabled",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/meta-viewport?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "nested-interactive",
-      "impact": null,
-      "tags": [
-        "cat.keyboard",
-        "wcag2a",
-        "wcag412",
-        "TTv5",
-        "TT6.a",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensures interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
-      "help": "Interactive controls must not be nested",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/nested-interactive?application=axeAPI",
-      "nodes": []
-    },
-    {
       "id": "object-alt",
       "impact": null,
       "tags": [
@@ -1015,19 +407,6 @@
       "description": "Ensures <object> elements have alternate text",
       "help": "<object> elements must have alternate text",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/object-alt?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "presentation-role-conflict",
-      "impact": null,
-      "tags": [
-        "cat.aria",
-        "best-practice",
-        "ACT"
-      ],
-      "description": "Elements marked as presentational should not have global ARIA or tabindex to ensure all screen readers ignore them",
-      "help": "Ensure elements marked as presentational are consistently ignored",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/presentation-role-conflict?application=axeAPI",
       "nodes": []
     },
     {
@@ -1153,18 +532,6 @@
       "nodes": []
     },
     {
-      "id": "tabindex",
-      "impact": null,
-      "tags": [
-        "cat.keyboard",
-        "best-practice"
-      ],
-      "description": "Ensures tabindex attribute values are not greater than 0",
-      "help": "Elements should not have tabindex greater than zero",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/tabindex?application=axeAPI",
-      "nodes": []
-    },
-    {
       "id": "table-duplicate-name",
       "impact": null,
       "tags": [
@@ -1215,24 +582,6 @@
       "nodes": []
     },
     {
-      "id": "valid-lang",
-      "impact": null,
-      "tags": [
-        "cat.language",
-        "wcag2aa",
-        "wcag312",
-        "TTv5",
-        "TT11.b",
-        "EN-301-549",
-        "EN-9.3.1.2",
-        "ACT"
-      ],
-      "description": "Ensures lang attributes have valid values",
-      "help": "lang attribute must have a valid value",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/valid-lang?application=axeAPI",
-      "nodes": []
-    },
-    {
       "id": "video-caption",
       "impact": null,
       "tags": [
@@ -1272,6 +621,246 @@
   ],
   "passes": [
     {
+      "id": "accesskeys",
+      "impact": null,
+      "tags": [
+        "cat.keyboard",
+        "best-practice"
+      ],
+      "description": "Ensures every accesskey attribute value is unique",
+      "help": "accesskey attribute value should be unique",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/accesskeys?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "accesskeys",
+              "data": "z",
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Accesskey attribute value is unique"
+            }
+          ],
+          "impact": null,
+          "html": "<a accesskey=\"z\" href=\"https://eternal-ember.fandom.com\" class=\"fandom-community-header__image\">",
+          "target": [
+            ".fandom-community-header__image"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-allowed-attr?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attributes are used correctly for the defined role"
+            }
+          ],
+          "none": [
+            {
+              "id": "aria-unsupported-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<nav class=\"global-top-navigation\" id=\"global-top-navigation\" aria-label=\"Fandom top navigation\">",
+          "target": [
+            "#global-top-navigation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-allowed-role",
+      "impact": "minor",
+      "tags": [
+        "cat.aria",
+        "best-practice"
+      ],
+      "description": "Ensures role attribute has an appropriate value for the element",
+      "help": "ARIA role should be appropriate for the element",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-allowed-role?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-allowed-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "ARIA role is allowed for given element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div id=\"sticky-toc\" class=\"toc sticky-toc wds-is-hidden\" role=\"navigation\">",
+          "target": [
+            "#sticky-toc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-command-name",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT"
+      ],
+      "description": "Ensures every ARIA button, link and menuitem has an accessible name",
+      "help": "ARIA commands must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-command-name?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute exists and is not empty"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div role=\"button\" class=\"wds-dropdown__toggle wds-button wds-is-text page-header__action-button\" aria-label=\"Page Tools\" aria-controls=\"p-cactions\" data-tracking-label=\"dropdown-actions\">\n\t\t\t\t\t\t\t<svg class=\"wds-icon wds-icon-small\"><use xlink:href=\"#wds-icons-more-small\"></use></svg>\t\t\t\t\t\t</div>",
+          "target": [
+            "div[aria-label=\"Page Tools\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-conditional-attr",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures ARIA attributes are used as described in the specification of the element's role",
+      "help": "ARIA attributes must be used as specified for the element's role",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-conditional-attr?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-conditional-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<nav class=\"global-top-navigation\" id=\"global-top-navigation\" aria-label=\"Fandom top navigation\">",
+          "target": [
+            "#global-top-navigation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-deprecated-role",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures elements do not use deprecated roles",
+      "help": "Deprecated ARIA roles must not be used",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-deprecated-role?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "deprecatedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "ARIA role is not deprecated"
+            }
+          ],
+          "impact": null,
+          "html": "<div role=\"button\" class=\"wds-dropdown__toggle wds-button wds-is-text page-header__action-button\" aria-label=\"Page Tools\" aria-controls=\"p-cactions\" data-tracking-label=\"dropdown-actions\">\n\t\t\t\t\t\t\t<svg class=\"wds-icon wds-icon-small\"><use xlink:href=\"#wds-icons-more-small\"></use></svg>\t\t\t\t\t\t</div>",
+          "target": [
+            "div[aria-label=\"Page Tools\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-dialog-name",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "best-practice"
+      ],
+      "description": "Ensures every ARIA dialog and alertdialog node has an accessible name",
+      "help": "ARIA dialog and alertdialog nodes should have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-dialog-name?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute exists and is not empty"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div role=\"dialog\" aria-label=\"Privacy\">",
+          "target": [
+            "div[aria-label=\"Privacy\"]"
+          ]
+        }
+      ]
+    },
+    {
       "id": "aria-hidden-body",
       "impact": null,
       "tags": [
@@ -1300,7 +889,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<body>\n<h1>Access Denied</h1>\n \nYou don't have permission to access \"http://www.salesforce.com/\" on this server.<p>\nReference #18.8cd02e17.1767812511.4fa7c6f6\n</p><p>https://errors.edgesuite.net/18.8cd02e17.1767812511.4fa7c6f6</p>\n\n\n</body>",
+          "html": "<body class=\"mainpage nowikiabar mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Eternal_Ember_Wiki page-Main_Page rootpage-Eternal_Ember_Wiki skin-fandomdesktop action-view ooui-theme-fandomooui wiki-eternalember theme-fandomdesktop-light odyssey odyssey-top-strategy\" data-theme=\"light\">",
           "target": [
             "body"
           ]
@@ -1308,8 +897,482 @@
       ]
     },
     {
-      "id": "color-contrast",
+      "id": "aria-hidden-focus",
       "impact": null,
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures aria-hidden elements are not focusable nor contain focusable elements",
+      "help": "ARIA hidden element must not be focusable or contain focusable elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-hidden-focus?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "focusable-modal-open",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements while a modal is open"
+            },
+            {
+              "id": "focusable-disabled",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            },
+            {
+              "id": "focusable-not-tabbable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "No focusable elements contained within element"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"height: 0px; width: 0px; position: absolute; overflow: hidden;\" aria-hidden=\"true\">",
+          "target": [
+            "body > svg[aria-hidden=\"true\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures ARIA attributes are not prohibited for an element's role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-prohibited-attr?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "ARIA attribute is allowed"
+            }
+          ],
+          "impact": null,
+          "html": "<nav class=\"global-top-navigation\" id=\"global-top-navigation\" aria-label=\"Fandom top navigation\">",
+          "target": [
+            "#global-top-navigation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-required-attr",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures elements with ARIA roles have all required ARIA attributes",
+      "help": "Required ARIA attributes must be provided",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-required-attr?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-required-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "All required ARIA attributes are present"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div role=\"button\" class=\"wds-dropdown__toggle wds-button wds-is-text page-header__action-button\" aria-label=\"Page Tools\" aria-controls=\"p-cactions\" data-tracking-label=\"dropdown-actions\">\n\t\t\t\t\t\t\t<svg class=\"wds-icon wds-icon-small\"><use xlink:href=\"#wds-icons-more-small\"></use></svg>\t\t\t\t\t\t</div>",
+          "target": [
+            "div[aria-label=\"Page Tools\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-roles",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures all elements with a role attribute use a valid value",
+      "help": "ARIA roles used must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-roles?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "invalidrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is valid"
+            },
+            {
+              "id": "abstractrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Abstract roles are not used"
+            },
+            {
+              "id": "unsupportedrole",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA role is supported"
+            }
+          ],
+          "impact": null,
+          "html": "<div role=\"button\" class=\"wds-dropdown__toggle wds-button wds-is-text page-header__action-button\" aria-label=\"Page Tools\" aria-controls=\"p-cactions\" data-tracking-label=\"dropdown-actions\">\n\t\t\t\t\t\t\t<svg class=\"wds-icon wds-icon-small\"><use xlink:href=\"#wds-icons-more-small\"></use></svg>\t\t\t\t\t\t</div>",
+          "target": [
+            "div[aria-label=\"Page Tools\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-valid-attr-value",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures all ARIA attributes have valid values",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-valid-attr-value?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-valid-attr-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute values are valid"
+            },
+            {
+              "id": "aria-errormessage",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
+            },
+            {
+              "id": "aria-level",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "aria-level values are valid"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<nav class=\"global-top-navigation\" id=\"global-top-navigation\" aria-label=\"Fandom top navigation\">",
+          "target": [
+            "#global-top-navigation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aria-valid-attr",
+      "impact": null,
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures attributes that begin with aria- are valid ARIA attributes",
+      "help": "ARIA attributes must conform to valid names",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-valid-attr?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-valid-attr",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute name is valid"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<nav class=\"global-top-navigation\" id=\"global-top-navigation\" aria-label=\"Fandom top navigation\">",
+          "target": [
+            "#global-top-navigation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avoid-inline-spacing",
+      "impact": null,
+      "tags": [
+        "cat.structure",
+        "wcag21aa",
+        "wcag1412",
+        "EN-301-549",
+        "EN-9.1.4.12",
+        "ACT"
+      ],
+      "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
+      "help": "Inline text spacing must be adjustable with custom stylesheets",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/avoid-inline-spacing?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<html class=\"client-js sse-other l2u-other cookie-banner-api-usp ve-available cookie-banner-visible\" lang=\"en\" dir=\"ltr\" style=\"--desktop-global-navigation-width: 66px; --left-panel-spacing: 66px; --skybox-impact-spacing: 0px; --cookie-banner-height: 71px;\">",
+          "target": [
+            "html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "button-name",
+      "impact": null,
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT"
+      ],
+      "description": "Ensures buttons have discernible text",
+      "help": "Buttons must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/button-name?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "button-has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has inner text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"global-explore-navigation__button\" aria-expanded=\"false\" aria-controls=\"menu__content\" data-testid=\"menu__button\">",
+          "target": [
+            "button[aria-controls=\"menu__content\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bypass",
+      "impact": null,
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag241",
+        "section508",
+        "section508.22.o",
+        "TTv5",
+        "TT9.a",
+        "EN-301-549",
+        "EN-9.2.4.1"
+      ],
+      "description": "Ensures each page has at least one mechanism for a user to bypass navigation and jump straight to the content",
+      "help": "Page must have means to bypass repeated blocks",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/bypass?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "internal-link-present",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Valid skip link found"
+            },
+            {
+              "id": "header-present",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<h1 class=\"page-header__title\" id=\"firstHeading\">\n\t\t\t\t\tHome\t\t\t\t</h1>",
+                  "target": [
+                    "#firstHeading"
+                  ]
+                },
+                {
+                  "html": "<h2 id=\"mw-toc-heading\"><svg class=\"wds-icon wds-icon-tiny\"><use href=\"#wds-icons-bullet-list-tiny\"></use></svg>Contents</h2>",
+                  "target": [
+                    "#mw-toc-heading"
+                  ]
+                },
+                {
+                  "html": "<h2>",
+                  "target": [
+                    "h2:nth-child(5)"
+                  ]
+                },
+                {
+                  "html": "<h2>",
+                  "target": [
+                    "h2:nth-child(8)"
+                  ]
+                },
+                {
+                  "html": "<h2>",
+                  "target": [
+                    "h2:nth-child(11)"
+                  ]
+                },
+                {
+                  "html": "<h2>",
+                  "target": [
+                    "h2:nth-child(13)"
+                  ]
+                },
+                {
+                  "html": "<h2 class=\"global-footer__header\">",
+                  "target": [
+                    ".global-footer__header"
+                  ]
+                },
+                {
+                  "html": "<h3 class=\"global-footer__section-header\">Explore properties</h3>",
+                  "target": [
+                    ".global-footer__section-fandom-overview > .global-footer__section-header"
+                  ]
+                },
+                {
+                  "html": "<h3 class=\"global-footer__section-header\">Follow Us</h3>",
+                  "target": [
+                    ".global-footer__section-social-links > .global-footer__section-header"
+                  ]
+                },
+                {
+                  "html": "<h3 class=\"global-footer__section-header\">Overview</h3>",
+                  "target": [
+                    ".global-footer__section-site-overview > .global-footer__section-header"
+                  ]
+                },
+                {
+                  "html": "<h3 class=\"global-footer__section-header\">Community</h3>",
+                  "target": [
+                    ".global-footer__section-community > .global-footer__section-header"
+                  ]
+                },
+                {
+                  "html": "<h3 class=\"global-footer__section-header\">Advertise</h3>",
+                  "target": [
+                    ".global-footer__section-advertise > .global-footer__section-header"
+                  ]
+                },
+                {
+                  "html": "<h3 class=\"global-footer__section-header\">Fandom Apps</h3>",
+                  "target": [
+                    ".global-footer__section-fandom-apps > .global-footer__section-header"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Page has a heading"
+            },
+            {
+              "id": "landmark",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"page__main\" lang=\"en\">",
+                  "target": [
+                    "main"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Page has a landmark region"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<html class=\"client-js sse-other l2u-other cookie-banner-api-usp ve-available cookie-banner-visible\" lang=\"en\" dir=\"ltr\" style=\"--desktop-global-navigation-width: 66px; --left-panel-spacing: 66px; --skybox-impact-spacing: 0px; --cookie-banner-height: 71px;\">",
+          "target": [
+            "html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
       "tags": [
         "cat.color",
         "wcag2aa",
@@ -1329,26 +1392,26 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#000000",
-                "bgColor": "#ffffff",
-                "contrastRatio": 21,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
+                "fgColor": "#3a3a3a",
+                "bgColor": "#edeee8",
+                "contrastRatio": 9.74,
+                "fontSize": "18.0pt (24px)",
+                "fontWeight": "bold",
                 "messageKey": null,
-                "expectedContrastRatio": "4.5:1",
+                "expectedContrastRatio": "3:1",
                 "shadowColor": null
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 21"
+              "message": "Element has sufficient color contrast of 9.74"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<body>\n<h1>Access Denied</h1>\n \nYou don't have permission to access \"http://www.salesforce.com/\" on this server.<p>\nReference #18.8cd02e17.1767812511.4fa7c6f6\n</p><p>https://errors.edgesuite.net/18.8cd02e17.1767812511.4fa7c6f6</p>\n\n\n</body>",
+          "html": "<b>Eternal Ember is a dark fantasy style Idle RPG game.</b>",
           "target": [
-            "body"
+            "div:nth-child(2) > b"
           ]
         }
       ]
@@ -1383,9 +1446,43 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<html>",
+          "html": "<html class=\"client-js sse-other l2u-other cookie-banner-api-usp ve-available cookie-banner-visible\" lang=\"en\" dir=\"ltr\" style=\"--desktop-global-navigation-width: 66px; --left-panel-spacing: 66px; --skybox-impact-spacing: 0px; --cookie-banner-height: 71px;\">",
           "target": [
             "html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "duplicate-id-aria",
+      "impact": null,
+      "tags": [
+        "cat.parsing",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures every id attribute value used in ARIA and in labels is unique",
+      "help": "IDs used in ARIA and labels must be unique",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/duplicate-id-aria?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "duplicate-id-aria",
+              "data": "menu__content",
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Document has no elements referenced with ARIA or labels that share the same id attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div id=\"menu__content\" class=\"global-explore-navigation__panel-container\"></div>",
+          "target": [
+            "#menu__content"
           ]
         }
       ]
@@ -1414,9 +1511,90 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h1>Access Denied</h1>",
+          "html": "<h1 class=\"page-header__title\" id=\"firstHeading\">\n\t\t\t\t\tHome\t\t\t\t</h1>",
           "target": [
-            "h1"
+            "#firstHeading"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "form-field-multiple-labels",
+      "impact": null,
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag332",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.3.3.2"
+      ],
+      "description": "Ensures form field does not have multiple label elements",
+      "help": "Form field must not have multiple label elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/form-field-multiple-labels?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "multiple-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "Form field does not have multiple label elements"
+            }
+          ],
+          "impact": null,
+          "html": "<input type=\"text\" class=\"search-app__input\" placeholder=\"Search\" value=\"\">",
+          "target": [
+            "#global-top-navigation > .search-container > .search-app__wrapper.search-app > .search-app__input[placeholder=\"Search\"][value=\"\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frame-title",
+      "impact": "serious",
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.i",
+        "TTv5",
+        "TT12.d",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures <iframe> and <frame> elements have an accessible name",
+      "help": "Frames must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-title?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "non-empty-title",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has a title attribute"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute exists and is not empty"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<iframe id=\"google_ads_iframe_/5441/wka1b.LB/top_leaderboard/desktop/ucp_desktop-fandom-home/_not_a_top1k_wiki-gaming_0\" name=\"google_ads_iframe_/5441/wka1b.LB/top_leaderboard/desktop/ucp_desktop-fandom-home/_not_a_top1k_wiki-gaming_0\" title=\"3rd party ad content\" width=\"728\" height=\"90\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" aria-label=\"Advertisement\" tabindex=\"0\" allow=\"private-state-token-redemption;attribution-reporting\" data-load-complete=\"true\" data-google-container-id=\"1\" style=\"border: 0px; vertical-align: bottom;\">",
+          "target": [
+            "#google_ads_iframe_\\/5441\\/wka1b\\.LB\\/top_leaderboard\\/desktop\\/ucp_desktop-fandom-home\\/_not_a_top1k_wiki-gaming_0"
           ]
         }
       ]
@@ -1440,9 +1618,105 @@
                 "headingOrder": [
                   {
                     "ancestry": [
-                      "html > body > h1:nth-child(1)"
+                      "html > body > div:nth-child(5) > div:nth-child(2) > div > fandom-ad:nth-child(1) > div > iframe"
+                    ],
+                    "level": -1
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(5) > div:nth-child(4) > div:nth-child(3) > main > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > h1"
                     ],
                     "level": 1
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(5) > div:nth-child(4) > div:nth-child(3) > main > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(4) > div:nth-child(2) > h2:nth-child(1)"
+                    ],
+                    "level": 2
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(5) > div:nth-child(4) > div:nth-child(3) > main > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(1) > div > h2:nth-child(5)"
+                    ],
+                    "level": 2
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(5) > div:nth-child(4) > div:nth-child(3) > main > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(1) > div > h2:nth-child(8)"
+                    ],
+                    "level": 2
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(5) > div:nth-child(4) > div:nth-child(3) > main > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(1) > div > h2:nth-child(11)"
+                    ],
+                    "level": 2
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(5) > div:nth-child(4) > div:nth-child(3) > main > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(1) > div > h2:nth-child(13)"
+                    ],
+                    "level": 2
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(5) > div:nth-child(4) > div:nth-child(3) > main > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(3) > fandom-ad:nth-child(1) > div:nth-child(1) > iframe"
+                    ],
+                    "level": -1
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(5) > div:nth-child(4) > div:nth-child(4) > fandom-ad:nth-child(1) > div > iframe"
+                    ],
+                    "level": -1
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(5) > footer:nth-child(5) > div:nth-child(1) > div:nth-child(1) > h2:nth-child(1)"
+                    ],
+                    "level": 2
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(5) > footer:nth-child(5) > div:nth-child(1) > div:nth-child(1) > section:nth-child(2) > h3:nth-child(1)"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(5) > footer:nth-child(5) > div:nth-child(1) > div:nth-child(1) > section:nth-child(3) > h3:nth-child(1)"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(5) > footer:nth-child(5) > div:nth-child(1) > div:nth-child(2) > section > h3:nth-child(1)"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(5) > footer:nth-child(5) > div:nth-child(1) > div:nth-child(3) > section:nth-child(1) > h3:nth-child(1)"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(5) > footer:nth-child(5) > div:nth-child(1) > div:nth-child(3) > section:nth-child(2) > h3:nth-child(1)"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > div:nth-child(5) > footer:nth-child(5) > div:nth-child(1) > div:nth-child(4) > section:nth-child(1) > h3"
+                    ],
+                    "level": 3
+                  },
+                  {
+                    "ancestry": [
+                      "html > body > iframe:nth-child(58)"
+                    ],
+                    "level": -1
                   }
                 ]
               },
@@ -1454,9 +1728,716 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<h1>Access Denied</h1>",
+          "html": "<h1 class=\"page-header__title\" id=\"firstHeading\">\n\t\t\t\t\tHome\t\t\t\t</h1>",
           "target": [
-            "h1"
+            "#firstHeading"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-has-lang",
+      "impact": null,
+      "tags": [
+        "cat.language",
+        "wcag2a",
+        "wcag311",
+        "TTv5",
+        "TT11.a",
+        "EN-301-549",
+        "EN-9.3.1.1",
+        "ACT"
+      ],
+      "description": "Ensures every HTML document has a lang attribute",
+      "help": "<html> element must have a lang attribute",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/html-has-lang?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-lang",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "The <html> element has a lang attribute"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<html class=\"client-js sse-other l2u-other cookie-banner-api-usp ve-available cookie-banner-visible\" lang=\"en\" dir=\"ltr\" style=\"--desktop-global-navigation-width: 66px; --left-panel-spacing: 66px; --skybox-impact-spacing: 0px; --cookie-banner-height: 71px;\">",
+          "target": [
+            "html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-lang-valid",
+      "impact": null,
+      "tags": [
+        "cat.language",
+        "wcag2a",
+        "wcag311",
+        "TTv5",
+        "TT11.a",
+        "EN-301-549",
+        "EN-9.3.1.1",
+        "ACT"
+      ],
+      "description": "Ensures the lang attribute of the <html> element has a valid value",
+      "help": "<html> element must have a valid value for the lang attribute",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/html-lang-valid?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "valid-lang",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Value of lang attribute is included in the list of valid languages"
+            }
+          ],
+          "impact": null,
+          "html": "<html class=\"client-js sse-other l2u-other cookie-banner-api-usp ve-available cookie-banner-visible\" lang=\"en\" dir=\"ltr\" style=\"--desktop-global-navigation-width: 66px; --left-panel-spacing: 66px; --skybox-impact-spacing: 0px; --cookie-banner-height: 71px;\">",
+          "target": [
+            "html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "image-alt",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag111",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT7.a",
+        "TT7.b",
+        "EN-301-549",
+        "EN-9.1.1.1",
+        "ACT"
+      ],
+      "description": "Ensures <img> elements have alternate text or a role of none or presentation",
+      "help": "Images must have alternate text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/image-alt?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-alt",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has an alt attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "alt-space-value",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a valid alt attribute value"
+            }
+          ],
+          "impact": null,
+          "html": "<img src=\"https://static.wikia.nocookie.net/eternal-ember/images/e/e6/Site-logo.png/revision/latest?cb=20250626020153\" width=\"500\" height=\"500\" alt=\"Eternal Ember Wiki\" data-test=\"fandom-community-header-community-logo\">",
+          "target": [
+            "img[width=\"500\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "image-redundant-alt",
+      "impact": null,
+      "tags": [
+        "cat.text-alternatives",
+        "best-practice"
+      ],
+      "description": "Ensure image alternative is not repeated as text",
+      "help": "Alternative text of images should not be repeated as text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/image-redundant-alt?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "duplicate-img-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "Element does not duplicate existing text in <img> alt text"
+            }
+          ],
+          "impact": null,
+          "html": "<img src=\"https://static.wikia.nocookie.net/eternal-ember/images/e/e6/Site-logo.png/revision/latest?cb=20250626020153\" width=\"500\" height=\"500\" alt=\"Eternal Ember Wiki\" data-test=\"fandom-community-header-community-logo\">",
+          "target": [
+            "img[width=\"500\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "label-title-only",
+      "impact": null,
+      "tags": [
+        "cat.forms",
+        "best-practice"
+      ],
+      "description": "Ensures that every form element has a visible label and is not solely labeled using hidden labels, or the title or aria-describedby attributes",
+      "help": "Form elements should have a visible label",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/label-title-only?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "title-only",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Form element does not solely use title attribute for its label"
+            }
+          ],
+          "impact": null,
+          "html": "<input type=\"text\" class=\"search-app__input\" placeholder=\"Search\" value=\"\">",
+          "target": [
+            "#global-top-navigation > .search-container > .search-app__wrapper.search-app > .search-app__input[placeholder=\"Search\"][value=\"\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "label",
+      "impact": null,
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.n",
+        "TTv5",
+        "TT5.c",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "ACT"
+      ],
+      "description": "Ensures every form element has a label",
+      "help": "Form elements must have labels",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/label?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "non-empty-placeholder",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Element has a placeholder attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "hidden-explicit-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "Form element has a visible explicit <label>"
+            }
+          ],
+          "impact": null,
+          "html": "<input type=\"text\" class=\"search-app__input\" placeholder=\"Search\" value=\"\">",
+          "target": [
+            "#global-top-navigation > .search-container > .search-app__wrapper.search-app > .search-app__input[placeholder=\"Search\"][value=\"\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "landmark-banner-is-top-level",
+      "impact": null,
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "description": "Ensures the banner landmark is at top level",
+      "help": "Banner landmark should not be contained in another landmark",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-banner-is-top-level?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "banner"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The banner landmark is at the top level."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<header class=\"fandom-community-header\">",
+          "target": [
+            ".fandom-community-header"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "landmark-contentinfo-is-top-level",
+      "impact": null,
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "description": "Ensures the contentinfo landmark is at top level",
+      "help": "Contentinfo landmark should not be contained in another landmark",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-contentinfo-is-top-level?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "contentinfo"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The contentinfo landmark is at the top level."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<footer class=\"global-footer\">",
+          "target": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "landmark-main-is-top-level",
+      "impact": null,
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "description": "Ensures the main landmark is at top level",
+      "help": "Main landmark should not be contained in another landmark",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-main-is-top-level?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-top-level",
+              "data": {
+                "role": "main"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "The main landmark is at the top level."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<main class=\"page__main\" lang=\"en\">",
+          "target": [
+            "main"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "landmark-no-duplicate-banner",
+      "impact": null,
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "description": "Ensures the document has at most one banner landmark",
+      "help": "Document should not have more than one banner landmark",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-no-duplicate-banner?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-banner",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "Document does not have more than one banner landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<header class=\"fandom-community-header\">",
+          "target": [
+            ".fandom-community-header"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "landmark-no-duplicate-contentinfo",
+      "impact": null,
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "description": "Ensures the document has at most one contentinfo landmark",
+      "help": "Document should not have more than one contentinfo landmark",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-no-duplicate-contentinfo?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-contentinfo",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "Document does not have more than one contentinfo landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<footer class=\"global-footer\">",
+          "target": [
+            "footer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "landmark-no-duplicate-main",
+      "impact": null,
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "description": "Ensures the document has at most one main landmark",
+      "help": "Document should not have more than one main landmark",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-no-duplicate-main?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "page-no-duplicate-main",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "Document does not have more than one main landmark"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<main class=\"page__main\" lang=\"en\">",
+          "target": [
+            "main"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "landmark-one-main",
+      "impact": null,
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "description": "Ensures the document has a main landmark",
+      "help": "Document should have one main landmark",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-one-main?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "page-has-main",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "Document has at least one main landmark"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<html class=\"client-js sse-other l2u-other cookie-banner-api-usp ve-available cookie-banner-visible\" lang=\"en\" dir=\"ltr\" style=\"--desktop-global-navigation-width: 66px; --left-panel-spacing: 66px; --skybox-impact-spacing: 0px; --cookie-banner-height: 71px;\">",
+          "target": [
+            "html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "landmark-unique",
+      "impact": null,
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "help": "Ensures landmarks are unique",
+      "description": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-unique?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "landmark-is-unique",
+              "data": {
+                "role": "navigation",
+                "accessibleText": "fandom top navigation"
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "Landmarks must have a unique role or role/label/title (i.e. accessible name) combination"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<nav class=\"global-top-navigation\" id=\"global-top-navigation\" aria-label=\"Fandom top navigation\">",
+          "target": [
+            "#global-top-navigation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT"
+      ],
+      "description": "Ensures links have discernible text",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/link-name?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute exists and is not empty"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is not in tab order or has accessible text"
+            }
+          ],
+          "impact": null,
+          "html": "<a href=\"https://www.fandom.com/\" class=\"global-top-navigation__fandom-logo\" data-tracking-label=\"fandom-logo\" data-testid=\"fandom-logo\" aria-label=\"Fandom homepage\">\n\t<svg class=\"wds-icon\"><use xlink:href=\"#wds-brand-fandom-logo\"></use></svg></a>",
+          "target": [
+            ".global-top-navigation__fandom-logo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "list",
+      "impact": null,
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1"
+      ],
+      "description": "Ensures that lists are structured correctly",
+      "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/list?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "only-listitems",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "List element only has direct children that are allowed inside <li> elements"
+            }
+          ],
+          "impact": null,
+          "html": "<ul class=\"wds-tabs\">",
+          "target": [
+            ".fandom-community-header > .fandom-community-header__local-navigation > .wds-tabs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "listitem",
+      "impact": null,
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1"
+      ],
+      "description": "Ensures <li> elements are used semantically",
+      "help": "<li> elements must be contained in a <ul> or <ol>",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/listitem?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "listitem",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<li class=\"wds-dropdown explore-menu\">",
+          "target": [
+            ".fandom-community-header > .fandom-community-header__local-navigation > .wds-tabs > .explore-menu.wds-dropdown"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meta-viewport-large",
+      "impact": null,
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "best-practice"
+      ],
+      "description": "Ensures <meta name=\"viewport\"> can scale a significant amount",
+      "help": "Users should be able to zoom and scale the text up to 500%",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/meta-viewport-large?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "meta-viewport-large",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "<meta> tag does not prevent significant zooming on mobile devices"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0\">",
+          "target": [
+            "meta[name=\"viewport\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meta-viewport",
+      "impact": null,
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag2aa",
+        "wcag144",
+        "EN-301-549",
+        "EN-9.1.4.4",
+        "ACT"
+      ],
+      "description": "Ensures <meta name=\"viewport\"> does not disable text scaling and zooming",
+      "help": "Zooming and scaling must not be disabled",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/meta-viewport?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "meta-viewport",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "<meta> tag does not disable zooming on mobile devices"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0\">",
+          "target": [
+            "meta[name=\"viewport\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nested-interactive",
+      "impact": null,
+      "tags": [
+        "cat.keyboard",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+      "help": "Interactive controls must not be nested",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/nested-interactive?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"global-explore-navigation__button\" aria-expanded=\"false\" aria-controls=\"menu__content\" data-testid=\"menu__button\">",
+          "target": [
+            "button[aria-controls=\"menu__content\"]"
           ]
         }
       ]
@@ -1478,99 +2459,779 @@
             {
               "id": "page-has-heading-one",
               "data": null,
-              "relatedNodes": [
-                {
-                  "html": "<h1>Access Denied</h1>",
-                  "target": [
-                    "h1"
-                  ]
-                }
-              ],
+              "relatedNodes": [],
               "impact": "moderate",
               "message": "Page has at least one level-one heading"
             }
           ],
           "none": [],
           "impact": null,
-          "html": "<html>",
+          "html": "<html class=\"client-js sse-other l2u-other cookie-banner-api-usp ve-available cookie-banner-visible\" lang=\"en\" dir=\"ltr\" style=\"--desktop-global-navigation-width: 66px; --left-panel-spacing: 66px; --skybox-impact-spacing: 0px; --cookie-banner-height: 71px;\">",
           "target": [
             "html"
           ]
         }
       ]
-    }
-  ],
-  "incomplete": [],
-  "violations": [
+    },
     {
-      "id": "html-has-lang",
-      "impact": "serious",
+      "id": "presentation-role-conflict",
+      "impact": null,
       "tags": [
-        "cat.language",
-        "wcag2a",
-        "wcag311",
-        "TTv5",
-        "TT11.a",
-        "EN-301-549",
-        "EN-9.3.1.1",
+        "cat.aria",
+        "best-practice",
         "ACT"
       ],
-      "description": "Ensures every HTML document has a lang attribute",
-      "help": "<html> element must have a lang attribute",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/html-has-lang?application=axeAPI",
+      "description": "Elements marked as presentational should not have global ARIA or tabindex to ensure all screen readers ignore them",
+      "help": "Ensure elements marked as presentational are consistently ignored",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/presentation-role-conflict?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "is-element-focusable",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "Element is focusable."
+            },
+            {
+              "id": "has-global-aria-attribute",
+              "data": [],
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "Element has global ARIA attributes: "
+            }
+          ],
+          "impact": null,
+          "html": "<img style=\"\" src=\"data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D\" title=\"The 9 Things You Should Do After Entering the Game (134 KB)\" class=\"thumbimage lazyload\" alt=\"\" height=\"180\" width=\"180\" data-image-name=\"1.png\" data-image-key=\"1.png\" data-relevant=\"1\" data-src=\"https://static.wikia.nocookie.net/eternal-ember/images/4/4a/1.png/revision/latest/scale-to-width-down/180?cb=20250304021448\">",
+          "target": [
+            "img[data-image-name=\"1.png\"]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "region",
+      "impact": "moderate",
+      "tags": [
+        "cat.keyboard",
+        "best-practice"
+      ],
+      "description": "Ensures all page content is contained by landmarks",
+      "help": "All page content should be contained by landmarks",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/region?application=axeAPI",
       "nodes": [
         {
           "any": [
             {
-              "id": "has-lang",
+              "id": "region",
               "data": {
-                "messageKey": "noLang"
+                "isIframe": false
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "All page content is contained by landmarks"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"notifications-placeholder\">\n\t\t\t\t<div class=\"banner-notifications-placeholder\" style=\"height: 0px;\">\n\t\t\t<div class=\"wds-banner-notification__container\">\n\t\n</div>\n\t\t</div>\n\t</div>",
+          "target": [
+            ".notifications-placeholder"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tabindex",
+      "impact": null,
+      "tags": [
+        "cat.keyboard",
+        "best-practice"
+      ],
+      "description": "Ensures tabindex attribute values are not greater than 0",
+      "help": "Elements should not have tabindex greater than zero",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/tabindex?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "tabindex",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have a tabindex greater than 0"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<iframe id=\"google_ads_iframe_/5441/wka1b.LB/top_leaderboard/desktop/ucp_desktop-fandom-home/_not_a_top1k_wiki-gaming_0\" name=\"google_ads_iframe_/5441/wka1b.LB/top_leaderboard/desktop/ucp_desktop-fandom-home/_not_a_top1k_wiki-gaming_0\" title=\"3rd party ad content\" width=\"728\" height=\"90\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" aria-label=\"Advertisement\" tabindex=\"0\" allow=\"private-state-token-redemption;attribution-reporting\" data-load-complete=\"true\" data-google-container-id=\"1\" style=\"border: 0px; vertical-align: bottom;\">",
+          "target": [
+            "#google_ads_iframe_\\/5441\\/wka1b\\.LB\\/top_leaderboard\\/desktop\\/ucp_desktop-fandom-home\\/_not_a_top1k_wiki-gaming_0"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "valid-lang",
+      "impact": null,
+      "tags": [
+        "cat.language",
+        "wcag2aa",
+        "wcag312",
+        "TTv5",
+        "TT11.b",
+        "EN-301-549",
+        "EN-9.3.1.2",
+        "ACT"
+      ],
+      "description": "Ensures lang attributes have valid values",
+      "help": "lang attribute must have a valid value",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/valid-lang?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "valid-lang",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Value of lang attribute is included in the list of valid languages"
+            }
+          ],
+          "impact": null,
+          "html": "<main class=\"page__main\" lang=\"en\">",
+          "target": [
+            "main"
+          ]
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures ARIA attributes are not prohibited for an element's role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-prohibited-attr?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-labelledby"
+                ]
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "The <html> element does not have a lang attribute"
+              "message": "aria-labelledby attribute is not well supported on a div with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div class=\"sticky-toc-wrapper\" aria-labelledby=\"mw-sticky-toc-heading\">",
+          "target": [
+            ".sticky-toc-wrapper"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-labelledby attribute is not well supported on a div with no valid role attribute."
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT"
+      ],
+      "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/color-contrast?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": null,
+                "bgColor": null,
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "normal",
+                "messageKey": "bgOverlap",
+                "expectedContrastRatio": "4.5:1",
+                "shadowColor": null
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's background color could not be determined because it is overlapped by another element"
             }
           ],
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<html>",
+          "html": "<input type=\"text\" class=\"search-app__input\" placeholder=\"Search\" value=\"\">",
           "target": [
-            "html"
+            "#global-top-navigation > .search-container > .search-app__wrapper.search-app > .search-app__input[placeholder=\"Search\"][value=\"\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
         }
       ]
     },
     {
-      "id": "landmark-one-main",
-      "impact": "moderate",
+      "id": "frame-tested",
+      "impact": "critical",
       "tags": [
-        "cat.semantics",
-        "best-practice"
+        "cat.structure",
+        "best-practice",
+        "review-item"
       ],
-      "description": "Ensures the document has a main landmark",
-      "help": "Document should have one main landmark",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/landmark-one-main?application=axeAPI",
+      "description": "Ensures <iframe> and <frame> elements contain the axe-core script",
+      "help": "Frames should be tested with axe-core",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-tested?application=axeAPI",
       "nodes": [
         {
           "any": [],
           "all": [
             {
-              "id": "page-has-main",
+              "id": "frame-tested",
               "data": null,
               "relatedNodes": [],
-              "impact": "moderate",
-              "message": "Document does not have a main landmark"
+              "impact": "critical",
+              "message": "The iframe still has to be tested with axe-core"
             }
           ],
           "none": [],
-          "impact": "moderate",
-          "html": "<html>",
+          "impact": "critical",
+          "html": "<iframe id=\"google_ads_iframe_/5441/wka1b.LB/top_leaderboard/desktop/ucp_desktop-fandom-home/_not_a_top1k_wiki-gaming_0\" name=\"google_ads_iframe_/5441/wka1b.LB/top_leaderboard/desktop/ucp_desktop-fandom-home/_not_a_top1k_wiki-gaming_0\" title=\"3rd party ad content\" width=\"728\" height=\"90\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" aria-label=\"Advertisement\" tabindex=\"0\" allow=\"private-state-token-redemption;attribution-reporting\" data-load-complete=\"true\" data-google-container-id=\"1\" style=\"border: 0px; vertical-align: bottom;\">",
           "target": [
-            "html"
+            "#google_ads_iframe_\\/5441\\/wka1b\\.LB\\/top_leaderboard\\/desktop\\/ucp_desktop-fandom-home\\/_not_a_top1k_wiki-gaming_0"
           ],
-          "failureSummary": "Fix all of the following:\n  Document does not have a main landmark"
+          "failureSummary": "Fix all of the following:\n  The iframe still has to be tested with axe-core"
+        }
+      ]
+    },
+    {
+      "id": "frame-title-unique",
+      "impact": "serious",
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag412",
+        "TTv5",
+        "TT12.d",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures <iframe> and <frame> elements contain a unique title attribute",
+      "help": "Frames must have a unique title attribute",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-title-unique?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "unique-frame-title",
+              "data": "3rd party ad content",
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's title attribute is not unique"
+            }
+          ],
+          "impact": "serious",
+          "html": "<iframe id=\"google_ads_iframe_/5441/wka1b.LB/top_leaderboard/desktop/ucp_desktop-fandom-home/_not_a_top1k_wiki-gaming_0\" name=\"google_ads_iframe_/5441/wka1b.LB/top_leaderboard/desktop/ucp_desktop-fandom-home/_not_a_top1k_wiki-gaming_0\" title=\"3rd party ad content\" width=\"728\" height=\"90\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" aria-label=\"Advertisement\" tabindex=\"0\" allow=\"private-state-token-redemption;attribution-reporting\" data-load-complete=\"true\" data-google-container-id=\"1\" style=\"border: 0px; vertical-align: bottom;\">",
+          "target": [
+            "#google_ads_iframe_\\/5441\\/wka1b\\.LB\\/top_leaderboard\\/desktop\\/ucp_desktop-fandom-home\\/_not_a_top1k_wiki-gaming_0"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element's title attribute is not unique"
+        }
+      ]
+    }
+  ],
+  "violations": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures an element's role supports its ARIA attributes",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-allowed-attr?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "aria-allowed-attr",
+              "data": [
+                "aria-expanded=\"false\""
+              ],
+              "relatedNodes": [],
+              "impact": "critical",
+              "message": "ARIA attribute is not allowed: aria-expanded=\"false\""
+            }
+          ],
+          "none": [],
+          "impact": "critical",
+          "html": "<header class=\"wds-collapsible-panel__header\" aria-controls=\"collapsible-content-categories\" aria-expanded=\"false\" tabindex=\"0\">\n\t\t\tCategories\t\t\t<svg class=\"wds-icon wds-icon-small\"><use xlink:href=\"#wds-icons-menu-control-small\"></use></svg>\t\t</header>",
+          "target": [
+            ".wds-collapsible-panel__header"
+          ],
+          "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+        }
+      ]
+    },
+    {
+      "id": "aria-allowed-role",
+      "impact": "minor",
+      "tags": [
+        "cat.aria",
+        "best-practice"
+      ],
+      "description": "Ensures role attribute has an appropriate value for the element",
+      "help": "ARIA role should be appropriate for the element",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-allowed-role?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "aria-allowed-role",
+              "data": [
+                "button"
+              ],
+              "relatedNodes": [],
+              "impact": "minor",
+              "message": "ARIA role button is not allowed for given element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "minor",
+          "html": "<input type=\"checkbox\" role=\"button\" id=\"toctogglecheckbox\" class=\"toctogglecheckbox\" style=\"display:none\" aria-label=\"show\">",
+          "target": [
+            "#toctogglecheckbox"
+          ],
+          "failureSummary": "Fix any of the following:\n  ARIA role button is not allowed for given element"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT"
+      ],
+      "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/color-contrast?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#917859",
+                "bgColor": "#edeee8",
+                "contrastRatio": 3.57,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1",
+                "shadowColor": null
+              },
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"page__main\" lang=\"en\">",
+                  "target": [
+                    "main"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.57 (foreground color: #917859, background color: #edeee8, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<font color=\"#917859\">Group up the heroes, explore the vast land, fight monsters, and gain loots.</font>",
+          "target": [
+            "font"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.57 (foreground color: #917859, background color: #edeee8, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#888788",
+                "bgColor": "#edeee8",
+                "contrastRatio": 3.06,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "normal",
+                "messageKey": null,
+                "expectedContrastRatio": "4.5:1",
+                "shadowColor": null
+              },
+              "relatedNodes": [
+                {
+                  "html": "<main class=\"page__main\" lang=\"en\">",
+                  "target": [
+                    "main"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element has insufficient color contrast of 3.06 (foreground color: #888788, background color: #edeee8, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<label id=\"label-top_boxad\" class=\"ae-translatable-label\" data-key=\"advertisement\">\n\tAdvertisement\n</label>",
+          "target": [
+            "#label-top_boxad"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.06 (foreground color: #888788, background color: #edeee8, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "id": "frame-title",
+      "impact": "serious",
+      "tags": [
+        "cat.text-alternatives",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.i",
+        "TTv5",
+        "TT12.d",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures <iframe> and <frame> elements have an accessible name",
+      "help": "Frames must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/frame-title?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "presentational-role",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<iframe id=\"li_sync_frame\" src=\"https://i.liadm.com/sync-container?duid=17cd767946ca--01ked0777wc3caq85rhwew86yv&amp;appId=a-07ev&amp;euns=0&amp;s=&amp;us_privacy=1YNN&amp;version=v3.13.1&amp;cd=.fandom.com&amp;pv=6e49ff99-3e39-4aa1-bbe6-b342856add50\" style=\"opacity: 0; width: 0px; height: 0px; border: 0px; position: absolute; top: 0px; left: 0px; z-index: -1000;\">",
+          "target": [
+            "#li_sync_frame"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element has no title attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+        }
+      ]
+    },
+    {
+      "id": "link-in-text-block",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2a",
+        "wcag141",
+        "TTv5",
+        "TT13.a",
+        "EN-301-549",
+        "EN-9.1.4.1"
+      ],
+      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+      "help": "Links must be distinguishable without relying on color",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/link-in-text-block?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "link-in-text-block",
+              "data": {
+                "messageKey": "fgContrast",
+                "contrastRatio": 1.33,
+                "requiredContrastRatio": 3,
+                "nodeColor": "#6d4306",
+                "parentColor": "#3a3a3a"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"license-description\">\n\t\tCommunity content is available under <a href=\"https://www.fandom.com/licensing\">CC-BY-SA</a> unless otherwise noted.\t</div>",
+                  "target": [
+                    ".license-description"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "The link has insufficient color contrast of 1.33:1 with the surrounding text. (Minimum contrast is 3:1, link text: #6d4306, surrounding text: #3a3a3a)"
+            },
+            {
+              "id": "link-in-text-block-style",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"license-description\">\n\t\tCommunity content is available under <a href=\"https://www.fandom.com/licensing\">CC-BY-SA</a> unless otherwise noted.\t</div>",
+                  "target": [
+                    ".license-description"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://www.fandom.com/licensing\">CC-BY-SA</a>",
+          "target": [
+            ".license-description > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 1.33:1 with the surrounding text. (Minimum contrast is 3:1, link text: #6d4306, surrounding text: #3a3a3a)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+        }
+      ]
+    },
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag244",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.2.4.4",
+        "EN-9.4.1.2",
+        "ACT"
+      ],
+      "description": "Ensures links have discernible text",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/link-name?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://reddit.com/submit?url=https%3A%2F%2Feternal-ember.fandom.com%2Fwiki%2FEternal_Ember_Wiki%3Fsh%3Dnull__6987%26m%3D3%26utm_source%3Dreddit%26utm_campaign%3Dh2s&amp;title=\"><svg class=\"wds-icon wds-icon-small\"><use xlink:href=\"#wds-icons-reddit-small\"></use></svg></a>",
+          "target": [
+            ".highlight__d-flex > .highlight__action:nth-child(1) > a"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://www.facebook.com/dialog/share?app_id=112328095453510&amp;href=https%3A%2F%2Feternal-ember.fandom.com%2Fwiki%2FEternal_Ember_Wiki%3Fsh%3Dnull__6987%26m%3D2%26utm_source%3Dfacebook%26utm_campaign%3Dh2s&amp;redirect_uri=https%3A%2F%2Feternal-ember.fandom.com%2Fwiki%2FEternal_Ember_Wiki&amp;quote=&amp;display=page\">",
+          "target": [
+            ".highlight__d-flex > .highlight__action:nth-child(2) > a"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "id": "aria-label",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "id": "aria-labelledby",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "id": "non-empty-title",
+              "data": {
+                "messageKey": "noAttr"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has no title attribute"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "impact": "serious",
+          "html": "<a href=\"https://twitter.com/intent/tweet?text=&amp;url=https%3A%2F%2Feternal-ember.fandom.com%2Fwiki%2FEternal_Ember_Wiki%3Fsh%3Dnull__6987%26m%3D1%26utm_source%3Dtwitter%26utm_campaign%3Dh2s\"><svg class=\"wds-icon wds-icon-small\"><use xlink:href=\"#wds-icons-twitter-small\"></use></svg></a>",
+          "target": [
+            ".highlight__action:nth-child(3) > a"
+          ],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
         }
       ]
     },
@@ -1600,9 +3261,9 @@
           "all": [],
           "none": [],
           "impact": "moderate",
-          "html": "<h1>Access Denied</h1>",
+          "html": "<label id=\"label-top_leaderboard\" class=\"ae-translatable-label\" data-key=\"advertisement\">\n\tAdvertisement\n</label>",
           "target": [
-            "h1"
+            "#label-top_leaderboard"
           ],
           "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
         },
@@ -1621,9 +3282,9 @@
           "all": [],
           "none": [],
           "impact": "moderate",
-          "html": "<p>\nReference #18.8cd02e17.1767812511.4fa7c6f6\n</p>",
+          "html": "<a href=\"#page-header\" class=\"skip-link wds-button wds-is-text\" tabindex=\"0\">Skip to content</a>",
           "target": [
-            "p:nth-child(2)"
+            ".skip-link"
           ],
           "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
         },
@@ -1642,9 +3303,30 @@
           "all": [],
           "none": [],
           "impact": "moderate",
-          "html": "<p>https://errors.edgesuite.net/18.8cd02e17.1767812511.4fa7c6f6</p>",
+          "html": "<span>Search this wiki</span>",
           "target": [
-            "p:nth-child(3)"
+            ".highlight__action:nth-child(1) > a > span"
+          ],
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "any": [
+            {
+              "id": "region",
+              "data": {
+                "isIframe": false
+              },
+              "relatedNodes": [],
+              "impact": "moderate",
+              "message": "Some page content is not contained by landmarks"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "moderate",
+          "html": "<div class=\"highlight__action \"><a href=\"https://eternal-ember.fandom.com/wiki/Special:Search?scope=cross-wiki&amp;query=&amp;h=1&amp;isFromHighlightActions=on\"><span>Search all wikis</span></a></div>",
+          "target": [
+            ".highlight__actions > .highlight__action:nth-child(2)"
           ],
           "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
         }

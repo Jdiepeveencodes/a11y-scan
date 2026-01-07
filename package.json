@@ -4,9 +4,16 @@
   "description": "Automated accessibility (a11y) scanner using Playwright and axe-core",
   "private": true,
   "scripts": {
-    "scan": "node scripts/scan.js"
+    "scan": "node scripts/scan.js",
+    "scan:file": "node scripts/scan-file.js",
+    "scan:file:open": "node scripts/scan-file.js urls.txt && node scripts/open-report.js",
+    "start": "node server.js"
+
   },
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
   }
 }

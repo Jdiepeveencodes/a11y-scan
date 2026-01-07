@@ -1,3 +1,4 @@
+import csv
 import json
 import re
 import sys
@@ -17,21 +18,19 @@ def slugify(text: str) -> str:
     return text or "report"
 
 
-def build_report_paths(url: str) -> tuple[Path, Path, Path, Path]:
+def build_report_paths(url: str) -> tuple[Path, Path, Path, Path, Path, Path]:
     """
     Returns:
-      (dated_json, dated_html, latest_json, latest_html)
+      (dated_json, dated_html, latest_json, latest_html, dated_csv, latest_csv)
 
     Dated paths go to: ./reports/YYYY/MM/
-    Latest paths go to: ./reports/latest.json and ./reports/latest.html
+    Latest paths go to: ./reports/latest.*
     """
     now = datetime.now()
 
-    # Root reports folder
     reports_root = Path.cwd() / "reports"
     reports_root.mkdir(parents=True, exist_ok=True)
 
-    # Year/month folder (e.g., reports/2026/01)
     dated_dir = reports_root / now.strftime("%Y") / now.strftime("%m")
     dated_dir.mkdir(parents=True, exist_ok=True)
 
@@ -45,11 +44,23 @@ def build_report_paths(url: str) -> tuple[Path, Path, Path, Path]:
 
     dated_json = dated_dir / f"{base}.json"
     dated_html = dated_dir / f"{base}.html"
+    dated_csv = dated_dir / f"{base}.csv"
 
     latest_json = reports_root / "latest.json"
     latest_html = reports_root / "latest.html"
+    latest_csv = reports_root / "latest.csv"
 
-    return dated_json, dated_html, latest_json, latest_html
+    return dated_json, dated_html, latest_json, latest_html, dated_csv, latest_csv
+
+
+def severity_counts(results: dict) -> dict:
+    counts = {"critical": 0, "serious": 0, "moderate": 0, "minor": 0, "unknown": 0}
+    for v in results.get("violations", []):
+        impact = (v.get("impact") or "unknown").lower()
+        if impact not in counts:
+            impact = "unknown"
+        counts[impact] += 1
+    return counts
 
 
 def run_a11y_scan(url: str) -> dict:
@@ -58,10 +69,8 @@ def run_a11y_scan(url: str) -> dict:
         page = browser.new_page()
 
         print(f"🔍 Scanning accessibility for: {url}")
-
         page.goto(url, wait_until="networkidle", timeout=90000)
 
-        # Inject axe-core and run it in the page context
         page.add_script_tag(url=AXE_CDN)
         results = page.evaluate(
             """async () => {
@@ -75,9 +84,10 @@ def run_a11y_scan(url: str) -> dict:
         return results
 
 
-def render_html_report(url: str, results: dict) -> str:
+def render_html_report(url: str, results: dict, csv_name: str, json_name: str) -> str:
     violations = results.get("violations", [])
     scanned_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    counts = severity_counts(results)
 
     def esc(s: str) -> str:
         return (
@@ -87,6 +97,18 @@ def render_html_report(url: str, results: dict) -> str:
             .replace(">", "&gt;")
             .replace('"', "&quot;")
         )
+
+    def badge(label: str, cls: str, val: int) -> str:
+        return f'<span class="badge {cls}">{esc(label)}: {val}</span>'
+
+    badges_html = " ".join(
+        [
+            badge("critical", "critical", counts["critical"]),
+            badge("serious", "serious", counts["serious"]),
+            badge("moderate", "moderate", counts["moderate"]),
+            badge("minor", "minor", counts["minor"]),
+        ]
+    )
 
     cards = []
     for v in violations:
@@ -141,33 +163,47 @@ def render_html_report(url: str, results: dict) -> str:
       background: #0b0f17;
       color: #e6edf3;
     }}
-    .wrap {{
-      max-width: 980px;
-      margin: 0 auto;
-    }}
+    .wrap {{ max-width: 980px; margin: 0 auto; }}
     .header {{
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 18px;
-      padding-bottom: 14px;
+      display: flex; flex-direction: column; gap: 8px;
+      margin-bottom: 18px; padding-bottom: 14px;
       border-bottom: 1px solid rgba(255,255,255,.08);
     }}
-    .title {{
-      font-size: 22px;
-      font-weight: 700;
+    .title {{ font-size: 22px; font-weight: 700; }}
+    .sub {{ font-size: 14px; opacity: .85; line-height: 1.4; }}
+
+    .badges {{ display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }}
+    .badge {{
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      text-transform: lowercase;
+      white-space: nowrap;
     }}
-    .sub {{
-      font-size: 14px;
-      opacity: .85;
-      line-height: 1.4;
+    .badge.critical {{ border-color: rgba(255,0,0,.35); }}
+    .badge.serious  {{ border-color: rgba(255,140,0,.35); }}
+    .badge.moderate {{ border-color: rgba(255,255,0,.25); }}
+    .badge.minor    {{ border-color: rgba(0,255,255,.18); }}
+
+    .actions {{
+      display: flex; gap: 10px; flex-wrap: wrap;
+      margin-top: 6px;
     }}
-    .summary {{
-      margin: 18px 0;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
+    .btn {{
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      color: #e6edf3;
+      text-decoration: none;
+      font-size: 13px;
     }}
+    .btn:hover {{ background: rgba(255,255,255,.10); }}
+
+    .summary {{ margin: 14px 0 18px; display: flex; gap: 12px; flex-wrap: wrap; }}
     .stat {{
       background: rgba(255,255,255,.04);
       border: 1px solid rgba(255,255,255,.08);
@@ -175,32 +211,18 @@ def render_html_report(url: str, results: dict) -> str:
       padding: 10px 12px;
       font-size: 14px;
     }}
-    .cards {{
-      display: grid;
-      gap: 12px;
-    }}
+
+    .cards {{ display: grid; gap: 12px; }}
     .card {{
       background: rgba(255,255,255,.04);
       border: 1px solid rgba(255,255,255,.08);
       border-radius: 14px;
       padding: 14px;
     }}
-    .top {{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 8px;
-    }}
-    .rule {{
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: .2px;
-    }}
+    .top {{ display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 8px; }}
+    .rule {{ font-size: 16px; font-weight: 700; letter-spacing: .2px; }}
     .pill {{
-      font-size: 12px;
-      padding: 4px 10px;
-      border-radius: 999px;
+      font-size: 12px; padding: 4px 10px; border-radius: 999px;
       border: 1px solid rgba(255,255,255,.16);
       background: rgba(255,255,255,.06);
       text-transform: lowercase;
@@ -210,28 +232,12 @@ def render_html_report(url: str, results: dict) -> str:
     .pill.serious  {{ border-color: rgba(255,140,0,.35); }}
     .pill.moderate {{ border-color: rgba(255,255,0,.25); }}
     .pill.minor    {{ border-color: rgba(0,255,255,.18); }}
-    .desc {{
-      font-size: 14px;
-      opacity: .92;
-      line-height: 1.45;
-      margin-bottom: 10px;
-    }}
-    .meta a {{
-      color: #8ab4f8;
-      text-decoration: none;
-      font-size: 13px;
-    }}
+
+    .desc {{ font-size: 14px; opacity: .92; line-height: 1.45; margin-bottom: 10px; }}
+    .meta a {{ color: #8ab4f8; text-decoration: none; font-size: 13px; }}
     .meta a:hover {{ text-decoration: underline; }}
-    .targets {{
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px solid rgba(255,255,255,.08);
-    }}
-    .label {{
-      font-size: 12px;
-      opacity: .8;
-      margin-bottom: 6px;
-    }}
+    .targets {{ margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,.08); }}
+    .label {{ font-size: 12px; opacity: .8; margin-bottom: 6px; }}
     .code {{
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       font-size: 12px;
@@ -259,10 +265,19 @@ def render_html_report(url: str, results: dict) -> str:
         URL: <strong>{esc(url)}</strong><br>
         Scanned: {esc(scanned_at)}
       </div>
+
+      <div class="badges">
+        {badges_html}
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="{esc(csv_name)}" download>⬇ Download CSV</a>
+        <a class="btn" href="{esc(json_name)}" download>⬇ Download JSON</a>
+      </div>
     </div>
 
     <div class="summary">
-      <div class="stat"><strong>Violations:</strong> {len(violations)}</div>
+      <div class="stat"><strong>Total violations:</strong> {len(violations)}</div>
       <div class="stat"><strong>Engine:</strong> axe-core (via Playwright)</div>
     </div>
 
@@ -273,6 +288,71 @@ def render_html_report(url: str, results: dict) -> str:
 </body>
 </html>
 """
+
+
+def flatten_violations_to_rows(url: str, results: dict) -> list[dict]:
+    rows: list[dict] = []
+    violations = results.get("violations", [])
+
+    for v in violations:
+        rule_id = v.get("id", "")
+        impact = v.get("impact", "")
+        description = v.get("description", "")
+        help_url = v.get("helpUrl", "")
+
+        for node in v.get("nodes", []):
+            targets = node.get("target", [])
+            target_str = " | ".join(targets) if isinstance(targets, list) else str(targets)
+            snippet = node.get("html", "")
+
+            rows.append(
+                {
+                    "url": url,
+                    "rule_id": rule_id,
+                    "impact": impact,
+                    "description": description,
+                    "help_url": help_url,
+                    "target": target_str,
+                    "snippet": snippet,
+                }
+            )
+
+        if not v.get("nodes"):
+            rows.append(
+                {
+                    "url": url,
+                    "rule_id": rule_id,
+                    "impact": impact,
+                    "description": description,
+                    "help_url": help_url,
+                    "target": "",
+                    "snippet": "",
+                }
+            )
+
+    if not violations:
+        rows.append(
+            {
+                "url": url,
+                "rule_id": "",
+                "impact": "",
+                "description": "No accessibility violations found",
+                "help_url": "",
+                "target": "",
+                "snippet": "",
+            }
+        )
+
+    return rows
+
+
+def write_csv(path: Path, rows: list[dict]) -> None:
+    fields = ["url", "rule_id", "impact", "description", "help_url", "target", "snippet"]
+    with path.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fields)
+        writer.writeheader()
+        for r in rows:
+            writer.writerow(r)
 
 
 def main():
@@ -313,24 +393,31 @@ def main():
 
             print("-" * 40)
 
-    dated_json, dated_html, latest_json, latest_html = build_report_paths(url)
+    dated_json, dated_html, latest_json, latest_html, dated_csv, latest_csv = build_report_paths(url)
 
-    # Generate HTML once (so both dated + latest match exactly)
-    html = render_html_report(url, results)
     json_text = json.dumps(results, indent=2)
+    csv_rows = flatten_violations_to_rows(url, results)
+
+    # Build file names so the HTML links work inside each folder
+    dated_html_text = render_html_report(url, results, dated_csv.name, dated_json.name)
+    latest_html_text = render_html_report(url, results, latest_csv.name, latest_json.name)
 
     # Write dated outputs
     dated_json.write_text(json_text, encoding="utf-8")
-    dated_html.write_text(html, encoding="utf-8")
+    dated_html.write_text(dated_html_text, encoding="utf-8")
+    write_csv(dated_csv, csv_rows)
 
     # Write "latest" outputs
     latest_json.write_text(json_text, encoding="utf-8")
-    latest_html.write_text(html, encoding="utf-8")
+    latest_html.write_text(latest_html_text, encoding="utf-8")
+    write_csv(latest_csv, csv_rows)
 
     print(f"\n📄 JSON report saved to: {dated_json}")
     print(f"🧾 HTML report saved to: {dated_html}")
+    print(f"📈 CSV report saved to:  {dated_csv}")
     print(f"⭐ Latest JSON updated:   {latest_json}")
     print(f"⭐ Latest HTML updated:   {latest_html}")
+    print(f"⭐ Latest CSV updated:    {latest_csv}")
 
 
 if __name__ == "__main__":

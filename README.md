@@ -1,76 +1,122 @@
 # a11y-scan ♿
 
-**a11y-scan** is an automated accessibility auditing tool that evaluates web pages against internationally recognized accessibility standards (WCAG). It uses real browser automation to detect accessibility issues that impact users with disabilities and helps developers build more inclusive web experiences.
+A browser-launched, automated accessibility (a11y) scanning platform built with **Playwright** and **axe-core**.  
+It audits web pages against WCAG 2.1 AA standards and generates **HTML, CSV, and JSON reports** with severity badges and a live dashboard.
 
 ---
 
-## 🚀 What This Project Does
+## 🚀 Features
 
-- Automatically scans web pages for accessibility violations
-- Uses real browser automation (not static HTML parsing)
-- Detects common WCAG issues such as:
-  - Missing alternative text
-  - Color contrast failures
-  - ARIA attribute errors
-  - Keyboard navigation problems
-  - Improper heading structure
-- Generates actionable accessibility findings
-
----
-
-## 🛠️ Tech Stack
-
-- Node.js
-- Playwright (browser automation)
-- axe-core (WCAG accessibility rules engine)
-- TypeScript / JavaScript
-- HTML
+- 🔍 **Single & multi-URL scanning**
+- 🌐 **Browser-based launcher UI** (no CLI required)
+- ♿ **WCAG 2.1 AA checks via axe-core**
+- 📊 **Severity breakdown** (Critical / Serious / Moderate / Minor)
+- 📄 **HTML reports** with readable issue cards
+- 📈 **CSV export** for audits & compliance tracking
+- 🧾 **JSON output** for automation & CI pipelines
+- 🕒 **Timestamped reports** organized by year/month
+- ⭐ **“Latest” snapshot** for quick access
+- 🧩 **Graceful failure handling** (timeouts, DNS issues, blocked pages)
 
 ---
 
-## 📂 Project Structure
+## 🖥️ Launcher UI
 
-a11y-scan/
-├─ a11y-web/ # Web interface / UI layer
-├─ playwright-a11y-scanner/ # Core accessibility scanning logic
-├─ package.json
-├─ package-lock.json
-└─ README.md
+The project includes a lightweight web interface that allows users to:
+
+1. Paste one or more URLs
+2. Run accessibility scans
+3. Open the dashboard or latest report in the browser
+
+**Launcher URL:**
+http://localhost:5177
+
+
+
+## 📂 Report Structure for auditabiity
+
+Reports are automatically organized and served by the launcher:
+
+reports/
+├─ index.html # Dashboard (multi-scan)
+├─ latest.html # Most recent scan (HTML)
+├─ latest.json
+├─ latest.csv
+└─ YYYY/
+└─ MM/
+├─ timestamp_site_a11y.html
+├─ timestamp_site_a11y.json
+└─ timestamp_site_a11y.csv
+
+
+Each HTML report includes:
+- Severity badges
+- Rule descriptions
+- Affected selectors
+- Direct links to Deque rule documentation
+- Download links for CSV and JSON
+
+---
 
 ## ⚙️ Installation
 
-Clone the repository and install dependencies:
+### Prerequisites
+- Node.js **18+**
+- Python **3.10+**
+- Playwright browsers installed
+
+### Install dependencies
 
 ```bash
-git clone https://github.com/Jdiepeveencodes/a11y-scan.git
-cd a11y-scan
 npm install
+pip install playwright
+playwright install
 
-▶️ Running the Accessibility Scanner
+## Start the launcher 
 
-npm run scan
+OPEN - launcher-dashboard.bat
 
 OR
 
-npm run scan -- https://example.com
+npm start
 
-📌 Disclaimer
+http://localhost:5177
 
-This tool provides automated accessibility testing and should be used alongside manual testing and real user validation for full WCAG compliance.
 
-🔮 Future Enhancements
+## 🧠 Accessibility Rules Covered
 
-CI/CD integration with GitHub Actions
+Examples include:
 
-Exportable accessibility reports (JSON / HTML)
+Color contrast (WCAG 1.4.3)
 
-Configurable WCAG levels (A / AA / AAA)
+Missing or invalid ARIA attributes
 
-Visual dashboard for scan results
+Landmark structure issues
 
-Multi-page and sitemap scanning
+Missing link text
 
-👤 Author
+Heading hierarchy problems
 
-Jesse Diepeveen
-GitHub: https://github.com/Jdiepeveencodes
+Frame and iframe accessibility
+
+Powered by axe-core, the industry standard used by enterprise accessibility tools.
+
+## 💼 Why this project matters
+
+This project demonstrates:
+
+End-to-end automation (browser → server → scanner → reports)
+
+Real-world accessibility auditing
+
+Error-tolerant batch processing
+
+Developer- and stakeholder-friendly reporting
+
+CI/CD-ready architecture
+
+It is designed to scale from local audits to automated compliance workflows.
+
+## 👤 Author
+
+Built by Jesse Diepeveen

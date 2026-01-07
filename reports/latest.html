@@ -12,33 +12,47 @@
       background: #0b0f17;
       color: #e6edf3;
     }
-    .wrap {
-      max-width: 980px;
-      margin: 0 auto;
-    }
+    .wrap { max-width: 980px; margin: 0 auto; }
     .header {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 18px;
-      padding-bottom: 14px;
+      display: flex; flex-direction: column; gap: 8px;
+      margin-bottom: 18px; padding-bottom: 14px;
       border-bottom: 1px solid rgba(255,255,255,.08);
     }
-    .title {
-      font-size: 22px;
-      font-weight: 700;
+    .title { font-size: 22px; font-weight: 700; }
+    .sub { font-size: 14px; opacity: .85; line-height: 1.4; }
+
+    .badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+    .badge {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      text-transform: lowercase;
+      white-space: nowrap;
     }
-    .sub {
-      font-size: 14px;
-      opacity: .85;
-      line-height: 1.4;
+    .badge.critical { border-color: rgba(255,0,0,.35); }
+    .badge.serious  { border-color: rgba(255,140,0,.35); }
+    .badge.moderate { border-color: rgba(255,255,0,.25); }
+    .badge.minor    { border-color: rgba(0,255,255,.18); }
+
+    .actions {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      margin-top: 6px;
     }
-    .summary {
-      margin: 18px 0;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
+    .btn {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      color: #e6edf3;
+      text-decoration: none;
+      font-size: 13px;
     }
+    .btn:hover { background: rgba(255,255,255,.10); }
+
+    .summary { margin: 14px 0 18px; display: flex; gap: 12px; flex-wrap: wrap; }
     .stat {
       background: rgba(255,255,255,.04);
       border: 1px solid rgba(255,255,255,.08);
@@ -46,32 +60,18 @@
       padding: 10px 12px;
       font-size: 14px;
     }
-    .cards {
-      display: grid;
-      gap: 12px;
-    }
+
+    .cards { display: grid; gap: 12px; }
     .card {
       background: rgba(255,255,255,.04);
       border: 1px solid rgba(255,255,255,.08);
       border-radius: 14px;
       padding: 14px;
     }
-    .top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 8px;
-    }
-    .rule {
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: .2px;
-    }
+    .top { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .rule { font-size: 16px; font-weight: 700; letter-spacing: .2px; }
     .pill {
-      font-size: 12px;
-      padding: 4px 10px;
-      border-radius: 999px;
+      font-size: 12px; padding: 4px 10px; border-radius: 999px;
       border: 1px solid rgba(255,255,255,.16);
       background: rgba(255,255,255,.06);
       text-transform: lowercase;
@@ -81,28 +81,12 @@
     .pill.serious  { border-color: rgba(255,140,0,.35); }
     .pill.moderate { border-color: rgba(255,255,0,.25); }
     .pill.minor    { border-color: rgba(0,255,255,.18); }
-    .desc {
-      font-size: 14px;
-      opacity: .92;
-      line-height: 1.45;
-      margin-bottom: 10px;
-    }
-    .meta a {
-      color: #8ab4f8;
-      text-decoration: none;
-      font-size: 13px;
-    }
+
+    .desc { font-size: 14px; opacity: .92; line-height: 1.45; margin-bottom: 10px; }
+    .meta a { color: #8ab4f8; text-decoration: none; font-size: 13px; }
     .meta a:hover { text-decoration: underline; }
-    .targets {
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px solid rgba(255,255,255,.08);
-    }
-    .label {
-      font-size: 12px;
-      opacity: .8;
-      margin-bottom: 6px;
-    }
+    .targets { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,.08); }
+    .label { font-size: 12px; opacity: .8; margin-bottom: 6px; }
     .code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       font-size: 12px;
@@ -127,13 +111,22 @@
     <div class="header">
       <div class="title">a11y-scan report</div>
       <div class="sub">
-        URL: <strong>https://salesforce.com</strong><br>
-        Scanned: 2026-01-07 11:01:52
+        URL: <strong>https://eternal-ember.fandom.com/wiki/Eternal_Ember_Wiki</strong><br>
+        Scanned: 2026-01-07 11:51:54
+      </div>
+
+      <div class="badges">
+        <span class="badge critical">critical: 1</span> <span class="badge serious">serious: 4</span> <span class="badge moderate">moderate: 1</span> <span class="badge minor">minor: 1</span>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="latest.csv" download>⬇ Download CSV</a>
+        <a class="btn" href="latest.json" download>⬇ Download JSON</a>
       </div>
     </div>
 
     <div class="summary">
-      <div class="stat"><strong>Violations:</strong> 3</div>
+      <div class="stat"><strong>Total violations:</strong> 7</div>
       <div class="stat"><strong>Engine:</strong> axe-core (via Playwright)</div>
     </div>
 
@@ -141,32 +134,96 @@
       
             <div class="card">
               <div class="top">
-                <div class="rule">html-has-lang</div>
-                <div class="pill serious">serious</div>
+                <div class="rule">aria-allowed-attr</div>
+                <div class="pill critical">critical</div>
               </div>
-              <div class="desc">Ensures every HTML document has a lang attribute</div>
+              <div class="desc">Ensures an element's role supports its ARIA attributes</div>
               <div class="meta">
-                <a href="https://dequeuniversity.com/rules/axe/4.9/html-has-lang?application=axeAPI" target="_blank" rel="noreferrer">Deque rule help</a>
+                <a href="https://dequeuniversity.com/rules/axe/4.9/aria-allowed-attr?application=axeAPI" target="_blank" rel="noreferrer">Deque rule help</a>
               </div>
               <div class="targets">
                 <div class="label">Affected targets (sample)</div>
-                <div class="code">html</div>
+                <div class="code">.wds-collapsible-panel__header</div>
               </div>
             </div>
             
 
             <div class="card">
               <div class="top">
-                <div class="rule">landmark-one-main</div>
-                <div class="pill moderate">moderate</div>
+                <div class="rule">aria-allowed-role</div>
+                <div class="pill minor">minor</div>
               </div>
-              <div class="desc">Ensures the document has a main landmark</div>
+              <div class="desc">Ensures role attribute has an appropriate value for the element</div>
               <div class="meta">
-                <a href="https://dequeuniversity.com/rules/axe/4.9/landmark-one-main?application=axeAPI" target="_blank" rel="noreferrer">Deque rule help</a>
+                <a href="https://dequeuniversity.com/rules/axe/4.9/aria-allowed-role?application=axeAPI" target="_blank" rel="noreferrer">Deque rule help</a>
               </div>
               <div class="targets">
                 <div class="label">Affected targets (sample)</div>
-                <div class="code">html</div>
+                <div class="code">#toctogglecheckbox</div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <div class="top">
+                <div class="rule">color-contrast</div>
+                <div class="pill serious">serious</div>
+              </div>
+              <div class="desc">Ensures the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds</div>
+              <div class="meta">
+                <a href="https://dequeuniversity.com/rules/axe/4.9/color-contrast?application=axeAPI" target="_blank" rel="noreferrer">Deque rule help</a>
+              </div>
+              <div class="targets">
+                <div class="label">Affected targets (sample)</div>
+                <div class="code">font<br>#label-top_boxad</div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <div class="top">
+                <div class="rule">frame-title</div>
+                <div class="pill serious">serious</div>
+              </div>
+              <div class="desc">Ensures &lt;iframe&gt; and &lt;frame&gt; elements have an accessible name</div>
+              <div class="meta">
+                <a href="https://dequeuniversity.com/rules/axe/4.9/frame-title?application=axeAPI" target="_blank" rel="noreferrer">Deque rule help</a>
+              </div>
+              <div class="targets">
+                <div class="label">Affected targets (sample)</div>
+                <div class="code">#li_sync_frame</div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <div class="top">
+                <div class="rule">link-in-text-block</div>
+                <div class="pill serious">serious</div>
+              </div>
+              <div class="desc">Ensure links are distinguished from surrounding text in a way that does not rely on color</div>
+              <div class="meta">
+                <a href="https://dequeuniversity.com/rules/axe/4.9/link-in-text-block?application=axeAPI" target="_blank" rel="noreferrer">Deque rule help</a>
+              </div>
+              <div class="targets">
+                <div class="label">Affected targets (sample)</div>
+                <div class="code">.license-description &gt; a</div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <div class="top">
+                <div class="rule">link-name</div>
+                <div class="pill serious">serious</div>
+              </div>
+              <div class="desc">Ensures links have discernible text</div>
+              <div class="meta">
+                <a href="https://dequeuniversity.com/rules/axe/4.9/link-name?application=axeAPI" target="_blank" rel="noreferrer">Deque rule help</a>
+              </div>
+              <div class="targets">
+                <div class="label">Affected targets (sample)</div>
+                <div class="code">.highlight__d-flex &gt; .highlight__action:nth-child(1) &gt; a<br>.highlight__d-flex &gt; .highlight__action:nth-child(2) &gt; a<br>.highlight__action:nth-child(3) &gt; a</div>
               </div>
             </div>
             
@@ -182,7 +239,7 @@
               </div>
               <div class="targets">
                 <div class="label">Affected targets (sample)</div>
-                <div class="code">h1<br>p:nth-child(2)<br>p:nth-child(3)</div>
+                <div class="code">#label-top_leaderboard<br>.skip-link<br>.highlight__action:nth-child(1) &gt; a &gt; span<br>.highlight__actions &gt; .highlight__action:nth-child(2)</div>
               </div>
             </div>
             
