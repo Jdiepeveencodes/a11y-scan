@@ -64,14 +64,20 @@ def severity_counts(results: dict) -> dict:
 
 
 def run_a11y_scan(url: str) -> dict:
+    print(f"Starting accessibility scan for: {url}")
+
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
 
-        print(f"🔍 Scanning accessibility for: {url}")
-        page.goto(url, wait_until="networkidle", timeout=90000)
+        try:
+            page.goto(url, wait_until="networkidle", timeout=90000)
+        except Exception as e:
+            browser.close()
+            raise RuntimeError(f"Navigation failed for {url}: {e}")
 
         page.add_script_tag(url=AXE_CDN)
+
         results = page.evaluate(
             """async () => {
                 return await axe.run(document, {
@@ -145,7 +151,7 @@ def render_html_report(url: str, results: dict, csv_name: str, json_name: str) -
 
     body = "\n".join(cards) if cards else """
       <div class="success">
-        ✅ No accessibility violations found.
+        No accessibility violations found.
       </div>
     """
 
@@ -271,8 +277,8 @@ def render_html_report(url: str, results: dict, csv_name: str, json_name: str) -
       </div>
 
       <div class="actions">
-        <a class="btn" href="{esc(csv_name)}" download>⬇ Download CSV</a>
-        <a class="btn" href="{esc(json_name)}" download>⬇ Download JSON</a>
+        <a class="btn" href="{esc(csv_name)}" download>Download CSV</a>
+        <a class="btn" href="{esc(json_name)}" download>Download JSON</a>
       </div>
     </div>
 
@@ -357,7 +363,7 @@ def write_csv(path: Path, rows: list[dict]) -> None:
 
 def main():
     if len(sys.argv) < 2:
-        print("❌ No URL provided.")
+        print("No URL provided.")
         print("Usage: python engine.py https://example.com")
         sys.exit(1)
 
@@ -366,13 +372,13 @@ def main():
 
     violations = results.get("violations", [])
 
-    print("\n♿ Accessibility Scan Results")
+    print("\nAccessibility Scan Results")
     print("=" * 40)
 
     if not violations:
-        print("✅ No accessibility violations found!")
+        print("No accessibility violations found.")
     else:
-        print(f"❌ {len(violations)} accessibility issues detected:\n")
+        print(f"{len(violations)} accessibility issues detected:\n")
 
         for v in violations:
             rule_id = v.get("id", "unknown")
@@ -412,12 +418,13 @@ def main():
     latest_html.write_text(latest_html_text, encoding="utf-8")
     write_csv(latest_csv, csv_rows)
 
-    print(f"\n📄 JSON report saved to: {dated_json}")
-    print(f"🧾 HTML report saved to: {dated_html}")
-    print(f"📈 CSV report saved to:  {dated_csv}")
-    print(f"⭐ Latest JSON updated:   {latest_json}")
-    print(f"⭐ Latest HTML updated:   {latest_html}")
-    print(f"⭐ Latest CSV updated:    {latest_csv}")
+    print("\nReports generated:")
+    print(f"JSON report:   {dated_json}")
+    print(f"HTML report:   {dated_html}")
+    print(f"CSV report:    {dated_csv}")
+    print(f"Latest JSON:   {latest_json}")
+    print(f"Latest HTML:   {latest_html}")
+    print(f"Latest CSV:    {latest_csv}")
 
 
 if __name__ == "__main__":

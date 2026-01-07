@@ -6,30 +6,49 @@ const { spawn } = require("child_process");
 const app = express();
 const PORT = 5177;
 
+function normalizeUrl(u) {
+  let url = String(u || "").trim();
+  if (!url || url.startsWith("#")) return null;
+
+  // Add scheme if missing
+  if (!/^https?:\/\//i.test(url)) url = "https://" + url;
+
+  return url;
+}
+
 function parseUrls(text) {
   return String(text || "")
     .split(/\r?\n/)
-    .map((l) => l.trim())
-    .filter((l) => l && !l.startsWith("#"));
+    .map(normalizeUrl)
+    .filter(Boolean);
 }
+
 
 function runPythonScan(url) {
   return new Promise((resolve, reject) => {
     const enginePath = path.join(__dirname, "playwright-a11y-scanner", "engine.py");
-
-    // Use py on Windows if python isn't found
     const pythonCmd = process.platform === "win32" ? "py" : "python";
 
-    const child = spawn(pythonCmd, [enginePath, url], { stdio: "inherit" });
+    const child = spawn(pythonCmd, [enginePath, url], { stdio: ["ignore", "pipe", "pipe"] });
+
+    let out = "";
+    let err = "";
+
+    child.stdout.on("data", (d) => (out += d.toString()));
+    child.stderr.on("data", (d) => (err += d.toString()));
 
     child.on("exit", (code) => {
-      if (code === 0) resolve();
-      else reject(new Error(`Scan failed (exit ${code})`));
+      if (code === 0) return resolve({ ok: true, out });
+
+      const msg =
+        (err || out || "").trim().slice(-1200) || `Scan failed (exit ${code})`;
+      reject(new Error(msg));
     });
 
     child.on("error", reject);
   });
 }
+
 
 function buildDashboard() {
   return new Promise((resolve, reject) => {

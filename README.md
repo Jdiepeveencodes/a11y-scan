@@ -1,41 +1,66 @@
-# a11y-scan ♿
+# a11y-scan
 
-A browser-launched, automated accessibility (a11y) scanning platform built with **Playwright** and **axe-core**.  
-It audits web pages against WCAG 2.1 AA standards and generates **HTML, CSV, and JSON reports** with severity badges and a live dashboard.
+Automated web accessibility (a11y) scanning tool using **Playwright** and **axe-core**, with a clean browser-based launcher, detailed HTML reports, and CSV/JSON exports aligned to **WCAG** guidelines.
 
----
-
-## 🚀 Features
-
-- 🔍 **Single & multi-URL scanning**
-- 🌐 **Browser-based launcher UI** (no CLI required)
-- ♿ **WCAG 2.1 AA checks via axe-core**
-- 📊 **Severity breakdown** (Critical / Serious / Moderate / Minor)
-- 📄 **HTML reports** with readable issue cards
-- 📈 **CSV export** for audits & compliance tracking
-- 🧾 **JSON output** for automation & CI pipelines
-- 🕒 **Timestamped reports** organized by year/month
-- ⭐ **“Latest” snapshot** for quick access
-- 🧩 **Graceful failure handling** (timeouts, DNS issues, blocked pages)
+This project focuses on **real-world usability**: handling messy user input, running stable scans, and producing reports that are easy to review and share.
 
 ---
 
-## 🖥️ Launcher UI
+## ✨ Features
 
-The project includes a lightweight web interface that allows users to:
+- **Browser-based launcher UI**
+  - Paste one URL per line
+  - Handles malformed and mixed-format URLs
+  - Sequential scanning for stability
 
-1. Paste one or more URLs
-2. Run accessibility scans
-3. Open the dashboard or latest report in the browser
+- **Automated accessibility scanning**
+  - Powered by Playwright + axe-core
+  - WCAG-aligned rule detection
+  - Severity classification (critical, serious, moderate, minor)
 
-**Launcher URL:**
-http://localhost:5177
+- **Rich reporting**
+  - HTML report with severity badges
+  - Downloadable CSV and JSON exports
+  - “Latest report” shortcuts
+  - Timestamped reports organized by year/month
 
+- **Robust input handling**
+  - Trims whitespace
+  - Normalizes protocols (`http`, `https`)
+  - Handles uppercase domains
+  - Supports `www` and non-`www` variants
 
+- **Cross-platform friendly**
+  - No emoji / encoding issues
+  - Works cleanly on Windows terminals
+  - Designed for local use or CI extension
 
-## 📂 Report Structure for auditabiity
+---
 
-Reports are automatically organized and served by the launcher:
+## 📁 Project Structure
+
+a11y-scan/
+├── a11y-web/ # Launcher UI
+│ └── index.html
+├── playwright-a11y-scanner/ # Python scan engine
+│ └── engine.py
+├── scripts/ # Node scan scripts
+│ ├── scan.js
+│ └── scan-file.js
+├── reports/ # Generated reports
+│ ├── YYYY/MM/ # Timestamped reports
+│ ├── index.html # Dashboard
+│ ├── latest.html
+│ ├── latest.json
+│ └── latest.csv
+├── server.js # Express server + API bridge
+├── launch-dashboard.bat # Windows launcher
+├── package.json
+├── package-lock.json
+├── README.md
+└── .gitignore
+
+## Reports are automatically organized and served by the launcher:
 
 reports/
 ├─ index.html # Dashboard (multi-scan)
@@ -48,7 +73,6 @@ reports/
 ├─ timestamp_site_a11y.json
 └─ timestamp_site_a11y.csv
 
-
 Each HTML report includes:
 - Severity badges
 - Rule descriptions
@@ -56,67 +80,86 @@ Each HTML report includes:
 - Direct links to Deque rule documentation
 - Download links for CSV and JSON
 
----
 
-## ⚙️ Installation
+## Using the Launcher -- launch-dashboard.bat
 
-### Prerequisites
-- Node.js **18+**
-- Python **3.10+**
-- Playwright browsers installed
+The launcher will open at: http://localhost:5177
+_______________________________________________________
+Paste one URL per line
 
-### Install dependencies
+Click Run Scan
 
-```bash
-npm install
-pip install playwright
-playwright install
+When finished:
 
-## Start the launcher 
+Open the dashboard
 
-OPEN - launcher-dashboard.bat
+View the latest report
 
-OR
+Download CSV or JSON
 
-npm start
+Example input:
 
-http://localhost:5177
+example.com
+www.wikipedia.org
+HTTP://NASA.GOV
+https://dequeuniversity.com
 
+## 📊 Reports
+HTML Report
 
-## 🧠 Accessibility Rules Covered
+Severity badges
 
-Examples include:
+Rule descriptions
 
-Color contrast (WCAG 1.4.3)
+Affected element selectors
 
-Missing or invalid ARIA attributes
+Direct links to Deque rule documentation
 
-Landmark structure issues
+CSV Export
 
-Missing link text
+Ideal for:
 
-Heading hierarchy problems
+Tracking issues over time
 
-Frame and iframe accessibility
+Importing into spreadsheets
 
-Powered by axe-core, the industry standard used by enterprise accessibility tools.
+Sharing with teams or stakeholders
 
-## 💼 Why this project matters
+JSON Export
 
-This project demonstrates:
+Ideal for:
 
-End-to-end automation (browser → server → scanner → reports)
+Automation pipelines
 
-Real-world accessibility auditing
+CI integration
 
-Error-tolerant batch processing
+Further processing
 
-Developer- and stakeholder-friendly reporting
+## 🧠 Design Goals
 
-CI/CD-ready architecture
+This project was built to demonstrate:
 
-It is designed to scale from local audits to automated compliance workflows.
+Practical accessibility automation
 
-## 👤 Author
+Defensive input handling
 
-Built by Jesse Diepeveen
+Stable Playwright usage
+
+Clear, human-readable output
+
+End-to-end system integration (UI → API → Python → Reports)
+
+It is intentionally not a SaaS or hosted service — the focus is on tooling quality and reliability.
+
+## ⚠️ Known Limitations
+
+Some enterprise sites may block automated browsers
+
+CAPTCHA or login-gated pages may fail to scan
+
+Sequential scanning prioritizes stability over speed
+
+These behaviors are handled gracefully and reported without crashing.
+
+## Author
+Created by Jesse Diepeveen
