@@ -39,26 +39,19 @@ This project focuses on **real-world usability**: handling messy user input, run
 
 ## 📁 Project Structure
 
-a11y-scan/
-├── a11y-web/ # Launcher UI
-│ └── index.html
-├── playwright-a11y-scanner/ # Python scan engine
-│ └── engine.py
-├── scripts/ # Node scan scripts
-│ ├── scan.js
-│ └── scan-file.js
-├── reports/ # Generated reports
-│ ├── YYYY/MM/ # Timestamped reports
-│ ├── index.html # Dashboard
-│ ├── latest.html
-│ ├── latest.json
-│ └── latest.csv
-├── server.js # Express server + API bridge
-├── launch-dashboard.bat # Windows launcher
-├── package.json
-├── package-lock.json
-├── README.md
-└── .gitignore
+### 📊 Reports Layout
+
+```text
+reports/
+├── index.html          # Dashboard (multi-scan)
+├── latest.html         # Most recent scan (HTML)
+├── latest.json
+├── latest.csv
+└── YYYY/
+    └── MM/
+        ├── timestamp_site_a11y.html
+        ├── timestamp_site_a11y.json
+        └── timestamp_site_a11y.csv
 
 ## Reports are automatically organized and served by the launcher:
 
@@ -72,7 +65,7 @@ reports/
 ├─ timestamp_site_a11y.html
 ├─ timestamp_site_a11y.json
 └─ timestamp_site_a11y.csv
-
+```
 Each HTML report includes:
 - Severity badges
 - Rule descriptions
@@ -100,8 +93,11 @@ Download CSV or JSON
 Example input:
 
 example.com
+
 www.wikipedia.org
+
 HTTP://NASA.GOV
+
 https://dequeuniversity.com
 
 ## 📊 Reports
